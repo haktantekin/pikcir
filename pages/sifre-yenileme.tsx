@@ -1,5 +1,4 @@
-import LostPassword from '@/components/LostPassword'
-import NewPassword from '@/components/NewPassword'
+import NewPassword from '@/components/membership/NewPassword'
 
 export default function Home() {
   return (

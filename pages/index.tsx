@@ -1,4 +1,4 @@
-import Membership from '@/components/Membership'
+import Membership from '@/components/membership/Index'
 
 export default function Home() {
   return (

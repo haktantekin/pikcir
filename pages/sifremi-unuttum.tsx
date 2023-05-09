@@ -1,4 +1,4 @@
-import LostPassword from '@/components/LostPassword'
+import LostPassword from '@/components/membership/LostPassword'
 
 export default function Home() {
   return (
