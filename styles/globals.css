@@ -6,13 +6,29 @@
   body {
     @apply font-pt
   }
+
+  input,
+  select {
+    @apply outline-0 focus:ring-transparent focus:outline-none ring-transparent shadow-none
+  }
+
+  img,
+  video {
+    @apply max-w-none
+  }
+
+  img,
+  svg,
+  video {
+    @apply max-w-none
+  }
 }
 
 @tailwind components;
 @tailwind utilities;
 
 #__next {
-  @apply overflow-hidden w-full h-full;
+  @apply w-full h-full;
 }
 
 .container {
