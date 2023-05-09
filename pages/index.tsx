@@ -1,6 +1,6 @@
 import Membership from '@/components/membership/Index'
 
-export default function Home() {
+export default function Login() {
   return (
     <main className={`h-auto lg:h-screen pb-10 lg:pb-0`}>
       <h1 className='font-black text-3xl lg:text-7xl text-f07167 lg:text-white relative lg:absolute mt-5 lg:top-5 lg:left-5 pl-5 lg:pl-0'>PIKCIR!</h1>
