@@ -17,6 +17,11 @@ export default function ShowProfile({profileShow}:ShowProfileProps) {
           </li>
           <li className='text-xs w-full mb-1'>
             <Link href={"javascript:;"} className='border-b border-dashed border-b-202124 w-full block text-202124 pb-1'>
+              Piklediklerim
+            </Link>
+          </li>
+          <li className='text-xs w-full mb-1'>
+            <Link href={"javascript:;"} className='border-b border-dashed border-b-202124 w-full block text-202124 pb-1'>
               Koleksiyonlarım
             </Link>
           </li>
