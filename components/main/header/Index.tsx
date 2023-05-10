@@ -1,6 +1,8 @@
-import { NotificationIcon } from "@/components/icons/NotificationIcon";
-import { PlusIcon } from "@/components/icons/PlusIcon";
-import { SearchIcon } from "@/components/icons/SearchIcon";
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import SearchIcon from '@mui/icons-material/Search';
+import AddIcon from '@mui/icons-material/Add';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,20 +18,21 @@ export default function Header() {
           </div>
           <div className="col-span-7 flex justify-center items-center relative">
             <input type="text" className="w-full rounded-3xl h-10 bg-ffbeb9 border border-white px-4 pl-10 text-white font-bold text-sm" ></input>
-            <button className="absolute left-2 z-10">
-              <SearchIcon />
+            <button className="absolute right-2 z-10">
+              <SearchIcon className="text-white" />
             </button>
           </div>
           <div className="col-span-3 flex justify-end items-center gap-3">
             <div className="relative cursor-pointer" title="Bildirimler">
               <div className="rounded-3xl bg-e15146 border border-white p-1 py-0 absolute -top-1 -right-1 text-white text-center text-xs">2</div>
-              <NotificationIcon />
+              <NotificationsNoneIcon className="text-white" />
             </div>
             <div className="relative cursor-pointer" title="Mesajlar">
-              DM
+              <div className="rounded-3xl bg-e15146 border border-white p-1 py-0 absolute -top-1 -right-1 text-white text-center text-xs">2</div>
+              <ChatBubbleOutlineIcon className="text-white" />
             </div>
             <div className="relative cursor-pointer" title="Yeni Ekle">
-              <PlusIcon />
+              <AddIcon className="text-white" />
             </div>
             <div className="relative cursor-pointer" title="Profilim">
               <div className="cursor pointer">
