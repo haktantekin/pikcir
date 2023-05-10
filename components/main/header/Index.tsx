@@ -11,14 +11,14 @@ export default function Header() {
     <header className={`h-12 w-full bg-f07167`}>
       <div className="container">
         <div className="grid grid-cols-12">
-          <div className="col-span-2">
+          <div className="col-span-3">
             <Link href="/home" className="w-full block">
               <Image src="/logo.png" alt="Pickup" width={384} height={114} className="w-[166px]"></Image>
             </Link>
           </div>
-          <div className="col-span-7 flex justify-center items-center relative">
+          <div className="col-span-6 flex justify-center items-center relative">
             <input type="text" className="w-full rounded-3xl h-10 bg-ffbeb9 border border-white px-4 pl-10 text-white font-bold text-sm" ></input>
-            <button className="absolute right-2 z-10">
+            <button className="absolute left-2 z-10">
               <SearchIcon className="text-white" />
             </button>
           </div>
