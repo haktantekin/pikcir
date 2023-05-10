@@ -2,11 +2,23 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import SearchIcon from '@mui/icons-material/Search';
 import AddIcon from '@mui/icons-material/Add';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from 'react';
+import ShowProfile from './ShowProfile';
 
 export default function Header() {
+  const [showProfile, setShowProfile] = useState(false);
+
+  function profileShow(value:boolean){
+    if(value === true){
+      setShowProfile(true);
+    }
+    else{
+      setShowProfile(false);
+    }
+  }
+
   return (
     <header className={`h-12 w-full bg-f07167`}>
       <div className="container">
@@ -35,13 +47,14 @@ export default function Header() {
               <AddIcon className="text-white" />
             </div>
             <div className="relative cursor-pointer" title="Profilim">
-              <div className="cursor pointer">
+              <button onClick={() => profileShow(showProfile === false ? true : false)} className="cursor pointer">
                 <Image alt="profile" src={'/profile.jpg'} width={400} height={400} className="w-9 rounded-full border border-white" />
-              </div>
+              </button>
+              {showProfile && <ShowProfile profileShow={profileShow} />}
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </header >
   )
 }
