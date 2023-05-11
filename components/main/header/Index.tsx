@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-
-
 import ShowProfile from './ShowProfile';
 import { IconCameraSearch, IconBellRinging, IconBrandHipchat, IconPlus } from '@tabler/icons-react';
-import { Menu, Button, Modal, FileButton, Group, UnstyledButton } from '@mantine/core';
+import { Menu, UnstyledButton } from '@mantine/core';
+import Notification from "./Notification";
 
 export default function Header() {
   return (
@@ -13,22 +12,21 @@ export default function Header() {
         <div className="grid grid-cols-12">
           <div className="col-span-3">
             <Link href="/home" className="w-full block">
-              <Image src="/logo-dark.png" alt="Pickup" width={160} height={47} className="w-[160px] h-[47px]"></Image>
+              <Image src="/logo-dark.png" alt="Pickup" width={160} height={47} className="w-[160px] h-[47px]" priority></Image>
             </Link>
           </div>
           <div className="col-span-6 flex justify-center items-center relative">
-            <input type="text" className="w-full rounded-3xl h-10 bg-white border border-ffbeb9 px-4 pl-10 text-ffbeb9 font-bold text-sm" ></input>
+            <input type="text" className="w-full rounded-3xl h-10 bg-white border border-e15146 px-4 pl-10 text-e15146 font-bold text-sm" ></input>
             <button className="absolute left-2 z-10">
               <IconCameraSearch size="1.7rem" stroke={1.0} className="text-f07167" />
             </button>
           </div>
           <div className="col-span-3 flex justify-end items-center gap-3">
-            <div className="relative cursor-pointer" title="Bildirimler">
-              <div className="rounded-3xl bg-e15146 border border-e15146 p-1 py-0 absolute -top-1 -right-1 text-white text-center text-xs">2</div>
-              <IconBellRinging size="1.7rem" stroke={1.0} className="text-343a40" />
+            <div className="relative cursor-pointer leading-none" title="Bildirimler">
+              <Notification />
             </div>
-            <div className="relative cursor-pointer" title="Mesajlar">
-              <div className="rounded-3xl bg-e15146 border border-e15146 p-1 py-0 absolute -top-1 -right-1 text-white text-center text-xs">2</div>
+            <div className="relative cursor-pointer leading-none hidden" title="Mesajlar">
+                <div className="rounded-3xl bg-e15146 border border-e15146 p-1 py-0 absolute -top-1 -right-1 text-white text-center text-xs">2</div>
               <IconBrandHipchat size="1.7rem" stroke={1.0} className="text-343a40" />
             </div>
             <div className="relative cursor-pointer" title="Yeni Ekle">
