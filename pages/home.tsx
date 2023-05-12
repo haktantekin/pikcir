@@ -1,5 +1,5 @@
-import HomeLeft from "@/components/layout/content/HomeLeft";
-import HomeRight from "@/components/layout/content/HomeRight";
+import HomeLeft from "@/components/layout/content/ContentLeft";
+import HomeRight from "@/components/layout/content/ContentRight";
 import Header from "@/components/main/header/Index";
 
 export default function Home() {

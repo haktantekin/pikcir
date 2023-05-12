@@ -1,7 +1,7 @@
 import { Menu } from '@mantine/core';
 import { IconAward, IconAwardFilled, IconBellRinging, IconHash, IconHome2, IconPackage, IconListDetails, IconUserCircle } from "@tabler/icons-react";
 
-export default function HomeLeft() {
+export default function ContentLeft() {
   return (
     <>
       <div className='relative col-span-2'>

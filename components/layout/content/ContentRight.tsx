@@ -5,7 +5,7 @@ import InfoBox from "./contentRight/InfoBox";
 import MonthlyWinner from "./contentRight/MonthlyWinner";
 import WeeklyWinner from "./contentRight/WeeklyWinner";
 
-export default function HomeRight() {
+export default function ContentRight() {
   return (
     <>
       <div className="col-span-3 relative">
