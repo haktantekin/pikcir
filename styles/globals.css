@@ -53,3 +53,6 @@ body{
 .cat-item label span{
   @apply text-e15146
 }
+[data-hovered]{
+  @apply bg-transparent
+}
