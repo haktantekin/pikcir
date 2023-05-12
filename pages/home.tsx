@@ -1,4 +1,5 @@
-import HomeLeft from "@/components/layout/home/HomeLeft";
+import HomeLeft from "@/components/layout/content/HomeLeft";
+import HomeRight from "@/components/layout/content/HomeRight";
 import Header from "@/components/main/header/Index";
 
 export default function Home() {
@@ -12,12 +13,7 @@ export default function Home() {
             <div className="col-span-7">
 
             </div>
-            <div className="col-span-3">
-              <div className="bg-white rounded w-full h-auto block col-span-2 border border-f07167">
-              <h2>En Üretkenler</h2>
-                
-              </div>
-            </div>
+            <HomeRight />
           </div>
         </div>
       </main>
