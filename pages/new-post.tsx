@@ -44,6 +44,8 @@ export default function NewPost() {
               <Group position="center" mt="md">
                 <Chip value="1">#serbest</Chip>
                 <Chip value="2">#spor</Chip>
+                <Chip value="2">#dizi/film</Chip>
+                <Chip value="2">#sanat</Chip>
                 <Chip value="3">#ilişki</Chip>
                 <Chip value="4">#eğitim</Chip>
                 <Chip value="5">#siyasi</Chip>
