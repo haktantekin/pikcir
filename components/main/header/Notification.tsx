@@ -30,7 +30,7 @@ export default function Notification() {
           </Menu.Item>
         </Menu.Dropdown>
       </Menu>
-      <Drawer opened={opened} onClose={close} title="Bildirimlerim" position="right" size="600">
+      <Drawer opened={opened} onClose={close} title="Bildirimlerim" position="right" size="xl" className='drawer-notification'>
         <Menu>
           <Menu.Item onMouseEnter={() => setNotRead(false)} href={"javascript:;"} className={`${notRead === true && 'bg-f5f3f4'}`} component="a" icon={<IconTrophy size={20} stroke={1.0} />}>
             Haftanın en çok pik&apos;lenenleri açıklandı! - <span className='text-xs text-gray-500'>1h</span>

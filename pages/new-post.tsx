@@ -38,7 +38,7 @@ export default function NewPost() {
         <div className='flex justify-center items-center flex-col gap-4 w-full max-w-[700px] mt-4'>
           {file && (
             <>
-              <label className='text-lg text-e15146'>Pikçır&apos;ı Tagle:</label>
+              <label className='text-lg text-e15146'>Pikçır&apos;ı Tag&apos;le:</label>
               <TagsInput />
             </>
           )}

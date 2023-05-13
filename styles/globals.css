@@ -66,3 +66,7 @@ body{
 .show-all button{
   @apply w-full text-center font-bold text-xs text-e15146 block 
 }
+
+.drawer-notification .mantine-Paper-root{
+  @apply lg:max-w-[400px]
+}
