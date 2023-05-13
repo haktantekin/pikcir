@@ -1,6 +1,6 @@
 import { useDisclosure } from '@mantine/hooks';
 import { Menu, Drawer, UnstyledButton } from '@mantine/core';
-import { IconBellRinging, IconBrandHipchat, IconMessageCircle2, IconMoodWink, IconPackage, IconTrophy } from '@tabler/icons-react';
+import { IconBellRinging, IconMessageCircle2, IconMoodWink, IconPackage, IconTrophy } from '@tabler/icons-react';
 import { useState } from 'react';
 import Link from 'next/link';
 
