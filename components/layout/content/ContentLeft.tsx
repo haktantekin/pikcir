@@ -31,7 +31,7 @@ export default function ContentLeft() {
                 Aylık Yarışmalar
               </Menu.Item>
               <Menu.Divider />
-              <Menu.Label>Pikçır&apos;lar</Menu.Label>
+              <Menu.Label>Günün Etiketleri</Menu.Label>
               <div className={"grid grid-cols-2"}>
                 <Menu.Item href={"/kategori/serbest"} component="a" icon={<IconHash size={15} stroke={0.5} className="!-mr-2" />} className="text-sm pb-0">
                   Serbest
