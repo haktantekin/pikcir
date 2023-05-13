@@ -1,7 +1,8 @@
 import { useState, useRef } from 'react';
 import Image from "next/image";
-import { Button, FileButton, Group, UnstyledButton, Chip } from '@mantine/core';
+import { Button, FileButton } from '@mantine/core';
 import Header from '@/components/main/header/Index';
+import TagsInput from '@/components/TagsInput';
 
 export default function NewPost() {
   const [file, setFile] = useState<File | null>(null);
@@ -22,20 +23,26 @@ export default function NewPost() {
           </div>
         )}
         <div className='flex gap-4'>
-          <FileButton resetRef={resetRef} onChange={setFile} accept="image/png,image/jpeg">
-            {(props) => <Button className="border border-e15146 text-e15146 hover:bg-e15146 hover:text-white" {...props}>Resim Yükle</Button>}
-          </FileButton>
-          <Button className="bg-f5f3f4 text-202124" disabled={!file} onClick={clearFile}>
-            Sıfırla
-          </Button>
-        </div>
-     
-        <div className='flex justify-center items-center flex-col gap-4 w-full max-w-[700px] mt-4'>
-          <div className='flex flex-col w-full'>
-            <label className='text-sm text-003049'>Pikçır Açıklaması:</label>
-            <input className='border-e5e5e5 border px-4 h-10 rounded mt-2 placeholder:text-003049 text-003049 text-sm' type="text" placeholder='Pikçır&apos;ı açıklayan bir yazı gir' />
+          <div className={`${!file ? 'block' : 'hidden'}`}>
+            <FileButton resetRef={resetRef} onChange={setFile} accept="image/png,image/jpeg">
+              {(props) => <Button className="border border-e15146 text-e15146 hover:bg-e15146 hover:text-white" {...props}>Resim Yükle</Button>}
+            </FileButton>
           </div>
-          <div className='w-full bg-e5e5e5 p-4 mt-4'>
+          <div className={`${!file ? 'hidden' : 'block'}`}>
+            <Button className="bg-f5f3f4 text-202124" disabled={!file} onClick={clearFile}>
+              Yenile
+            </Button>
+          </div>
+        </div>
+
+        <div className='flex justify-center items-center flex-col gap-4 w-full max-w-[700px] mt-4'>
+          {file && (
+            <>
+              <label className='text-lg text-e15146'>Pikçır&apos;ı Tagle:</label>
+              <TagsInput />
+            </>
+          )}
+          {/* <div className='w-full bg-e5e5e5 p-4 mt-4'>
           <p className='text-left'>
             İlgili pikcır hangi kategorilerde gösterilsin?
           </p>
@@ -56,10 +63,7 @@ export default function NewPost() {
               </Group>
             </Chip.Group>
           </div>
-        </div>
-          <div>
-            <UnstyledButton className="bg-e15146 w-24 flex text-center justify-center items-center h-9 rounded font-bold text-white text-base">Yollaa!</UnstyledButton>
-          </div>
+        </div> */}
         </div>
       </main>
     </>
