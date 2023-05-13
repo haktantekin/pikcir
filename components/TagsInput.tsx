@@ -34,7 +34,7 @@ export default function TagsInput() {
           {tags.map((tag: any, index: number) => (
             <div className="bg-white inline-block border-e15146 border p-2 h-auto rounded-full placeholder:text-003049 text-003049 text-xs " key={index}>
               <span className="text">#{tag}</span>
-              <span className="h-4 w-4 bg-e15146 text-white rounded-full inline-flex justify-center items-center ml-2 text-base cursor-pointer" onClick={() => removeTag(tag, index)}>&times;</span>
+              <span className="h-4 w-4 bg-e15146 text-white rounded-full inline-flex justify-center items-center ml-2 text-base cursor-pointer" onClick={() => removeTag(index)}>&times;</span>
             </div>
           ))}
           {tags.length < 5 &&
