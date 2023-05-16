@@ -1,4 +1,5 @@
 import { Menu } from '@mantine/core';
+import { IconMoodSearch } from '@tabler/icons-react';
 import { IconAward, IconAwardFilled, IconBellRinging, IconHash, IconHome2, IconPackage, IconListDetails, IconUserCircle } from "@tabler/icons-react";
 import { useState } from 'react';
 
@@ -30,6 +31,9 @@ export default function ContentLeft() {
               <Menu.Item icon={<IconBellRinging size={25} stroke={0.5} />} className="text-sm pb-0" onClick={() => linkClick(disabled === false ? true : false)}>
                 Bildirimlerim
               </Menu.Item>
+              <Menu.Item icon={<IconMoodSearch size={25} stroke={0.5} />} className="text-sm pb-0" onClick={() => linkClick(disabled === false ? true : false)}>
+                Keşfet
+              </Menu.Item>
               <Menu.Item href={"/home"} component="a" icon={<IconPackage size={25} stroke={0.5} />} className="text-sm pb-0">
                 Koleksiyonlarım
               </Menu.Item>
@@ -52,7 +56,6 @@ export default function ContentLeft() {
                 <Menu.Item href={"/kategori/serbest"} component="a" icon={<IconHash size={15} stroke={0.5} className="!-mr-2" />} className="text-sm pb-0">
                   Serbest
                 </Menu.Item>
-           
                 <Menu.Item href={"/home"} component="a" icon={<IconHash size={15} stroke={0.5} className="!-mr-2" />} className="text-sm pb-0">
                   Dizi/Film
                 </Menu.Item>
