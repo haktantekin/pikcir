@@ -1,5 +1,5 @@
-import HomeLeft from "@/components/layout/content/ContentLeft";
-import HomeRight from "@/components/layout/content/ContentRight";
+import ContentLeft from "@/components/layout/content/ContentLeft";
+import ContentRight from "@/components/layout/content/ContentRight";
 import Header from "@/components/main/header/Index";
 
 export default function Home() {
@@ -9,11 +9,11 @@ export default function Home() {
       <main className={`h-auto pb-10 lg:pb-0`}>
         <div className="container mt-3">
           <div className="grid grid-cols-12 gap-4">
-            <HomeLeft />
+            <ContentLeft />
             <div className="col-span-7">
 
             </div>
-            <HomeRight />
+            <ContentRight />
           </div>
         </div>
       </main>

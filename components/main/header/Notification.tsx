@@ -13,6 +13,7 @@ export default function Notification() {
         <Menu.Target>
           <UnstyledButton className="bg-none hover:bg-transparent px-0 mx-0">
             <div className="rounded-3xl bg-e15146 border border-e15146 p-1 py-0 absolute -top-1 -right-1 text-white text-center text-xs">9+</div>
+            <span id="show-notification" className='fixed top-0'></span>
             <IconBellRinging size="1.7rem" stroke={1.0} className="text-343a40" />
           </UnstyledButton>
         </Menu.Target>
@@ -25,7 +26,7 @@ export default function Notification() {
             Yeni bir liste açıldı <Link href="javascript:;" className='font-bold'>&apos;Karım evde yokken&apos;</Link> - <span className='text-xs text-gray-500'>1h</span>
             <Link href="javascript:;" className='block text-f07167 mt-1'>Pikçır paylaş</Link>
           </Menu.Item>
-          <Menu.Item className='text-center font-bold' onClick={open}>
+          <Menu.Item className='text-center font-bold' onClick={open} id='show-all'>
             Tümünü Gör
           </Menu.Item>
         </Menu.Dropdown>

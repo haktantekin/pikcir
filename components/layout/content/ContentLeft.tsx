@@ -1,7 +1,23 @@
 import { Menu } from '@mantine/core';
 import { IconAward, IconAwardFilled, IconBellRinging, IconHash, IconHome2, IconPackage, IconListDetails, IconUserCircle } from "@tabler/icons-react";
+import { useState } from 'react';
 
 export default function ContentLeft() {
+  const [disabled, setDisabled] = useState(false);
+  function linkClick(value: boolean) {
+    console.log(value);
+    if (value === true) {
+      document.getElementById('show-notification')?.click();
+      setTimeout(() => {
+        document.getElementById('show-all')?.click();
+        setDisabled(false);
+      }, 100);
+    }
+    else {
+      setDisabled(true);
+    }
+  }
+
   return (
     <>
       <div className='relative col-span-2'>
@@ -11,7 +27,7 @@ export default function ContentLeft() {
               <Menu.Item href={"/home"} component="a" icon={<IconHome2 size={25} stroke={0.5} />} className="text-sm pb-0">
                 Ana Sayfa
               </Menu.Item>
-              <Menu.Item href={"/home"} component="a" icon={<IconBellRinging size={25} stroke={0.5} />} className="text-sm pb-0">
+              <Menu.Item icon={<IconBellRinging size={25} stroke={0.5} />} className="text-sm pb-0" onClick={() => linkClick(disabled === false ? true : false)}>
                 Bildirimlerim
               </Menu.Item>
               <Menu.Item href={"/home"} component="a" icon={<IconPackage size={25} stroke={0.5} />} className="text-sm pb-0">
@@ -36,9 +52,7 @@ export default function ContentLeft() {
                 <Menu.Item href={"/kategori/serbest"} component="a" icon={<IconHash size={15} stroke={0.5} className="!-mr-2" />} className="text-sm pb-0">
                   Serbest
                 </Menu.Item>
-                <Menu.Item href={"/home"} component="a" icon={<IconHash size={15} stroke={0.5} className="!-mr-2" />} className="text-sm pb-0">
-                  Spor
-                </Menu.Item>
+           
                 <Menu.Item href={"/home"} component="a" icon={<IconHash size={15} stroke={0.5} className="!-mr-2" />} className="text-sm pb-0">
                   Dizi/Film
                 </Menu.Item>
