@@ -1,3 +1,4 @@
+import ContentCenter from "@/components/layout/content/ContentCenter";
 import ContentLeft from "@/components/layout/content/ContentLeft";
 import ContentRight from "@/components/layout/content/ContentRight";
 import Header from "@/components/main/header/Index";
@@ -10,9 +11,7 @@ export default function Home() {
         <div className="container mt-3">
           <div className="grid grid-cols-12 gap-4">
             <ContentLeft />
-            <div className="col-span-7">
-
-            </div>
+            <ContentCenter />
             <ContentRight />
           </div>
         </div>

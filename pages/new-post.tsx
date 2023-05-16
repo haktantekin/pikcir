@@ -42,28 +42,6 @@ export default function NewPost() {
               <TagsInput />
             </>
           )}
-          {/* <div className='w-full bg-e5e5e5 p-4 mt-4'>
-          <p className='text-left'>
-            İlgili pikcır hangi kategorilerde gösterilsin?
-          </p>
-          <div className='mt-2 cat-item'>
-            <Chip.Group multiple>
-              <Group position="center" mt="md">
-                <Chip value="1">#serbest</Chip>
-                <Chip value="2">#spor</Chip>
-                <Chip value="2">#dizi/film</Chip>
-                <Chip value="2">#sanat</Chip>
-                <Chip value="3">#ilişki</Chip>
-                <Chip value="4">#eğitim</Chip>
-                <Chip value="5">#siyasi</Chip>
-                <Chip value="6">#yetişkin</Chip>
-                <Chip value="7">#troll</Chip>
-                <Chip value="8">#tweet</Chip>
-                <Chip value="9">#karikatür</Chip>
-              </Group>
-            </Chip.Group>
-          </div>
-        </div> */}
         </div>
       </main>
     </>
