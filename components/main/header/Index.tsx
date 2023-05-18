@@ -34,7 +34,7 @@ export default function Header() {
             </div>
             <div className="relative cursor-pointer" title="Yeni Ekle">
               <UnstyledButton onClick={open}>  <IconPlus size="1.7rem" stroke={1.0} className="text-f07167" /></UnstyledButton>
-            <Modal opened={opened} onClose={close}>
+            <Modal opened={opened} onClose={close} centered>
               <NewPost/>
             </Modal>
           </div>
