@@ -14,7 +14,7 @@ export default function CreatePost() {
   };
   return (
     <>
-      <div className="col-span-7 relative">
+  
         <div className='flex flex-col'>
           {file && (
             <div className="mx-auto w-full relative">
@@ -41,7 +41,7 @@ export default function CreatePost() {
             )}
           </div>
         </div>
-      </div>
+
     </>
   )
 }
