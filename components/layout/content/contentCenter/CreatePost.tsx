@@ -14,7 +14,6 @@ export default function CreatePost() {
   };
   return (
     <>
-  
         <div className='flex flex-col'>
           {file && (
             <div className="mx-auto w-full relative">

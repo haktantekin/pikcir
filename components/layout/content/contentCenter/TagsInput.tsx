@@ -43,14 +43,14 @@ export default function TagsInput() {
                 <input
                   onKeyDown={handleKeyDown}
                   type="text"
-                  className="tags-input border-none outline-none bg-transparent text-xs w-auto flex-grow min-h-[30px] placeholder:text-202124 text-202124 font-bold"
+                  className="tags-input border-none outline-none bg-transparent text-xs w-auto flex-grow min-h-[35px] placeholder:text-202124 text-202124 font-bold"
                   placeholder={tags.length !== 0 ? 5 - tags.length + " tag daha ekleyebilirsin" : '5 tag ekleyebilirsin'} />
               }
             </div>
           </div>
         </div>
-        <div className='col-span-2'>
-          <UnstyledButton className={`w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-base ${tags.length <= 0 ? 'bg-343a40 pointer-events-none' : 'bg-e15146'}`} disabled={tags.length < 0}>Pikle!</UnstyledButton>
+        <div className='col-span-2 my-auto min-h-[53px]'>
+          <UnstyledButton className={`w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-base min-h-[53px] ${tags.length <= 0 ? 'bg-343a40 pointer-events-none' : 'bg-e15146'}`} disabled={tags.length < 0}>Pikle!</UnstyledButton>
         </div>
       </div>
     </>
