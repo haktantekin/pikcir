@@ -1,3 +1,4 @@
+import { UnstyledButton } from '@mantine/core';
 import CreatePost from './contentCenter/CreatePost';
 import PostList from './contentCenter/PostList';
 
@@ -30,7 +31,7 @@ export default function ContentCenter() {
     <>
       <div className="col-span-7 relative mb-4">
         <CreatePost />
-        <div className='text-center text-lg w-full my-4 font-bold text-e15146 border border-e15146 rounded p-1'>32 Yeni Gönderi</div>
+        <UnstyledButton className='absolute left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer'>32 Yeni Gönderi</UnstyledButton>
         <PostList
           userName={"natkahh"}
           userLink={"javascript:;"}

@@ -14,7 +14,7 @@ export default function CreatePost() {
   };
   return (
     <>
-      <div className='flex flex-col'>
+      <div className='flex flex-col mb-4'>
         {file && (
           <div className="mx-auto w-full relative">
             <div className={`${!file ? 'hidden' : 'flex justify-center items-center'} mx-aut absolute h-4 w-4 bg-e15146 text-white rounded-full inline-flex left-2 top-2 justify-center items-center text-base cursor-pointer p-0 mt-0`}>
