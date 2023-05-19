@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ShowProfile from './ShowProfile';
 import { IconCameraSearch, IconBrandHipchat, IconPlus } from '@tabler/icons-react';
-import { Menu, UnstyledButton, Modal, Button, Group } from '@mantine/core';
+import { Menu, UnstyledButton, Modal } from '@mantine/core';
 import Notification from "./Notification";
 import { useDisclosure } from '@mantine/hooks';
 import NewPost from "./NewPost";

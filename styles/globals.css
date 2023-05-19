@@ -70,3 +70,7 @@ body{
 .drawer-notification .mantine-Paper-root{
   @apply lg:max-w-[400px]
 }
+
+.mantine-Modal-title{
+  @apply text-base font-bold text-343a40
+}

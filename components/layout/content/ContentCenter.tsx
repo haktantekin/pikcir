@@ -1,6 +1,6 @@
 import { UnstyledButton } from '@mantine/core';
 import CreatePost from './contentCenter/CreatePost';
-import PostList from './contentCenter/PostList';
+import PostList from './contentCenter/post/PostList';
 
 export default function ContentCenter() {
   function postTime(time: string | number) {
@@ -40,6 +40,7 @@ export default function ContentCenter() {
           image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
           commentCount={3}
           pikCount={3}
+          admin={true}
         />
           <PostList
           userName={"natkahh"}
@@ -49,6 +50,7 @@ export default function ContentCenter() {
           image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
           commentCount={35}
           pikCount={150}
+          admin={true}
         />
       </div>
     </>
