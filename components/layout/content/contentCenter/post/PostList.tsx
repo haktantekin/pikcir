@@ -1,10 +1,12 @@
-import { IconAdFilled, IconAlarm, IconAlertSquareFilled, IconBrandHipchat, IconBrandMailgun, IconMessageDots, IconMoodWink, IconPackage, IconPhotoFilled, IconPhoto, IconShare3, IconTags } from "@tabler/icons-react";
+import { IconAdFilled, IconAlarm, IconAlertSquareFilled, IconBrandHipchat, IconBrandMailgun, IconMessageDots, IconPackage, IconPhotoFilled, IconPhoto, IconShare3, IconTags } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import { UnstyledButton, Tooltip, Modal } from '@mantine/core';
+import { UnstyledButton, Tooltip, Modal, Collapse } from '@mantine/core';
 import TagModal from "./TagModal";
 import { useState } from 'react';
 import PikModal from "./PikModal";
+import { useDisclosure } from '@mantine/hooks';
+import PostCollapse from "./PostCollapse";
 
 
 interface PostListProps {
@@ -22,6 +24,7 @@ interface PostListProps {
 export default function PostList({ userName, userLink, postLink, time, image, commentCount, pikCount, admin, postTitle }: PostListProps) {
   const [tagOpened, setTagOpened] = useState(false);
   const [pikOpened, setPikOpened] = useState(false);
+  const [opened, { toggle }] = useDisclosure(false);
   return (
     <>
       <div className="bg-white border border-e15146 p-4 rounded mb-4">
@@ -29,7 +32,10 @@ export default function PostList({ userName, userLink, postLink, time, image, co
           <div className="flex flex-row items-center gap-2">
             <Link href={userLink} className="flex flex-row items-center gap-2">
               <Image alt="profile" src={'/profile.jpg'} width={400} height={400} className="w-9 rounded-full border border-white" />
-              <span className="text-xs font-bold flex items-center text-f07167"><IconBrandMailgun size={20} /> {userName}</span>
+              <span className="text-xs font-bold flex items-center text-f07167">
+                <IconBrandMailgun size={20} />
+                {userName}
+              </span>
             </Link>
             {admin &&
               <Tooltip label="Yönetici">
@@ -61,24 +67,29 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             <Modal opened={pikOpened} onClose={() => setPikOpened(false)} centered title="Pikleyen(ler)">
               <PikModal />
             </Modal>
-            <Link href={postLink} className="flex gap-1 items-center text-sm text-f07167 border border-f07167 p-2 rounded">
+            <UnstyledButton className="flex gap-1 items-center text-sm text-f07167 border border-solid !border-f07167 p-2 rounded" onClick={toggle}>
               <IconBrandHipchat size={18} />{commentCount} Laklak
-            </Link>
+            </UnstyledButton>
           </div>
         </div>
         <div className="flex gap-2 p-3 justify-around pb-0">
           <Tooltip label="Geri Al">
             {/* <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconPhoto />Pikle!</Link> */}
-            <Link href="javascript:;" className="flex items-center gap-1 text-sm text-f07167"><IconPhotoFilled />
+            <Link href="javascript:;" className="flex items-center gap-1 text-sm text-f07167">
+              <IconPhotoFilled />
               Pikledin
             </Link>
           </Tooltip>
-          <Link href={postLink} className="flex items-center gap-1 text-sm"><IconMessageDots />Laklak Yap</Link>
-          <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconPackage />Koleksiyona Ekle</Link>
+          <UnstyledButton className="flex items-center gap-1 text-sm" onClick={toggle}><IconMessageDots />Laklak Yap</UnstyledButton>
+
+          <UnstyledButton  onClick={toggle} className="flex items-center gap-1 text-sm"><IconPackage />Koleksiyona Ekle</UnstyledButton>
           <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconShare3 />Paylaş</Link>
           <Link href="javascript:;" className="flex items-center gap-1 text-sm text-ffbeb9"><IconAlertSquareFilled />Bildir</Link>
         </div>
-      </div >
+        <Collapse in={opened} className="w-full">
+          <PostCollapse />
+        </Collapse>
+      </div>
     </>
   )
 }
