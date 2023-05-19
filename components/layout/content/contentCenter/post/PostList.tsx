@@ -2,8 +2,9 @@ import { IconAdFilled, IconAlarm, IconAlertSquareFilled, IconBrandHipchat, IconB
 import Image from "next/image";
 import Link from "next/link";
 import { UnstyledButton, Tooltip, Modal } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
 import TagModal from "./TagModal";
+import { useState } from 'react';
+import PikModal from "./PikModal";
 
 
 interface PostListProps {
@@ -19,7 +20,8 @@ interface PostListProps {
 }
 
 export default function PostList({ userName, userLink, postLink, time, image, commentCount, pikCount, admin, postTitle }: PostListProps) {
-  const [tagOpened, { open, close }] = useDisclosure(false);
+  const [tagOpened, setTagOpened] = useState(false);
+  const [pikOpened, setPikOpened] = useState(false);
   return (
     <>
       <div className="bg-white border border-e15146 p-4 rounded mb-4">
@@ -42,10 +44,10 @@ export default function PostList({ userName, userLink, postLink, time, image, co
           <Link href={postLink} className="rounded overflow-hidden mt-4 block">
             <Image alt="profile" width={740} height={200} className="w-full m-auto max-h-[1000px]" src={image} />
           </Link>
-          <UnstyledButton onClick={open} className="flex gap-1 items-center text-sm bg-f07167 text-white p-2 rounded absolute right-2 bottom-2">
+          <UnstyledButton onClick={() => setTagOpened(true)} className="flex gap-1 items-center text-sm bg-f07167 text-white p-2 rounded absolute right-2 bottom-2">
             <IconTags size={20} />
           </UnstyledButton>
-          <Modal opened={tagOpened} onClose={close} centered title="Etiket(ler)">
+          <Modal opened={tagOpened} onClose={() => setTagOpened(false)} centered title="Etiket(ler)">
             <TagModal />
           </Modal>
         </div>
@@ -55,7 +57,10 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             {postTitle && <div className="text-sm text-343a40 lowercase">{postTitle}</div>}
           </div>
           <div className="flex gap-2">
-            <UnstyledButton className="text-sm bg-f07167 text-white p-2 rounded font-bold flex gap-1 items-center"><IconPhoto /> {pikCount} Pik&apos;lenme</UnstyledButton>
+            <UnstyledButton className="text-sm bg-f07167 text-white p-2 rounded font-bold flex gap-1 items-center" onClick={() => setPikOpened(true)}><IconPhoto /> {pikCount} Pik&apos;lenme</UnstyledButton>
+            <Modal opened={pikOpened} onClose={() => setPikOpened(false)} centered title="Pikleyen(ler)">
+              <PikModal />
+            </Modal>
             <Link href={postLink} className="flex gap-1 items-center text-sm text-f07167 border border-f07167 p-2 rounded">
               <IconBrandHipchat size={18} />{commentCount} Laklak
             </Link>
@@ -63,7 +68,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
         </div>
         <div className="flex gap-2 p-3 justify-around pb-0">
           <Tooltip label="Geri Al">
-          {/* <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconPhoto />Pikle!</Link> */}
+            {/* <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconPhoto />Pikle!</Link> */}
             <Link href="javascript:;" className="flex items-center gap-1 text-sm text-f07167"><IconPhotoFilled />
               Pikledin
             </Link>
