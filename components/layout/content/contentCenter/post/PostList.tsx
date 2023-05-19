@@ -15,24 +15,27 @@ interface PostListProps {
   commentCount: number
   pikCount: number
   admin: boolean
+  postTitle?: string
 }
 
-export default function PostList({ userName, userLink, postLink, time, image, commentCount, pikCount, admin }: PostListProps) {
+export default function PostList({ userName, userLink, postLink, time, image, commentCount, pikCount, admin, postTitle }: PostListProps) {
   const [tagOpened, { open, close }] = useDisclosure(false);
   return (
     <>
       <div className="bg-white border border-e15146 p-4 rounded mb-4">
         <div className="flex flex-row justify-between border-b pb-2 px-1">
-          <Link href={userLink} className="flex flex-row items-center gap-2">
-            <Image alt="profile" src={'/profile.jpg'} width={400} height={400} className="w-9 rounded-full border border-white" />
-            <span className="text-xs font-bold flex items-center text-f07167"><IconBrandMailgun size={20} /> {userName}
-              {admin &&
-                <Tooltip label="Yönetici">
-                  <IconAdFilled size={15} className="ml-1 text-202124" />
-                </Tooltip>
-              }
-            </span>
-          </Link>
+          <div className="flex flex-row items-center gap-2">
+            <Link href={userLink} className="flex flex-row items-center gap-2">
+              <Image alt="profile" src={'/profile.jpg'} width={400} height={400} className="w-9 rounded-full border border-white" />
+              <span className="text-xs font-bold flex items-center text-f07167"><IconBrandMailgun size={20} /> {userName}</span>
+            </Link>
+            {admin &&
+              <Tooltip label="Yönetici">
+                <IconAdFilled size={15} className="-ml-1 text-202124" />
+              </Tooltip>
+            }
+            <Link href={"javascript:;"} className="flex flex-row ml-0 text-343a40 text-xs">takibe al</Link>
+          </div>
           <Link href={postLink} className="text-343a40 font-light flex items-center text-sm gap-1">&nbsp; <IconAlarm size={10} /> {time}</Link>
         </div>
         <div className="overflow-hidden max-h-[700px] relative">
@@ -46,11 +49,17 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             <TagModal />
           </Modal>
         </div>
-        <div className="flex gap-4 px-3 p-2 border-b ">
-          <UnstyledButton className="text-sm bg-f07167 text-white p-2 rounded font-bold">{pikCount} Pik&apos;lenme</UnstyledButton>
-          <Link href={postLink} className="flex gap-1 items-center text-sm text-f07167 border border-f07167 p-2 rounded">
-            <IconBrandHipchat size={18} />{commentCount} Laklak
-          </Link>
+
+        <div className="flex justify-between gap-4 p-2 border-b items-center">
+          <div className="flex flex-col items-center">
+            {postTitle && <div className="text-sm text-343a40 lowercase">{postTitle}</div>}
+          </div>
+          <div className="flex gap-2">
+            <UnstyledButton className="text-sm bg-f07167 text-white p-2 rounded font-bold">{pikCount} Pik&apos;lenme</UnstyledButton>
+            <Link href={postLink} className="flex gap-1 items-center text-sm text-f07167 border border-f07167 p-2 rounded">
+              <IconBrandHipchat size={18} />{commentCount} Laklak
+            </Link>
+          </div>
         </div>
         <div className="flex gap-2 p-3 justify-around pb-0">
           <Tooltip label="Geri Al">
@@ -64,7 +73,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
           <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconShare3 />Paylaş</Link>
           <Link href="javascript:;" className="flex items-center gap-1 text-sm text-ffbeb9"><IconAlertSquareFilled />Bildir</Link>
         </div>
-      </div>
+      </div >
     </>
   )
 }

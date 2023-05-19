@@ -41,6 +41,7 @@ export default function ContentCenter() {
           commentCount={3}
           pikCount={3}
           admin={true}
+          postTitle={"devamlı hata yapıyorumdur"}
         />
           <PostList
           userName={"natkahh"}
@@ -51,6 +52,7 @@ export default function ContentCenter() {
           commentCount={35}
           pikCount={150}
           admin={true}
+          postTitle={"chp'nin kurduğu koalisyon"}
         />
       </div>
     </>
