@@ -1,4 +1,4 @@
-import { IconAdFilled, IconAlarm, IconAlertSquareFilled, IconBrandHipchat, IconBrandMailgun, IconMessageDots, IconMoodWink, IconPackage, IconShare3, IconTags } from "@tabler/icons-react";
+import { IconAdFilled, IconAlarm, IconAlertSquareFilled, IconBrandHipchat, IconBrandMailgun, IconMessageDots, IconMoodWink, IconPackage, IconPhotoFilled, IconPhoto, IconShare3, IconTags } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { UnstyledButton, Tooltip, Modal } from '@mantine/core';
@@ -55,7 +55,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             {postTitle && <div className="text-sm text-343a40 lowercase">{postTitle}</div>}
           </div>
           <div className="flex gap-2">
-            <UnstyledButton className="text-sm bg-f07167 text-white p-2 rounded font-bold">{pikCount} Pik&apos;lenme</UnstyledButton>
+            <UnstyledButton className="text-sm bg-f07167 text-white p-2 rounded font-bold flex gap-1 items-center"><IconPhoto /> {pikCount} Pik&apos;lenme</UnstyledButton>
             <Link href={postLink} className="flex gap-1 items-center text-sm text-f07167 border border-f07167 p-2 rounded">
               <IconBrandHipchat size={18} />{commentCount} Laklak
             </Link>
@@ -63,11 +63,11 @@ export default function PostList({ userName, userLink, postLink, time, image, co
         </div>
         <div className="flex gap-2 p-3 justify-around pb-0">
           <Tooltip label="Geri Al">
-            <Link href="javascript:;" className="flex items-center gap-1 text-sm text-f07167"><IconMoodWink />
+          {/* <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconPhoto />Pikle!</Link> */}
+            <Link href="javascript:;" className="flex items-center gap-1 text-sm text-f07167"><IconPhotoFilled />
               Pikledin
             </Link>
           </Tooltip>
-          {/* <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconMoodWink />Pikle!</Link> */}
           <Link href={postLink} className="flex items-center gap-1 text-sm"><IconMessageDots />Laklak Yap</Link>
           <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconPackage />Koleksiyona Ekle</Link>
           <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconShare3 />Paylaş</Link>
