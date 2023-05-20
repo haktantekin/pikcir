@@ -45,20 +45,20 @@ export default function Notification() {
             <strong className="text-e15146">@haktan</strong> senin gönderini PİK&apos;ledi! <Link href="javascript:;" className='font-bold'>&quot;Seçim kazanırken biz&quot;</Link> - <span className='text-xs text-gray-500'>1h</span>
           </Menu.Item>
           <Menu.Item className='leading-5' href={"javascript:;"} component="a" icon={<IconPackage size={20} stroke={1.0} />}>
-            <strong className="text-e15146">@haktan</strong> senin gönderini kolesiyonuna ekledi! <Link href="javascript:;" className='font-bold'>&quot;Seçim kazanırken biz&quot;</Link> - <span className='text-xs text-gray-500'>1h</span>
+            <strong className="text-e15146">@haktan</strong> senin gönderini koleksiyonuna ekledi! <Link href="javascript:;" className='font-bold'>&quot;Seçim kazanırken biz&quot;</Link> - <span className='text-xs text-gray-500'>1h</span>
           </Menu.Item>
           <Menu.Item onMouseEnter={() => setNotRead(false)} href={"javascript:;"} className={`${notRead === true && 'bg-f5f3f4'}`} component="a" icon={<IconMessageCircle2 size={20} stroke={1.0} />}>
             <strong className="text-e15146">@haktan</strong> senin gönderine yorum yaptı <em>&quot;hahahaha&quot;</em>- <span className='text-xs text-gray-500'>1h</span>
             <Link href="javascript:;" className='block text-f07167'>Cevap ver</Link>
           </Menu.Item>
           <Menu.Item className='leading-5' href={"javascript:;"} component="a" icon={<IconPackage size={20} stroke={1.0} />}>
-            <strong className="text-e15146">@haktan</strong> senin gönderini kolesiyonuna ekledi! <Link href="javascript:;" className='font-bold'>&quot;Seçim kazanırken biz&quot;</Link> - <span className='text-xs text-gray-500'>1h</span>
+            <strong className="text-e15146">@haktan</strong> senin gönderini koleksiyonuna ekledi! <Link href="javascript:;" className='font-bold'>&quot;Seçim kazanırken biz&quot;</Link> - <span className='text-xs text-gray-500'>1h</span>
           </Menu.Item>
           <Menu.Item onMouseEnter={() => setNotRead(false)} href={"javascript:;"} className={`${notRead === true && 'bg-f5f3f4'}`} component="a" icon={<IconMoodWink size={20} stroke={1.0} />}>
             <strong className="text-e15146">@haktan</strong> senin gönderini PİK&apos;ledi! <Link href="javascript:;" className='font-bold'>&quot;Seçim kazanırken biz&quot;</Link> - <span className='text-xs text-gray-500'>1h</span>
           </Menu.Item>
           <Menu.Item className='leading-5' href={"javascript:;"} component="a" icon={<IconPackage size={20} stroke={1.0} />}>
-            <strong className="text-e15146">@haktan</strong> senin gönderini kolesiyonuna ekledi! <Link href="javascript:;" className='font-bold'>&quot;Seçim kazanırken biz&quot;</Link> - <span className='text-xs text-gray-500'>1h</span>
+            <strong className="text-e15146">@haktan</strong> senin gönderini koleksiyonuna ekledi! <Link href="javascript:;" className='font-bold'>&quot;Seçim kazanırken biz&quot;</Link> - <span className='text-xs text-gray-500'>1h</span>
           </Menu.Item>
         </Menu>
       </Drawer>

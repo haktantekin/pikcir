@@ -54,7 +54,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             <Image alt="profile" width={740} height={200} className="w-full m-auto max-h-[1000px]" src={image} />
           </Link>
           <UnstyledButton onClick={() => setTagOpened(true)} className="flex gap-1 items-center text-sm bg-f07167 text-white p-2 rounded absolute right-2 bottom-2">
-            <IconTags size={20} />
+            <IconTags size={18} />
           </UnstyledButton>
           <Modal opened={tagOpened} onClose={() => setTagOpened(false)} centered title="Etiket(ler)">
             <TagModal />
@@ -66,7 +66,8 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             {postTitle && <div className="text-sm text-343a40 lowercase">{postTitle}</div>}
           </div>
           <div className="flex gap-2">
-            <UnstyledButton className="text-sm bg-f07167 text-white p-2 rounded font-bold flex gap-1 items-center" onClick={() => setPikOpened(true)}><IconPhoto /> {pikCount} Pik&apos;lenme</UnstyledButton>
+            <UnstyledButton className="text-sm bg-f07167 text-white p-2 rounded font-bold flex gap-1 items-center" onClick={() => setPikOpened(true)}>
+              <IconPhoto size={18} /> {pikCount} Pik&apos;lenme</UnstyledButton>
             <Modal opened={pikOpened} onClose={() => setPikOpened(false)} centered title="Pikleyen(ler)">
               <PikModal />
             </Modal>
@@ -77,21 +78,21 @@ export default function PostList({ userName, userLink, postLink, time, image, co
         </div>
         <div className="flex gap-2 p-3 justify-between pb-0">
 
-          {pik === false && <button className="flex items-center gap-1 text-sm" onClick={() => setPik(true)}><IconPhoto />Pikle!</button>}
+          {pik === false && <button className="flex items-center gap-1 text-sm" onClick={() => setPik(true)}><IconPhoto size={18} />Pikle!</button>}
           {pik === true &&
             <button className="flex items-center gap-1 text-sm text-f07167" onClick={() => setPik(false)}>
-              <IconPhotoFilled />
+              <IconPhotoFilled size={18} />
               Pikledin
             </button>
           }
-          <UnstyledButton className="flex items-center gap-1 text-sm" onClick={toggle}><IconMessageDots />Laklak Yap</UnstyledButton>
-          <UnstyledButton onClick={open} className="flex items-center gap-1 text-sm"><IconPackage />Koleksiyona Ekle</UnstyledButton>
+          <UnstyledButton className="flex items-center gap-1 text-sm" onClick={toggle}><IconMessageDots size={18} />Laklak Yap</UnstyledButton>
+          <UnstyledButton onClick={open} className="flex items-center gap-1 text-sm"><IconPackage size={18} />Koleksiyona Ekle</UnstyledButton>
           <Drawer opened={openDraw} onClose={close} title="Koleksiyonlarım">
             <CollapseCollectionList />
           </Drawer>
 
-          <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconShare3 />Paylaş</Link>
-          <Link href="javascript:;" className="flex items-center gap-1 text-sm text-ffbeb9"><IconAlertSquareFilled /></Link>
+          <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconShare3 size={18} />Paylaş</Link>
+          <Link href="javascript:;" className="flex items-center gap-1 text-sm text-ffbeb9"><IconAlertSquareFilled size={18} /></Link>
         </div>
         <Collapse in={opened} className="w-full">
           <PostCollapse />
