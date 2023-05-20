@@ -133,7 +133,7 @@ export default function PostCollapse() {
             </Spoiler>
               <div className="grid grid-cols-12 w-full">
                 <div className="col-span-11">
-                  <input type="text" placeholder="goygoy yap" className="w-full border-b" />
+                  <input type="text" placeholder="goygoy yap" className="w-full border-b text-xs" />
                 </div>
                 <div className="col-span-1 flex justify-center items-center">
                   <button>
