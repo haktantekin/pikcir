@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Tabs, Spoiler } from '@mantine/core';
 import Image from "next/image";
 import CollapseCollectionList from "./CollapseCollectionList";
+import { IconSend } from "@tabler/icons-react";
 
 
 export default function PostCollapse() {
@@ -130,6 +131,16 @@ export default function PostCollapse() {
                 </div>
               </div>
             </Spoiler>
+              <div className="grid grid-cols-12 w-full">
+                <div className="col-span-11">
+                  <input type="text" placeholder="goygoy yap" className="w-full border-b" />
+                </div>
+                <div className="col-span-1 flex justify-center items-center">
+                  <button>
+                    <IconSend/>
+                  </button>
+                </div>
+              </div>
           </Tabs.Panel>
           <Tabs.Panel value="collection" pt="xs">
             <CollapseCollectionList />
