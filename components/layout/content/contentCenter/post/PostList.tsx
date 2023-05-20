@@ -1,12 +1,13 @@
 import { IconAdFilled, IconAlarm, IconAlertSquareFilled, IconBrandHipchat, IconBrandMailgun, IconMessageDots, IconPackage, IconPhotoFilled, IconPhoto, IconShare3, IconTags } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import { UnstyledButton, Tooltip, Modal, Collapse } from '@mantine/core';
+import { UnstyledButton, Tooltip, Modal, Collapse, Drawer } from '@mantine/core';
 import TagModal from "./TagModal";
 import { useState } from 'react';
 import PikModal from "./PikModal";
 import { useDisclosure } from '@mantine/hooks';
 import PostCollapse from "./PostCollapse";
+import CollapseCollectionList from "./CollapseCollectionList";
 
 
 interface PostListProps {
@@ -26,6 +27,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
   const [pikOpened, setPikOpened] = useState(false);
   const [pik, setPik] = useState(false);
   const [opened, { toggle }] = useDisclosure(false);
+  const [openDraw, { open, close }] = useDisclosure(false);
   return (
     <>
       <div className="bg-white p-4 rounded mb-4" style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
@@ -83,7 +85,11 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             </button>
           }
           <UnstyledButton className="flex items-center gap-1 text-sm" onClick={toggle}><IconMessageDots />Laklak Yap</UnstyledButton>
-          <UnstyledButton onClick={toggle} className="flex items-center gap-1 text-sm"><IconPackage />Koleksiyona Ekle</UnstyledButton>
+          <UnstyledButton onClick={open} className="flex items-center gap-1 text-sm"><IconPackage />Koleksiyona Ekle</UnstyledButton>
+          <Drawer opened={openDraw} onClose={close} title="Koleksiyonlarım">
+            <CollapseCollectionList />
+          </Drawer>
+
           <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconShare3 />Paylaş</Link>
           <Link href="javascript:;" className="flex items-center gap-1 text-sm text-ffbeb9"><IconAlertSquareFilled /></Link>
         </div>
