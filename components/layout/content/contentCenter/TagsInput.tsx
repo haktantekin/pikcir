@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { UnstyledButton } from '@mantine/core';
+import { UnstyledButton, Input, Tooltip } from '@mantine/core';
+import { IconBrandTwitter, IconAlertCircle, IconInfoSmall, IconAlignJustified } from '@tabler/icons-react';
 
 export default function TagsInput() {
   const [tags, setTags]: any = useState([])
@@ -30,6 +31,21 @@ export default function TagsInput() {
   return (
     <>
       <div className='grid grid-cols-12 w-full gap-2'>
+        <div className='col-span-12 post-title'>
+          <Input
+            icon={<IconAlignJustified size="1rem" />}
+            className=''
+            placeholder="Pikçır'ın esprisi nedir?"
+            maxLength={80}
+            rightSection={
+              <Tooltip label="80 karakter" position="top-end" withArrow>
+                <div>
+                  <IconAlertCircle size="1rem" style={{ display: 'block', opacity: 0.5 }} />
+                </div>
+              </Tooltip>
+            }
+          />
+        </div>
         <div className='col-span-10'>
           <div className='flex flex-col w-full bg-white border border-e15146 rounded p-2'>
             <div className="w-full flex items-center flex-wrap gap-2">
