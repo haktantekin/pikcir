@@ -22,7 +22,7 @@ export default function ContentLeft() {
   return (
     <>
       <div className='relative col-span-2'>
-        <div className="bg-white rounded border border-f07167 absolute left-0 w-full" style={{ gridAutoRows: "min-content" }}>
+        <div className="bg-white rounded absolute left-0 w-full" style={{ gridAutoRows: "min-content", boxShadow:'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
           <div className='home-left w-full'>
             <Menu>
               <Menu.Item href={"/home"} component="a" icon={<IconHome2 size={25} stroke={0.5} />} className="text-sm pb-0">

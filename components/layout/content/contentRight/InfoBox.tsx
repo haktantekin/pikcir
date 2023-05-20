@@ -5,7 +5,7 @@ import { Tabs, Spoiler } from '@mantine/core';
 export default function InfoBox() {
   return (
     <>
-      <div className="bg-white rounded w-full h-auto block col-span-2 border border-f07167 p-3 mt-3">
+      <div className="bg-white rounded w-full h-auto block col-span-2 p-3 mt-3" style={{ boxShadow:'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
         <Tabs defaultValue="pik" className="tab-active">
           <Tabs.List className="w-full justify-around border-b-0">
             <Tabs.Tab className="px-0" value="pik">En Fazla Pik&apos;lenenler</Tabs.Tab>

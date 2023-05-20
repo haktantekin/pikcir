@@ -10,7 +10,7 @@ import NewPost from "./NewPost";
 export default function Header() {
   const [opened, { open, close }] = useDisclosure(false);
   return (
-    <header className={`h-12 w-full bg-white border-b border-f07167`}>
+    <header className={`h-12 w-full bg-white`} style={{boxShadow:'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px'}}>
       <div className="container">
         <div className="grid grid-cols-12">
           <div className="col-span-3">

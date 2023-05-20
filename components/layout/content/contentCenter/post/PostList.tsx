@@ -27,7 +27,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
   const [opened, { toggle }] = useDisclosure(false);
   return (
     <>
-      <div className="bg-white border border-e15146 p-4 rounded mb-4">
+      <div className="bg-white p-4 rounded mb-4" style={{ boxShadow:'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
         <div className="flex flex-row justify-between border-b pb-2 px-1">
           <div className="flex flex-row items-center gap-2">
             <Link href={userLink} className="flex flex-row items-center gap-2">
