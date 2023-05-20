@@ -77,12 +77,10 @@ export default function PostList({ userName, userLink, postLink, time, image, co
 
           {pik === false && <button className="flex items-center gap-1 text-sm" onClick={() => setPik(true)}><IconPhoto />Pikle!</button>}
           {pik === true &&
-            <Tooltip label="Geri Al">
-              <button className="flex items-center gap-1 text-sm text-f07167" onClick={() => setPik(false)}>
-                <IconPhotoFilled />
-                Pikledin
-              </button>
-            </Tooltip>
+            <button className="flex items-center gap-1 text-sm text-f07167" onClick={() => setPik(false)}>
+              <IconPhotoFilled />
+              Pikledin
+            </button>
           }
           <UnstyledButton className="flex items-center gap-1 text-sm" onClick={toggle}><IconMessageDots />Laklak Yap</UnstyledButton>
           <UnstyledButton onClick={toggle} className="flex items-center gap-1 text-sm"><IconPackage />Koleksiyona Ekle</UnstyledButton>
