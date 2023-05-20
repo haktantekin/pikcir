@@ -1,7 +1,6 @@
-import { Menu, Button, Text } from '@mantine/core';
-import { IconSettings, IconSearch, IconPhoto, IconMessageCircle, IconTrash, IconArrowsLeftRight, IconShare3, IconBrandFacebook, IconBrandTwitter, IconBrandWhatsapp, IconLink, IconBrandPinterest, IconDownload } from '@tabler/icons-react';
+import { Menu } from '@mantine/core';
+import { IconShare3, IconBrandFacebook, IconBrandTwitter, IconBrandWhatsapp, IconLink, IconBrandPinterest, IconDownload } from '@tabler/icons-react';
 import Link from 'next/link';
-
 
 export default function PostShare() {
   return (

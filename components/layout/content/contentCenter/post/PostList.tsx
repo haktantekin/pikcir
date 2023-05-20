@@ -9,6 +9,7 @@ import { useDisclosure } from '@mantine/hooks';
 import PostCollapse from "./PostCollapse";
 import CollapseCollectionList from "./CollapseCollectionList";
 import PostShare from "./PostShare";
+import ReportModal from "./ReportModal";
 
 
 interface PostListProps {
@@ -26,6 +27,7 @@ interface PostListProps {
 export default function PostList({ userName, userLink, postLink, time, image, commentCount, pikCount, admin, postTitle }: PostListProps) {
   const [tagOpened, setTagOpened] = useState(false);
   const [pikOpened, setPikOpened] = useState(false);
+  const [reportOpened, setReportOpened] = useState(false);
   const [pik, setPik] = useState(false);
   const [opened, { toggle }] = useDisclosure(false);
   const [openDraw, { open, close }] = useDisclosure(false);
@@ -90,7 +92,10 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             <CollapseCollectionList />
           </Drawer>
           <PostShare />
-          <Link href="javascript:;" className="flex items-center gap-1 text-sm text-ffbeb9"><IconAlertSquareFilled size={18} /></Link>
+          <button className="flex items-center gap-1 text-sm text-ffbeb9" onClick={() => setReportOpened(true)}><IconAlertSquareFilled size={18} /></button>
+          <Modal opened={reportOpened} onClose={() => setReportOpened(false)} centered title="Rapor Et">
+            <ReportModal />
+          </Modal>
         </div>
         <Collapse in={opened} className="w-full">
           <PostCollapse />
