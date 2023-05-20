@@ -8,6 +8,7 @@ import PikModal from "./PikModal";
 import { useDisclosure } from '@mantine/hooks';
 import PostCollapse from "./PostCollapse";
 import CollapseCollectionList from "./CollapseCollectionList";
+import PostShare from "./PostShare";
 
 
 interface PostListProps {
@@ -60,7 +61,6 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             <TagModal />
           </Modal>
         </div>
-
         <div className="flex justify-between gap-4 p-2 border-b items-center">
           <div className="flex flex-col items-center">
             {postTitle && <div className="text-sm text-343a40 lowercase">{postTitle}</div>}
@@ -77,7 +77,6 @@ export default function PostList({ userName, userLink, postLink, time, image, co
           </div>
         </div>
         <div className="flex gap-2 p-3 justify-between pb-0">
-
           {pik === false && <button className="flex items-center gap-1 text-sm" onClick={() => setPik(true)}><IconPhoto size={18} />Pikle!</button>}
           {pik === true &&
             <button className="flex items-center gap-1 text-sm text-f07167" onClick={() => setPik(false)}>
@@ -90,8 +89,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
           <Drawer opened={openDraw} onClose={close} title="Koleksiyonlarım">
             <CollapseCollectionList />
           </Drawer>
-
-          <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconShare3 size={18} />Paylaş</Link>
+          <PostShare />
           <Link href="javascript:;" className="flex items-center gap-1 text-sm text-ffbeb9"><IconAlertSquareFilled size={18} /></Link>
         </div>
         <Collapse in={opened} className="w-full">
