@@ -73,7 +73,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             </UnstyledButton>
           </div>
         </div>
-        <div className="flex gap-2 p-3 justify-around pb-0">
+        <div className="flex gap-2 p-3 justify-between pb-0">
 
           {pik === false && <button className="flex items-center gap-1 text-sm" onClick={() => setPik(true)}><IconPhoto />Pikle!</button>}
           {pik === true &&
@@ -85,7 +85,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
           <UnstyledButton className="flex items-center gap-1 text-sm" onClick={toggle}><IconMessageDots />Laklak Yap</UnstyledButton>
           <UnstyledButton onClick={toggle} className="flex items-center gap-1 text-sm"><IconPackage />Koleksiyona Ekle</UnstyledButton>
           <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconShare3 />Paylaş</Link>
-          <Link href="javascript:;" className="flex items-center gap-1 text-sm text-ffbeb9"><IconAlertSquareFilled />Bildir</Link>
+          <Link href="javascript:;" className="flex items-center gap-1 text-sm text-ffbeb9"><IconAlertSquareFilled /></Link>
         </div>
         <Collapse in={opened} className="w-full">
           <PostCollapse />
