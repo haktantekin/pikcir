@@ -24,10 +24,11 @@ interface PostListProps {
 export default function PostList({ userName, userLink, postLink, time, image, commentCount, pikCount, admin, postTitle }: PostListProps) {
   const [tagOpened, setTagOpened] = useState(false);
   const [pikOpened, setPikOpened] = useState(false);
+  const [pik, setPik] = useState(false);
   const [opened, { toggle }] = useDisclosure(false);
   return (
     <>
-      <div className="bg-white p-4 rounded mb-4" style={{ boxShadow:'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
+      <div className="bg-white p-4 rounded mb-4" style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
         <div className="flex flex-row justify-between border-b pb-2 px-1">
           <div className="flex flex-row items-center gap-2">
             <Link href={userLink} className="flex flex-row items-center gap-2">
@@ -73,15 +74,18 @@ export default function PostList({ userName, userLink, postLink, time, image, co
           </div>
         </div>
         <div className="flex gap-2 p-3 justify-around pb-0">
-          <Tooltip label="Geri Al">
-            {/* <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconPhoto />Pikle!</Link> */}
-            <Link href="javascript:;" className="flex items-center gap-1 text-sm text-f07167">
-              <IconPhotoFilled />
-              Pikledin
-            </Link>
-          </Tooltip>
+
+          {pik === false && <button className="flex items-center gap-1 text-sm" onClick={() => setPik(true)}><IconPhoto />Pikle!</button>}
+          {pik === true &&
+            <Tooltip label="Geri Al">
+              <button className="flex items-center gap-1 text-sm text-f07167" onClick={() => setPik(false)}>
+                <IconPhotoFilled />
+                Pikledin
+              </button>
+            </Tooltip>
+          }
           <UnstyledButton className="flex items-center gap-1 text-sm" onClick={toggle}><IconMessageDots />Laklak Yap</UnstyledButton>
-          <UnstyledButton  onClick={toggle} className="flex items-center gap-1 text-sm"><IconPackage />Koleksiyona Ekle</UnstyledButton>
+          <UnstyledButton onClick={toggle} className="flex items-center gap-1 text-sm"><IconPackage />Koleksiyona Ekle</UnstyledButton>
           <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconShare3 />Paylaş</Link>
           <Link href="javascript:;" className="flex items-center gap-1 text-sm text-ffbeb9"><IconAlertSquareFilled />Bildir</Link>
         </div>
