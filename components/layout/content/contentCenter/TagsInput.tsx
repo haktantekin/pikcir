@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { UnstyledButton, Textarea, Tooltip } from '@mantine/core';
-import { IconBrandTwitter, IconAlertCircle, IconInfoSmall, IconAlignJustified } from '@tabler/icons-react';
+import { UnstyledButton, Textarea, Tooltip, Chip } from '@mantine/core';
+import { IconAlertCircle } from '@tabler/icons-react';
 
 export default function TagsInput() {
   const [tags, setTags]: any = useState([])
+  const [collection, setCollection]: any = useState(false)
 
   function handleKeyDown(e: any) {
     if (e.key === ' ') {
@@ -63,6 +64,18 @@ export default function TagsInput() {
               }
             </div>
           </div>
+        </div>
+        <div className='col-span-12 grid grid-cols-12'>
+          <div className='flex gap-2 chip-item col-span-5 min-h-[30px] justify-center items-center'>
+            <Chip onChange={()=> setCollection(collection === false ? true : false)} className=''>Koleksiyona Ekle</Chip>
+          </div>
+          {collection &&
+            <div className='col-span-7'>
+              <select className='w-full min-h-[30px] rounded border border-e15146 text-sm'>
+                <option value={1}>Whatsapp Resimleri</option>
+              </select>
+            </div>
+          }
         </div>
         <div className='col-span-12 my-auto'>
           <UnstyledButton className={`w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-base max-w-[100px] mx-auto min-h-[40px] ${tags.length <= 0 ? 'bg-343a40 pointer-events-none' : 'bg-e15146'}`} disabled={tags.length < 0}>Pikle!</UnstyledButton>
