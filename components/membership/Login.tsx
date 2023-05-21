@@ -17,7 +17,7 @@ export default function Login() {
         <Link href="/forgot-password" className='ml-auto text-f07167 text-sm border-b border-b-f07167'>
           şifrem neydi yaa
         </Link>
-        <button className='font-bold text-base text-003049 border border-003049 rounded py-2 px-10 mx-auto hover:bg-003049 hover:text-white' style={{ boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px" }}>FİŞEKLE!</button>
+        <button className='font-bold text-base text-003049 border border-003049 rounded py-2 px-10 mx-auto hover:bg-003049 hover:text-white' style={{ boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px" }}>GİRİŞ YAP</button>
       </div>
     </>
   )
