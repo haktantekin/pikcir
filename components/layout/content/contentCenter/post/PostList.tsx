@@ -15,6 +15,7 @@ import ReportModal from "./ReportModal";
 interface PostListProps {
   userName: string,
   userLink: string,
+  profileImage: string,
   postLink: string,
   time: string | number,
   image: string,
@@ -24,7 +25,7 @@ interface PostListProps {
   postTitle?: string
 }
 
-export default function PostList({ userName, userLink, postLink, time, image, commentCount, pikCount, admin, postTitle }: PostListProps) {
+export default function PostList({ userName, userLink, postLink, time, image, commentCount, pikCount, admin, postTitle, profileImage }: PostListProps) {
   const [tagOpened, setTagOpened] = useState(false);
   const [pikOpened, setPikOpened] = useState(false);
   const [reportOpened, setReportOpened] = useState(false);
@@ -37,7 +38,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
         <div className="flex flex-row justify-between border-b pb-2 px-1">
           <div className="flex flex-row items-center gap-2">
             <Link href={userLink} className="flex flex-row items-center gap-2">
-              <Image alt="profile" src={'/profile.jpg'} width={400} height={400} className="w-9 rounded-full border border-white" />
+              <Image alt="profile" src={profileImage} width={400} height={400} className="w-9 rounded-full border-2 border-solid border-ffbeb9" />
               <span className="text-xs font-bold flex items-center text-f07167">
                 <IconBrandMailgun size={20} />
                 {userName}
@@ -54,7 +55,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
         </div>
         <div className="overflow-hidden max-h-[700px] relative">
           <Link href={postLink} className="rounded overflow-hidden mt-4 block">
-            <Image alt="profile" width={740} height={200} className="w-full m-auto max-h-[1000px]" src={image} />
+            <Image alt="profile" width={740} height={200} className="w-full m-auto max-h-[1000px] " src={image} />
           </Link>
           <UnstyledButton onClick={() => setTagOpened(true)} className="flex gap-1 items-center text-sm bg-f07167 text-white p-2 rounded absolute right-2 bottom-2">
             <IconTags size={18} />

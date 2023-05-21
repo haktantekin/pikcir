@@ -11,7 +11,7 @@ export default function Home() {
         <div className="container mt-3">
           <div className="grid grid-cols-12 gap-4">
             <ContentLeft />
-            <ContentCenter />
+            <ContentCenter type="home" />
             <ContentRight />
           </div>
         </div>

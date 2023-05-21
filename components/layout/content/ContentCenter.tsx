@@ -1,8 +1,12 @@
-import { UnstyledButton } from '@mantine/core';
+import { UnstyledButton, Tabs } from '@mantine/core';
 import CreatePost from './contentCenter/CreatePost';
 import PostList from './contentCenter/post/PostList';
 
-export default function ContentCenter() {
+interface ContentCenterProps {
+  type: string
+}
+
+export default function ContentCenter({ type }) {
   function postTime(time: string | number) {
     let paylasilanTarih: any = new Date(time);
     let suAnkiTarih: any = new Date();
@@ -16,11 +20,11 @@ export default function ContentCenter() {
       if (dakikaFarki > 60) {
         return time = saatFarki + ' saat';
       }
-      else{
+      else {
         return time = dakikaFarki + ' dakika';
       }
-    } 
-    else if(yilFarki > 0){
+    }
+    else if (yilFarki > 0) {
       return time = yilFarki + ' yıl';
     }
     else {
@@ -31,29 +35,100 @@ export default function ContentCenter() {
     <>
       <div className="col-span-7 relative mb-4">
         <CreatePost />
-        <UnstyledButton className='absolute left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer'>32 Yeni Gönderi</UnstyledButton>
-        <PostList
-          userName={"natkahh"}
-          userLink={"javascript:;"}
-          postLink={"javascript:;"}
-          time={postTime("2023-05-18T23:11:00")}
-          image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
-          commentCount={3}
-          pikCount={3}
-          admin={true}
-          postTitle={"devamlı hata yapıyorumdur"}
-        />
-          <PostList
-          userName={"natkahh"}
-          userLink={"javascript:;"}
-          postLink={"javascript:;"}
-          time={postTime("2023-05-18T23:11:00")}
-          image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
-          commentCount={35}
-          pikCount={150}
-          admin={true}
-          postTitle={"chp'nin kurduğu koalisyon"}
-        />
+        {type === 'home' ?
+          <>
+            <Tabs defaultValue="karma" className="tab-active">
+              <Tabs.List className="w-full justify-around border-b-0 bg-white py-2 font-bold rounded" style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
+                <Tabs.Tab className="px-0 text-f07167" value="karma">Karma</Tabs.Tab>
+                <Tabs.Tab className="px-0 text-f07167" value="followed">Takip Ettiklerin</Tabs.Tab>
+              </Tabs.List>
+              <Tabs.Panel value="karma" pt="xs">
+                <UnstyledButton className='absolute left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer'>32 Yeni Gönderi</UnstyledButton>
+                <PostList
+                  userName={"can"}
+                  userLink={"javascript:;"}
+                  postLink={"javascript:;"}
+                  profileImage={"/noImage.png"}
+                  time={postTime("2023-05-21T10:11:00")}
+                  image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
+                  commentCount={3}
+                  pikCount={3}
+                  admin={true}
+                  postTitle={"devamlı hata yapıyorumdur"}
+                />
+                <PostList
+                  userName={"can"}
+                  userLink={"javascript:;"}
+                  postLink={"javascript:;"}
+                  profileImage={"/noImage.png"}
+                  time={postTime("2023-05-21T10:11:00")}
+                  image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
+                  commentCount={35}
+                  pikCount={150}
+                  admin={true}
+                  postTitle={"chp'nin kurduğu koalisyon"}
+                />
+              </Tabs.Panel>
+
+              <Tabs.Panel value="followed" pt="xs">
+                <PostList
+                  userName={"natkahh"}
+                  userLink={"javascript:;"}
+                  postLink={"javascript:;"}
+                  profileImage={"/profile.jpg"}
+                  time={postTime("2023-05-18T23:11:00")}
+                  image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
+                  commentCount={3}
+                  pikCount={3}
+                  admin={true}
+                  postTitle={"devamlı hata yapıyorumdur"}
+                />
+                <PostList
+                  userName={"natkahh"}
+                  userLink={"javascript:;"}
+                  postLink={"javascript:;"}
+                  profileImage={"/profile.jpg"}
+                  time={postTime("2023-05-18T23:11:00")}
+                  image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
+                  commentCount={35}
+                  pikCount={150}
+                  admin={true}
+                  postTitle={"chp'nin kurduğu koalisyon"}
+                />
+              </Tabs.Panel>
+            </Tabs>
+
+
+          </>
+          :
+          <>
+            <PostList
+              userName={"natkahh"}
+              userLink={"javascript:;"}
+              profileImage={"/profile.jpg"}
+              postLink={"javascript:;"}
+              time={postTime("2023-05-18T23:11:00")}
+              image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
+              commentCount={3}
+              pikCount={3}
+              admin={true}
+              postTitle={"devamlı hata yapıyorumdur"}
+            />
+            <PostList
+              userName={"natkahh"}
+              userLink={"javascript:;"}
+              profileImage={"/profile.jpg"}
+              postLink={"javascript:;"}
+              time={postTime("2023-05-18T23:11:00")}
+              image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
+              commentCount={35}
+              pikCount={150}
+              admin={true}
+              postTitle={"chp'nin kurduğu koalisyon"}
+            />
+          </>
+        }
+
       </div>
     </>
   )

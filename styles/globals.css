@@ -47,10 +47,10 @@ body{
     -1px 1px 0 #202124,
     1px 1px 0 #202124;
 }
-.cat-item label[data-checked]:not([data-disabled]){
+.chip-item label[data-checked]:not([data-disabled]){
   @apply border-e15146
 }
-.cat-item label span{
+.chip-item label span{
   @apply text-e15146
 }
 .home-left [data-hovered]{
