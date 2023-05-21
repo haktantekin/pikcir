@@ -43,7 +43,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                 <Tabs.Tab className="px-0 text-f07167" value="followed">Takip Ettiklerin</Tabs.Tab>
               </Tabs.List>
               <Tabs.Panel value="karma" pt="xs">
-                <UnstyledButton className='absolute left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>32 Yeni Gönderi</UnstyledButton>
+                <UnstyledButton className='relative mb-2 left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>32 Yeni Gönderi</UnstyledButton>
                 <PostList
                   userName={"can"}
                   userLink={"javascript:;"}
@@ -71,7 +71,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
               </Tabs.Panel>
 
               <Tabs.Panel value="followed" pt="xs">
-                <UnstyledButton className='absolute left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>19 Yeni Gönderi</UnstyledButton>
+                <UnstyledButton className='relative mb-2 left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>19 Yeni Gönderi</UnstyledButton>
                 <PostList
                   userName={"natkahh"}
                   userLink={"javascript:;"}
