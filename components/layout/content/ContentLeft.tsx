@@ -1,6 +1,5 @@
 import { Menu } from '@mantine/core';
-import { IconMoodSearch } from '@tabler/icons-react';
-import { IconAward, IconAwardFilled, IconBellRinging, IconHash, IconHome2, IconPackage, IconListDetails, IconUserCircle } from "@tabler/icons-react";
+import { IconAward, IconCameraSearch, IconAwardFilled, IconBellRinging, IconHome2, IconPackage, IconListDetails, IconUserCircle } from "@tabler/icons-react";
 import { useState } from 'react';
 
 export default function ContentLeft() {
@@ -31,7 +30,7 @@ export default function ContentLeft() {
               <Menu.Item icon={<IconBellRinging size={25} stroke={0.5} />} className="text-sm pb-0" onClick={() => linkClick(disabled === false ? true : false)}>
                 Bildirimlerim
               </Menu.Item>
-              <Menu.Item icon={<IconMoodSearch size={25} stroke={0.5} />} className="text-sm pb-0" onClick={() => linkClick(disabled === false ? true : false)}>
+              <Menu.Item href={"/explore"} component="a"icon={<IconCameraSearch size={25} stroke={0.5} />} className="text-sm pb-0">
                 Keşfet
               </Menu.Item>
               <Menu.Item href={"/home"} component="a" icon={<IconPackage size={25} stroke={0.5} />} className="text-sm pb-0">

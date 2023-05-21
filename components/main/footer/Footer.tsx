@@ -16,7 +16,7 @@ export default function Footer() {
           <IconHome2 size={"1.7rem"} stroke={1.0} />
         </Link>
 
-        <Link href="/home" className="flex justify-center items-center">
+        <Link href="/explore" className="flex justify-center items-center">
           <IconCameraSearch size={"1.7rem"} stroke={1.0} />
         </Link>
         <div className="relative cursor-pointer flex justify-center" title="Yeni Ekle">

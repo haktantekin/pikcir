@@ -1,6 +1,8 @@
 import { UnstyledButton, Tabs } from '@mantine/core';
 import CreatePost from './contentCenter/CreatePost';
 import PostList from './contentCenter/post/PostList';
+import TagList from './contentCenter/TagList';
+import Search from '@/components/main/Search';
 
 interface ContentCenterProps {
   type: string
@@ -34,9 +36,9 @@ export default function ContentCenter({ type }: ContentCenterProps) {
   return (
     <>
       <div className="col-span-12 lg:col-span-7 relative mb-4">
-        <CreatePost />
         {type === 'home' ?
           <>
+            <CreatePost />
             <Tabs defaultValue="karma" className="tab-active">
               <Tabs.List className="w-full justify-around border-b-0 bg-white py-2 font-bold rounded" style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
                 <Tabs.Tab className="px-0 text-f07167" value="karma">Karma</Tabs.Tab>
@@ -101,6 +103,21 @@ export default function ContentCenter({ type }: ContentCenterProps) {
           </>
           :
           <>
+            {type === 'explore' &&
+              <>
+                <div className='flex lg:hidden relative mt-4 justify-center items-center'>
+                  <Search />
+                </div>
+                <TagList />
+              </>
+            }
+            {type === 'search' &&
+              <>
+                <section className="w-full bg-white rounded mb-4 mt-4 lg:mt-0 text-sm text-center min-h-[40px] flex justify-center items-center" style={{ boxShadow: 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px' }}>
+                  <span className='font-bold text-sm text-ffbeb9'>&quot;deli&quot;</span>&nbsp;araması ile alakalı pikçır&apos;lar
+                </section>
+              </>
+            }
             <PostList
               userName={"natkahh"}
               userLink={"javascript:;"}

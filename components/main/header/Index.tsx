@@ -8,6 +8,7 @@ import { useDisclosure } from '@mantine/hooks';
 import NewPost from "./NewPost";
 import ShowProfileMobile from "./ShowProfileMobile";
 import { useState } from "react";
+import Search from "../Search";
 
 export default function Header() {
   const [opened, { open, close }] = useDisclosure(false);
@@ -22,10 +23,7 @@ export default function Header() {
             </Link>
           </div>
           <div className="col-span-6 lg:col-span-7 hidden lg:flex justify-center items-center relative">
-            <input type="text" className="w-full rounded-3xl h-10 bg-white border border-e15146 px-4 pl-10 text-e15146 font-bold text-sm" ></input>
-            <button className="absolute left-2 z-10">
-              <IconCameraSearch size="1.7rem" stroke={1.0} className="text-f07167" />
-            </button>
+          <Search />
           </div>
           <div className="col-span-2 lg:col-span-3 flex justify-end items-center gap-3 h-full absolute lg:relative right-4 lg:right-0 top-0">
             <div className="relative cursor-pointer leading-none hidden lg:inline-block" title="Bildirimler">
