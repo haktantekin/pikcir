@@ -33,7 +33,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
   }
   return (
     <>
-      <div className="col-span-7 relative mb-4">
+      <div className="col-span-12 lg:col-span-7 relative mb-4">
         <CreatePost />
         {type === 'home' ?
           <>
@@ -43,7 +43,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                 <Tabs.Tab className="px-0 text-f07167" value="followed">Takip Ettiklerin</Tabs.Tab>
               </Tabs.List>
               <Tabs.Panel value="karma" pt="xs">
-                <UnstyledButton className='absolute left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer'>32 Yeni Gönderi</UnstyledButton>
+                <UnstyledButton className='absolute left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>32 Yeni Gönderi</UnstyledButton>
                 <PostList
                   userName={"can"}
                   userLink={"javascript:;"}
@@ -53,7 +53,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
                   commentCount={3}
                   pikCount={3}
-                  admin={true}
+                  admin={false}
                   postTitle={"devamlı hata yapıyorumdur"}
                 />
                 <PostList
@@ -65,13 +65,13 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
                   commentCount={35}
                   pikCount={150}
-                  admin={true}
+                  admin={false}
                   postTitle={"chp'nin kurduğu koalisyon"}
                 />
               </Tabs.Panel>
 
               <Tabs.Panel value="followed" pt="xs">
-              <UnstyledButton className='absolute left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer'>19 Yeni Gönderi</UnstyledButton>
+                <UnstyledButton className='absolute left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>19 Yeni Gönderi</UnstyledButton>
                 <PostList
                   userName={"natkahh"}
                   userLink={"javascript:;"}
@@ -98,8 +98,6 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                 />
               </Tabs.Panel>
             </Tabs>
-
-
           </>
           :
           <>

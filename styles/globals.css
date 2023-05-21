@@ -78,3 +78,7 @@ body{
 .post-title .mantine-Input-input{
   @apply border-e15146
 }
+
+.mantine-Spoiler-root .mantine-Text-root{
+  @apply py-2
+}

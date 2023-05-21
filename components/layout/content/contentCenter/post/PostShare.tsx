@@ -7,7 +7,7 @@ export default function PostShare() {
     <>
       <Menu shadow="md" width={200}>
         <Menu.Target>
-          <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconShare3 size={18} />Paylaş</Link>
+          <Link href="javascript:;" className="flex items-center gap-1 text-sm"><IconShare3 size={18} /><span className="hidden lg:inline-block">Paylaş</span></Link>
         </Menu.Target>
         <Menu.Dropdown>
           <Menu.Item icon={<IconLink size={18} />}>Linki Kopyala</Menu.Item>

@@ -4,6 +4,7 @@ import { IconUserCircle, IconMoodWink, IconPackage, IconLogout2 } from '@tabler/
 export default function ShowProfile() {
   return (
     <>
+    
       <Menu.Label>Merhaba @haktan</Menu.Label>
       <Menu.Item href={"javascript:;"} component="a" icon={<IconUserCircle size={17} stroke={1.0} />}>
         Profilim

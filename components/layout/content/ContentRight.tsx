@@ -8,7 +8,7 @@ import WeeklyWinner from "./contentRight/WeeklyWinner";
 export default function ContentRight() {
   return (
     <>
-      <div className="col-span-3 relative">
+      <div className="hidden lg:block col-span-3 relative">
         <div className="absolute w-full">
           <WeeklyWinner />
           <MonthlyWinner />

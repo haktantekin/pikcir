@@ -21,7 +21,7 @@ export default function ContentLeft() {
 
   return (
     <>
-      <div className='relative col-span-2'>
+      <div className='hidden lg:block relative col-span-2'>
         <div className="bg-white rounded absolute left-0 w-full" style={{ gridAutoRows: "min-content", boxShadow:'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
           <div className='home-left w-full'>
             <Menu>

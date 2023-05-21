@@ -12,7 +12,7 @@ export default function Notification() {
       <Menu shadow="md" width={300} withArrow closeOnItemClick={true}>
         <Menu.Target>
           <UnstyledButton className="bg-none hover:bg-transparent px-0 mx-0">
-            <div className="rounded-3xl bg-e15146 border border-e15146 p-1 py-0 absolute -top-1 -right-1 text-white text-center text-xs">9+</div>
+            <div className="rounded-3xl bg-e15146 border border-e15146 p-1 py-0 absolute top-1 lg:-top-1 -right-1 text-white text-center text-xs">9+</div>
             <span id="show-notification" className='fixed top-0'></span>
             <IconBellRinging size="1.7rem" stroke={1.0} className="text-343a40" />
           </UnstyledButton>
