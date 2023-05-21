@@ -6,7 +6,7 @@ interface ContentCenterProps {
   type: string
 }
 
-export default function ContentCenter({ type }) {
+export default function ContentCenter({ type }: ContentCenterProps) {
   function postTime(time: string | number) {
     let paylasilanTarih: any = new Date(time);
     let suAnkiTarih: any = new Date();
@@ -71,6 +71,7 @@ export default function ContentCenter({ type }) {
               </Tabs.Panel>
 
               <Tabs.Panel value="followed" pt="xs">
+              <UnstyledButton className='absolute left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer'>19 Yeni Gönderi</UnstyledButton>
                 <PostList
                   userName={"natkahh"}
                   userLink={"javascript:;"}
