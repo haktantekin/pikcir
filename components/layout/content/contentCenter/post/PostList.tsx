@@ -38,7 +38,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
         <div className="flex flex-row justify-between border-b pb-2 px-1">
           <div className="flex flex-row items-center gap-2">
             <Link href={userLink} className="flex flex-row items-center gap-2">
-              <Image alt="profile" src={profileImage} width={400} height={400} className="w-9 rounded-full border-2 border-solid border-ffbeb9" />
+              <Image alt="profile" src={profileImage} width={400} height={400} className="w-9 rounded-full" style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }} />
               <span className="text-xs font-bold flex items-center text-f07167">
                 <IconBrandMailgun size={20} />
                 {userName}
