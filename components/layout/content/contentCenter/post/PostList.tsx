@@ -23,9 +23,10 @@ interface PostListProps {
   pikCount: number
   admin: boolean
   postTitle?: string
+  profile: boolean
 }
 
-export default function PostList({ userName, userLink, postLink, time, image, commentCount, pikCount, admin, postTitle, profileImage }: PostListProps) {
+export default function PostList({ userName, userLink, postLink, time, image, commentCount, pikCount, admin, postTitle, profileImage, profile }: PostListProps) {
   const [tagOpened, setTagOpened] = useState(false);
   const [pikOpened, setPikOpened] = useState(false);
   const [reportOpened, setReportOpened] = useState(false);
@@ -49,7 +50,9 @@ export default function PostList({ userName, userLink, postLink, time, image, co
                 <IconAdFilled size={15} className="-ml-1 text-202124" />
               </Tooltip>
             }
-            <Link href={"javascript:;"} className="flex flex-row ml-0 text-343a40 text-xs">takibe al</Link>
+            {!profile &&
+              <Link href={"javascript:;"} className="flex flex-row ml-0 text-343a40 text-xs">takibe al</Link>
+            }
           </div>
           <Link href={postLink} className="text-343a40 font-light flex items-center text-sm gap-1">&nbsp; <IconAlarm size={10} /> {time}</Link>
         </div>

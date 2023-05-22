@@ -11,7 +11,7 @@ export default function PostShare() {
         </Menu.Target>
         <Menu.Dropdown>
           <Menu.Item icon={<IconLink size={18} />}>Linki Kopyala</Menu.Item>
-          <Menu.Item icon={<IconDownload size={18} />}>Resmi İndir</Menu.Item>
+          <Menu.Item icon={<IconDownload size={18} />} disabled>Resmi İndir</Menu.Item>
           <Menu.Item icon={<IconBrandWhatsapp size={18} />}>Whatsapp&apos;a Gönder</Menu.Item>
           <Menu.Item icon={<IconSticker size={18} />}>Sticker Yap</Menu.Item>
           <Menu.Item icon={<IconBrandTwitter size={18} />}>Twitter</Menu.Item>

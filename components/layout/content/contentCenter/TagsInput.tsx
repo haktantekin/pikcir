@@ -66,11 +66,11 @@ export default function TagsInput() {
           </div>
         </div>
         <div className='col-span-12 grid grid-cols-12'>
-          <div className='flex gap-2 chip-item col-span-5 min-h-[30px] justify-center items-center'>
-            <Chip onChange={()=> setCollection(collection === false ? true : false)} className=''><span className='hidden lg:inline-block'>Koleksiyona Ekle</span> <span className='inline-block lg:hidden'>Koleksiyon</span></Chip>
+          <div className='flex gap-2 chip-item col-span-3 min-h-[30px] justify-center items-center'>
+            <Chip onChange={()=> setCollection(collection === false ? true : false)}><span className='hidden lg:inline-block'>Koleksiyona Ekle</span> <span className='inline-block lg:hidden'>Koleksiyon</span></Chip>
           </div>
           {collection &&
-            <div className='col-span-7'>
+            <div className='col-span-9'>
               <select className='w-full min-h-[30px] rounded border border-e15146 text-sm'>
                 <option value={1}>Whatsapp Resimleri</option>
               </select>

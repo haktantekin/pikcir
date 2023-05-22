@@ -36,7 +36,7 @@ export default function ContentLeft() {
               <Menu.Item href={"/home"} component="a" icon={<IconPackage size={25} stroke={0.5} />} className="text-sm pb-0">
                 Koleksiyonlarım
               </Menu.Item>
-              <Menu.Item href={"/home"} component="a" icon={<IconUserCircle size={25} stroke={0.5} />} className="text-sm">
+              <Menu.Item href={"/profile"} component="a" icon={<IconUserCircle size={25} stroke={0.5} />} className="text-sm">
                 Profilim
               </Menu.Item>
               <Menu.Divider />

@@ -3,6 +3,8 @@ import CreatePost from './contentCenter/CreatePost';
 import PostList from './contentCenter/post/PostList';
 import TagList from './contentCenter/TagList';
 import Search from '@/components/main/Search';
+import ProfileHeader from './profile/ProfileHeader';
+import ProfileContent from './profile/ProfileContent';
 
 interface ContentCenterProps {
   type: string
@@ -57,6 +59,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   pikCount={3}
                   admin={false}
                   postTitle={"devamlı hata yapıyorumdur"}
+                  profile={false}
                 />
                 <PostList
                   userName={"can"}
@@ -69,6 +72,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   pikCount={150}
                   admin={false}
                   postTitle={"chp'nin kurduğu koalisyon"}
+                  profile={false}
                 />
               </Tabs.Panel>
 
@@ -85,6 +89,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   pikCount={3}
                   admin={true}
                   postTitle={"devamlı hata yapıyorumdur"}
+                  profile={false}
                 />
                 <PostList
                   userName={"natkahh"}
@@ -97,6 +102,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   pikCount={150}
                   admin={true}
                   postTitle={"chp'nin kurduğu koalisyon"}
+                  profile={false}
                 />
               </Tabs.Panel>
             </Tabs>
@@ -118,30 +124,42 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                 </section>
               </>
             }
-            <PostList
-              userName={"natkahh"}
-              userLink={"javascript:;"}
-              profileImage={"/profile.jpg"}
-              postLink={"javascript:;"}
-              time={postTime("2023-05-18T23:11:00")}
-              image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
-              commentCount={3}
-              pikCount={3}
-              admin={true}
-              postTitle={"devamlı hata yapıyorumdur"}
-            />
-            <PostList
-              userName={"natkahh"}
-              userLink={"javascript:;"}
-              profileImage={"/profile.jpg"}
-              postLink={"javascript:;"}
-              time={postTime("2023-05-18T23:11:00")}
-              image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
-              commentCount={35}
-              pikCount={150}
-              admin={true}
-              postTitle={"chp'nin kurduğu koalisyon"}
-            />
+            {type === 'profile' ?
+              <>
+                <ProfileHeader />
+                <ProfileContent />
+              </>
+              :
+              <>
+                <PostList
+                  userName={"natkahh"}
+                  userLink={"javascript:;"}
+                  profileImage={"/profile.jpg"}
+                  postLink={"javascript:;"}
+                  time={postTime("2023-05-18T23:11:00")}
+                  image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
+                  commentCount={3}
+                  pikCount={3}
+                  admin={true}
+                  postTitle={"devamlı hata yapıyorumdur"}
+                  profile={false}
+                />
+                <PostList
+                  userName={"natkahh"}
+                  userLink={"javascript:;"}
+                  profileImage={"/profile.jpg"}
+                  postLink={"javascript:;"}
+                  time={postTime("2023-05-18T23:11:00")}
+                  image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
+                  commentCount={35}
+                  pikCount={150}
+                  admin={true}
+                  postTitle={"chp'nin kurduğu koalisyon"}
+                  profile={false}
+                />
+              </>
+            }
+
           </>
         }
 

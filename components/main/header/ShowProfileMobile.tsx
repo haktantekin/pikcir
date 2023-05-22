@@ -10,7 +10,7 @@ export default function ShowProfileMobile() {
         <Menu.Item href={"/home"} component="a" icon={<IconHome2 size={25} stroke={1.0} />} className="text-sm pb-0">
           Ana Sayfa
         </Menu.Item>
-        <Menu.Item href={"/home"} component="a" icon={<IconUserCircle size={25} stroke={1.0} />} className="text-sm pb-0">
+        <Menu.Item href={"/profile"} component="a" icon={<IconUserCircle size={25} stroke={1.0} />} className="text-sm pb-0">
           Profilim
         </Menu.Item>
         <Menu.Item href={"javascript:;"} component="a" icon={<IconMoodWink size={25} stroke={1.0} />} className="text-sm pb-0">
@@ -19,7 +19,7 @@ export default function ShowProfileMobile() {
         <Menu.Item href={"javascript:;"} component="a" icon={<IconPackage size={25} stroke={1.0} />} className="text-sm pb-0">
           Koleksiyonlarım
         </Menu.Item>
-        <Menu.Item icon={<IconMoodSearch size={25} stroke={1.0} />} className="text-sm">
+        <Menu.Item href={"explore"} component="a" icon={<IconMoodSearch size={25} stroke={1.0} />} className="text-sm">
           Keşfet
         </Menu.Item>
         <Menu.Divider />

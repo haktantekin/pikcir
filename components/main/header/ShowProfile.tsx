@@ -6,7 +6,7 @@ export default function ShowProfile() {
     <>
     
       <Menu.Label>Merhaba @haktan</Menu.Label>
-      <Menu.Item href={"javascript:;"} component="a" icon={<IconUserCircle size={17} stroke={1.0} />}>
+      <Menu.Item href={"/profile"} component="a" icon={<IconUserCircle size={17} stroke={1.0} />}>
         Profilim
       </Menu.Item>
       <Menu.Item href={"javascript:;"} component="a" icon={<IconMoodWink size={17} stroke={1.0} />}>
