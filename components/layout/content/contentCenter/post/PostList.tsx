@@ -64,7 +64,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             {postTitle && <div className="text-sm italic text-343a40 lowercase">{postTitle}</div>}
           </div>
         }
-        <div className="overflow-hidden max-h-[700px] relative">
+        <div className="overflow-hidden max-h-[500px] relative">
           <Link href={postLink} className="rounded overflow-hidden block">
             <Image alt="profile" width={740} height={200} className="w-full m-auto max-h-[1000px] " src={image} />
           </Link>
@@ -73,58 +73,52 @@ export default function PostList({ userName, userLink, postLink, time, image, co
               {postTitle && <div className="text-sm italic text-343a40 lowercase">{postTitle}</div>}
             </div>
           }
-          {!collectionItem &&
-            <>
-              <UnstyledButton onClick={() => setTagOpened(true)} className="flex gap-1 items-center justify-center text-sm bg-f07167 text-white p-2 lg:min-w-[38px] lg:min-h-[38px] rounded absolute right-2 bottom-2">
-                <IconTags size={18} />
-              </UnstyledButton>
-              <Modal opened={tagOpened} onClose={() => setTagOpened(false)} centered title="Etiket(ler)">
-                <TagModal />
+          <UnstyledButton onClick={() => setTagOpened(true)} className="flex gap-1 items-center justify-center text-sm bg-f07167 text-white p-2 lg:min-w-[38px] lg:min-h-[38px] rounded absolute right-2 bottom-2">
+            <IconTags size={18} />
+          </UnstyledButton>
+          <Modal opened={tagOpened} onClose={() => setTagOpened(false)} centered title="Etiket(ler)">
+            <TagModal />
+          </Modal>
+          <div className="flex justify-between gap-2 lg:gap-4  items-center flex-col lg:flex-row absolute bottom-2 left-2">
+            <div className="flex gap-2">
+              <UnstyledButton className="text-sm bg-f07167 text-white p-1 lg:p-2 rounded font-bold flex gap-1 items-center" onClick={() => setPikOpened(true)}>
+                <IconPhoto size={18} /> {pikCount} <span className="hidden lg:inline-block">Pik&apos;lenme</span></UnstyledButton>
+              <Modal opened={pikOpened} onClose={() => setPikOpened(false)} centered title="Pikleyen(ler)">
+                <PikModal />
               </Modal>
-              <div className="flex justify-between gap-2 lg:gap-4  items-center flex-col lg:flex-row absolute bottom-2 left-2">
-                <div className="flex gap-2">
-                  <UnstyledButton className="text-sm bg-f07167 text-white p-1 lg:p-2 rounded font-bold flex gap-1 items-center" onClick={() => setPikOpened(true)}>
-                    <IconPhoto size={18} /> {pikCount} <span className="hidden lg:inline-block">Pik&apos;lenme</span></UnstyledButton>
-                  <Modal opened={pikOpened} onClose={() => setPikOpened(false)} centered title="Pikleyen(ler)">
-                    <PikModal />
-                  </Modal>
-                  <UnstyledButton className="flex gap-1 items-center text-sm text-f07167 border border-solid !border-f07167 p-1 lg:p-2 rounded bg-white" onClick={toggle}>
-                    <IconBrandHipchat size={18} />{commentCount} <span className="hidden lg:inline-block">Laklak</span>
-                  </UnstyledButton>
-                </div>
-              </div>
-            </>
-          }
-        </div>
-        {!collectionItem &&
-          <div className="flex gap-2 p-3 pl-0 pr-0 lg:pr-3 lg:pl-3 justify-between pb-0 min-h-[30px] lg:min-h-[40px] items-center">
-            {pik === false && <button className="flex items-center gap-1 text-sm" onClick={() => setPik(true)}><IconPhoto size={18} />Pikle!</button>}
-            {pik === true &&
-              <button className="flex items-center gap-1 text-sm text-f07167" onClick={() => setPik(false)}>
-                <IconPhotoFilled size={18} />
-                Pikledin
-              </button>
-            }
-            <UnstyledButton className="flex items-center gap-1 text-sm" onClick={toggle}>
-              <IconMessageDots size={18} />
-              <span className="hidden lg:inline-block">Laklak Yap</span>
-            </UnstyledButton>
-            <UnstyledButton onClick={open} className="flex items-center gap-1 text-sm">
-              <IconPackage size={18} />
-              <span className="hidden lg:inline-block">Koleksiyona Ekle</span>
-            </UnstyledButton>
-            <Drawer opened={openDraw} onClose={close} title="Koleksiyonlarım">
-              <CollapseCollectionList />
-            </Drawer>
-            <PostShare />
-            <button className="flex items-center gap-1 text-sm text-ffbeb9" onClick={() => setReportOpened(true)}>
-              <IconAlertSquareFilled size={18} />
-            </button>
-            <Modal opened={reportOpened} onClose={() => setReportOpened(false)} centered title="Rapor Et">
-              <ReportModal />
-            </Modal>
+              <UnstyledButton className="flex gap-1 items-center text-sm text-f07167 border border-solid !border-f07167 p-1 lg:p-2 rounded bg-white" onClick={toggle}>
+                <IconBrandHipchat size={18} />{commentCount} <span className="hidden lg:inline-block">Laklak</span>
+              </UnstyledButton>
+            </div>
           </div>
-        }
+        </div>
+        <div className="flex gap-2 p-3 pl-0 pr-0 lg:pr-3 lg:pl-3 justify-between pb-0 min-h-[30px] lg:min-h-[40px] items-center">
+          {pik === false && <button className="flex items-center gap-1 text-sm" onClick={() => setPik(true)}><IconPhoto size={18} />Pikle!</button>}
+          {pik === true &&
+            <button className="flex items-center gap-1 text-sm text-f07167" onClick={() => setPik(false)}>
+              <IconPhotoFilled size={18} />
+              Pikledin
+            </button>
+          }
+          <UnstyledButton className="flex items-center gap-1 text-sm" onClick={toggle}>
+            <IconMessageDots size={18} />
+            <span className="hidden lg:inline-block">Laklak Yap</span>
+          </UnstyledButton>
+          <UnstyledButton onClick={open} className="flex items-center gap-1 text-sm">
+            <IconPackage size={18} />
+            <span className="hidden lg:inline-block">Koleksiyona Ekle</span>
+          </UnstyledButton>
+          <Drawer opened={openDraw} onClose={close} title="Koleksiyonlarım">
+            <CollapseCollectionList />
+          </Drawer>
+          <PostShare />
+          <button className="flex items-center gap-1 text-sm text-ffbeb9" onClick={() => setReportOpened(true)}>
+            <IconAlertSquareFilled size={18} />
+          </button>
+          <Modal opened={reportOpened} onClose={() => setReportOpened(false)} centered title="Rapor Et">
+            <ReportModal />
+          </Modal>
+        </div>
         <Collapse in={opened} className="w-full">
           <PostCollapse />
         </Collapse>

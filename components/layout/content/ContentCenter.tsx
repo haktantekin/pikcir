@@ -37,7 +37,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
   }
   return (
     <>
-      <div className="col-span-12 lg:col-span-7 relative mb-4">
+      <div className="col-span-12 lg:col-span-7 relative mb-4 mt-4 lg:mt-0">
         {type === 'home' ?
           <>
             <CreatePost />
@@ -60,7 +60,6 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   admin={false}
                   postTitle={"devamlı hata yapıyorumdur"}
                   profile={false}
-                  collectionItem={false}
                 />
                 <PostList
                   userName={"can"}
@@ -74,7 +73,6 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   admin={false}
                   postTitle={"chp'nin kurduğu koalisyon"}
                   profile={false}
-                  collectionItem={false}
                 />
               </Tabs.Panel>
 
@@ -92,7 +90,6 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   admin={true}
                   postTitle={"devamlı hata yapıyorumdur"}
                   profile={false}
-                  collectionItem={false}
                 />
                 <PostList
                   userName={"natkahh"}
@@ -106,7 +103,6 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   admin={true}
                   postTitle={"chp'nin kurduğu koalisyon"}
                   profile={false}
-                  collectionItem={false}
                 />
               </Tabs.Panel>
             </Tabs>
@@ -147,7 +143,6 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   admin={true}
                   postTitle={"devamlı hata yapıyorumdur"}
                   profile={false}
-                  collectionItem={false}
                 />
                 <PostList
                   userName={"natkahh"}
@@ -161,7 +156,6 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   admin={true}
                   postTitle={"chp'nin kurduğu koalisyon"}
                   profile={false}
-                  collectionItem={false}
                 />
               </>
             }

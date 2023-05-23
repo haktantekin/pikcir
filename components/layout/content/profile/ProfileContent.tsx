@@ -1,7 +1,7 @@
 import { Tabs } from '@mantine/core';
 import PostList from './../contentCenter/post/PostList';
 import CollectionListItem from '../profile/CollectionListItem';
-import { IconSquareRoundedPlus } from '@tabler/icons-react';
+import { IconSquareRoundedPlus, IconArrowNarrowLeft } from '@tabler/icons-react';
 import { useState } from 'react';
 
 export default function ProfileContent() {
@@ -86,6 +86,7 @@ export default function ProfileContent() {
             admin={false}
             postTitle={"devamlı hata yapıyorumdur"}
             profile={false}
+            collectionItem={false}
           />
           <PostList
             userName={"can"}
@@ -99,6 +100,7 @@ export default function ProfileContent() {
             admin={false}
             postTitle={"chp'nin kurduğu koalisyon"}
             profile={false}
+            collectionItem={false}
           />
         </Tabs.Panel>
         <Tabs.Panel value="collection" pt="lg">
@@ -121,7 +123,9 @@ export default function ProfileContent() {
             </>
             :
             <>
-              <div className='grid grid-cols-2 gap-4'>
+              <div className='w-full bg-white rounded mb-4 text-sm text-center min-h-[40px] flex justify-center items-center relative' style={{ boxShadow: "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px" }}>
+                <button className="absolute left-4 top-2" onClick={() => setCollectionDetail(false)}><IconArrowNarrowLeft /></button><span className="font-bold text-sm text-ffbeb9">Komik Resimler</span>&nbsp;Koleksiyonu</div>
+              <div className='grid grid-cols-1 gap-4'>
                 <PostList
                   userName={"natkah"}
                   userLink={"javascript:;"}
@@ -150,7 +154,7 @@ export default function ProfileContent() {
                   profile={true}
                   collectionItem={true}
                 />
-                  <PostList
+                <PostList
                   userName={"natkah"}
                   userLink={"javascript:;"}
                   postLink={"javascript:;"}
@@ -164,7 +168,7 @@ export default function ProfileContent() {
                   profile={true}
                   collectionItem={true}
                 />
-                  <PostList
+                <PostList
                   userName={"natkah"}
                   userLink={"javascript:;"}
                   postLink={"javascript:;"}

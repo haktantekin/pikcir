@@ -25,7 +25,7 @@ export default function CollectionListItem({ name, link, item, count, collectCli
               {count}
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {item.map((e: any, index: number) => (
               <>
                 <div className="w-full rounded overflow-hidden" key={index}>
@@ -35,7 +35,7 @@ export default function CollectionListItem({ name, link, item, count, collectCli
             ))}
           </div>
         </Link>
-          <button className="font-bold font-base text-xs text-center mt-4 text-f07167" onClick={collectClick}>Koleksiyonu Gör</button>
+          <button className="font-bold font-base text-xs text-center mt-4 text-f07167 mx-auto flex" onClick={collectClick}>Koleksiyonu Gör</button>
       </div>
     </>
   )
