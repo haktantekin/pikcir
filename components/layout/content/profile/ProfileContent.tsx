@@ -1,9 +1,16 @@
 import { Tabs } from '@mantine/core';
 import PostList from './../contentCenter/post/PostList';
-import CollectionItem from '../CollectionItem';
+import CollectionListItem from '../profile/CollectionListItem';
 import { IconSquareRoundedPlus } from '@tabler/icons-react';
+import { useState } from 'react';
 
 export default function ProfileContent() {
+  const [collectionDetail, setCollectionDetail] = useState(false);
+
+  const collectClick = (): void => {
+    setCollectionDetail(true);
+  }
+
   function postTime(time: string | number) {
     let paylasilanTarih: any = new Date(time);
     let suAnkiTarih: any = new Date();
@@ -49,6 +56,7 @@ export default function ProfileContent() {
             admin={false}
             postTitle={"devamlı hata yapıyorumdur"}
             profile={true}
+            collectionItem={false}
           />
           <PostList
             userName={"natkah"}
@@ -62,6 +70,7 @@ export default function ProfileContent() {
             admin={false}
             postTitle={"chp'nin kurduğu koalisyon"}
             profile={true}
+            collectionItem={false}
           />
         </Tabs.Panel>
         <Tabs.Panel value="piklediklerim" pt="lg">
@@ -76,7 +85,7 @@ export default function ProfileContent() {
             pikCount={3}
             admin={false}
             postTitle={"devamlı hata yapıyorumdur"}
-            profile={true}
+            profile={false}
           />
           <PostList
             userName={"can"}
@@ -89,23 +98,89 @@ export default function ProfileContent() {
             pikCount={150}
             admin={false}
             postTitle={"chp'nin kurduğu koalisyon"}
-            profile={true}
+            profile={false}
           />
         </Tabs.Panel>
         <Tabs.Panel value="collection" pt="lg">
-
-          <div className='w-full text-right pr-4 mb-4 text-f07167 font-bold flex justify-center gap-1 text-xs items-center'><IconSquareRoundedPlus size={18} /> Yeni Oluştur</div>
-          <CollectionItem
-            name="Komik Resimler"
-            link="/natkah/collections/komik-resimler"
-            item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
-            count={68} />
-          <CollectionItem
-            name="Küfürlü Resimler"
-            link="/natkah/collections/kufurlu-resimler"
-            item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
-            count={19} />
-
+          {!collectionDetail ?
+            <>
+              <div className='w-full text-right pr-4 mb-4 text-f07167 font-bold flex justify-center gap-1 text-xs items-center'><IconSquareRoundedPlus size={18} /> Yeni Oluştur</div>
+              <CollectionListItem
+                name="Komik Resimler"
+                link="/natkah/collections/komik-resimler"
+                item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
+                count={68}
+                collectClick={collectClick}
+              />
+              <CollectionListItem
+                name="Küfürlü Resimler"
+                link="/natkah/collections/kufurlu-resimler"
+                item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
+                count={19}
+                collectClick={collectClick} />
+            </>
+            :
+            <>
+              <div className='grid grid-cols-2 gap-4'>
+                <PostList
+                  userName={"natkah"}
+                  userLink={"javascript:;"}
+                  postLink={"javascript:;"}
+                  profileImage={"/profile.jpg"}
+                  time={postTime("2023-05-21T10:11:00")}
+                  image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
+                  commentCount={3}
+                  pikCount={3}
+                  admin={false}
+                  postTitle={"devamlı hata yapıyorumdur"}
+                  profile={true}
+                  collectionItem={true}
+                />
+                <PostList
+                  userName={"natkah"}
+                  userLink={"javascript:;"}
+                  postLink={"javascript:;"}
+                  profileImage={"/profile.jpg"}
+                  time={postTime("2023-05-21T10:11:00")}
+                  image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
+                  commentCount={3}
+                  pikCount={3}
+                  admin={false}
+                  postTitle={"devamlı hata yapıyorumdur"}
+                  profile={true}
+                  collectionItem={true}
+                />
+                  <PostList
+                  userName={"natkah"}
+                  userLink={"javascript:;"}
+                  postLink={"javascript:;"}
+                  profileImage={"/profile.jpg"}
+                  time={postTime("2023-05-21T10:11:00")}
+                  image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
+                  commentCount={3}
+                  pikCount={3}
+                  admin={false}
+                  postTitle={"devamlı hata yapıyorumdur"}
+                  profile={true}
+                  collectionItem={true}
+                />
+                  <PostList
+                  userName={"natkah"}
+                  userLink={"javascript:;"}
+                  postLink={"javascript:;"}
+                  profileImage={"/profile.jpg"}
+                  time={postTime("2023-05-21T10:11:00")}
+                  image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
+                  commentCount={3}
+                  pikCount={3}
+                  admin={false}
+                  postTitle={"devamlı hata yapıyorumdur"}
+                  profile={true}
+                  collectionItem={true}
+                />
+              </div>
+            </>
+          }
         </Tabs.Panel>
       </Tabs>
     </>

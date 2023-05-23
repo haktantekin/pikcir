@@ -1,17 +1,17 @@
 import { IconAlbum } from "@tabler/icons-react"
 import Image from "next/image"
 import Link from "next/link"
-import { ReactElement } from "react"
 
 
-interface CollectionItemProps {
+interface CollectionListItemProps {
   name: string,
   link: string,
   item: any,
-  count: number
+  count: number,
+  collectClick:any
 }
 
-export default function CollectionItem({ name, link, item, count }: CollectionItemProps) {
+export default function CollectionItem({ name, link, item, count, collectClick }: CollectionListItemProps) {
   return (
     <>
       <div className="w-full bg-white border rounded min-h-[200px] p-4 mb-4">
@@ -34,8 +34,8 @@ export default function CollectionItem({ name, link, item, count }: CollectionIt
               </>
             ))}
           </div>
-          <div className="font-bold font-base text-xs text-center mt-4 text-f07167">Koleksiyonu Gör</div>
         </Link>
+          <button className="font-bold font-base text-xs text-center mt-4 text-f07167" onClick={collectClick}>Koleksiyonu Gör</button>
       </div>
     </>
   )

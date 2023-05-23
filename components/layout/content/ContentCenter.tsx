@@ -60,6 +60,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   admin={false}
                   postTitle={"devamlı hata yapıyorumdur"}
                   profile={false}
+                  collectionItem={false}
                 />
                 <PostList
                   userName={"can"}
@@ -73,6 +74,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   admin={false}
                   postTitle={"chp'nin kurduğu koalisyon"}
                   profile={false}
+                  collectionItem={false}
                 />
               </Tabs.Panel>
 
@@ -90,6 +92,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   admin={true}
                   postTitle={"devamlı hata yapıyorumdur"}
                   profile={false}
+                  collectionItem={false}
                 />
                 <PostList
                   userName={"natkahh"}
@@ -103,6 +106,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   admin={true}
                   postTitle={"chp'nin kurduğu koalisyon"}
                   profile={false}
+                  collectionItem={false}
                 />
               </Tabs.Panel>
             </Tabs>
@@ -143,6 +147,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   admin={true}
                   postTitle={"devamlı hata yapıyorumdur"}
                   profile={false}
+                  collectionItem={false}
                 />
                 <PostList
                   userName={"natkahh"}
@@ -156,6 +161,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   admin={true}
                   postTitle={"chp'nin kurduğu koalisyon"}
                   profile={false}
+                  collectionItem={false}
                 />
               </>
             }
