@@ -10,7 +10,7 @@ export default function ProfileHeader() {
         <div className="flex flex-col relative z-1 justify-center items-center -mt-4 bg-white">
           <div className=""><Image alt="" width={300} height={300} src="/profile.jpg" className="rounded-full w-28 border-2 border-white -mt-12" /></div>
           <div className="w-full text-center font-bold text-base mt-2 text-202124 relative">Haktan</div>
-          <div className="w-full text-center font-bold text-xs mt-0 text-343a40">@natkahh  <span className="absolute text-e15146 rounded text-[10px] ml-2 text-center">seni pikcır&apos;lıyor</span></div>
+          <div className="w-full text-center font-bold text-xs mt-0 text-343a40">@natkahh  <span className="absolute text-e15146 rounded text-[10px] ml-2 text-center">seni pikcırlıyor</span></div>
           <div className="absolute top-4 right-4 gap-2 justify-center items-center flex">
             <button className="text-202124 rounded text-sm font-bold justify-center items-center" title="Bildirimleri Aç"><IconBellRinging /></button>
             <button className="text-202124 rounded text-sm font-bold justify-center items-center" title="Mesaj At"><IconMail /></button>

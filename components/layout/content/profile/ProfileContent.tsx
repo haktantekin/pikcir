@@ -32,10 +32,9 @@ export default function ProfileContent() {
     <>
       <Tabs defaultValue="piklerim" className="tab-active mb-4">
         <Tabs.List className="w-full justify-around border-b-0 bg-white py-2 font-bold rounded" style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
-          <Tabs.Tab className="px-0 text-f07167" value="piklerim">Pikçırları</Tabs.Tab>
+          <Tabs.Tab className="px-0 text-f07167" value="piklerim">Pikcırları</Tabs.Tab>
           <Tabs.Tab className="px-0 text-f07167" value="piklediklerim">Pikledikleri</Tabs.Tab>
           <Tabs.Tab className="px-0 text-f07167" value="collection">Koleksiyonları</Tabs.Tab>
-          <Tabs.Tab className="px-0 text-f07167" value="tags">Tagleri</Tabs.Tab>
         </Tabs.List>
         <Tabs.Panel value="piklerim" pt="lg">
           <PostList

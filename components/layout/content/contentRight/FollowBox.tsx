@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function FollowBox() {
   return (
     <>
-     <div className="bg-white rounded w-full h-auto block col-span-2 p-3 mt-3" style={{ boxShadow:'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
+     <div className="bg-white rounded w-full h-auto block col-span-2 p-3" style={{ boxShadow:'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
           <h2 className="fony-bold text-lg">Yeni Kullanıcılar</h2>
           <div className="flex py-2 justify-center items-center">
             <div>

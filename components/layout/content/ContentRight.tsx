@@ -10,10 +10,11 @@ export default function ContentRight() {
     <>
       <div className="hidden lg:block col-span-3 relative">
         <div className="absolute w-full">
-          <WeeklyWinner />
-          <MonthlyWinner />
+
           <FollowBox />
           <InfoBox />
+          <WeeklyWinner />
+          <MonthlyWinner />
           <div className="flex justify-around mt-2">
             <Link href="javascript:;" className="text-xs">Hizmet Şartları</Link>
             <Link href="javascript:;" className="text-xs">Gizlilik Sözleşmesi</Link>
