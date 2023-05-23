@@ -1,5 +1,7 @@
-import { UnstyledButton, Tabs } from '@mantine/core';
+import { Tabs } from '@mantine/core';
 import PostList from './../contentCenter/post/PostList';
+import CollectionItem from '../CollectionItem';
+import { IconSquareRoundedPlus } from '@tabler/icons-react';
 
 export default function ProfileContent() {
   function postTime(time: string | number) {
@@ -92,6 +94,18 @@ export default function ProfileContent() {
           />
         </Tabs.Panel>
         <Tabs.Panel value="collection" pt="lg">
+
+          <div className='w-full text-right pr-4 mb-4 text-f07167 font-bold flex justify-center gap-1 text-xs items-center'><IconSquareRoundedPlus size={18} /> Yeni Oluştur</div>
+          <CollectionItem
+            name="Komik Resimler"
+            link="/natkah/collections/komik-resimler"
+            item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
+            count={68} />
+          <CollectionItem
+            name="Küfürlü Resimler"
+            link="/natkah/collections/kufurlu-resimler"
+            item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
+            count={19} />
 
         </Tabs.Panel>
       </Tabs>
