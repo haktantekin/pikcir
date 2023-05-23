@@ -59,20 +59,13 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             <Link href={postLink} className="text-343a40 font-light flex items-center text-sm gap-1">&nbsp; <IconAlarm size={10} /> {time}</Link>
           </div>
         }
-        {!collectionItem &&
-          <div className="flex flex-col items-start py-2 mb-1">
-            {postTitle && <div className="text-sm italic text-343a40 lowercase">{postTitle}</div>}
+          <div className={`flex flex-col items-start  ${collectionItem ? 'p-0 mb-3 font-bold' : 'mb-1 py-2'}`}>
+            {postTitle && <div className={`flex flex-col items-start text-sm text-343a40 lowercase  ${collectionItem ? ' ' : 'italic'}`}>{postTitle}</div>}
           </div>
-        }
-        <div className="overflow-hidden max-h-[500px] relative">
+        <div className="overflow-hidden max-h-[700px] relative">
           <Link href={postLink} className="rounded overflow-hidden block">
             <Image alt="profile" width={740} height={200} className="w-full m-auto max-h-[1000px] " src={image} />
           </Link>
-          {collectionItem &&
-            <div className="flex flex-col items-start py-2 pb-0">
-              {postTitle && <div className="text-sm italic text-343a40 lowercase">{postTitle}</div>}
-            </div>
-          }
           <UnstyledButton onClick={() => setTagOpened(true)} className="flex gap-1 items-center justify-center text-sm bg-f07167 text-white p-2 lg:min-w-[38px] lg:min-h-[38px] rounded absolute right-2 bottom-2">
             <IconTags size={18} />
           </UnstyledButton>

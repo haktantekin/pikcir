@@ -10,7 +10,7 @@ export default function ReportModal() {
           <label className="text-sm">Rahatsızlık Sebebi:</label>
           <textarea className="border p-2 text-sm mt-2" placeholder="Bir bahane uydurun"></textarea>
         </div>
-        <button className={`w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-base max-w-[200px] mx-auto min-h-[40px] bg-003049 mt-4`} >
+        <button className={`w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-sm lg:text-base max-w-[200px] mx-auto min-h-[40px] bg-003049 mt-4`} >
           İncelemeye Gönder
         </button>
       </div>

@@ -14,7 +14,7 @@ export default function ProfileHeader() {
           <div className="absolute top-4 right-4 gap-2 justify-center items-center flex">
             <button className="text-202124 rounded text-sm font-bold justify-center items-center" title="Bildirimleri Aç"><IconBellRinging /></button>
             <button className="text-202124 rounded text-sm font-bold justify-center items-center" title="Mesaj At"><IconMail /></button>
-            <button className="border border-e15146 text-e15146 rounded text-sm font-bold min-w-[100px] min-h-[30px] justify-center items-center">Pikcırla!</button>
+            <button className="border border-e15146 text-e15146 hover:bg-e15146 hover:text-white rounded text-sm font-bold min-w-[100px] min-h-[30px] justify-center items-center">Pikcırla!</button>
           </div>
           <div className="w-full text-sm mt-2 lg:mt-1 italic text-202124 text-left lg:text-center pr-5 lg:px-5">Sana mutluluğun resmini çizemem, ama komik caps paylaşabilirim.</div>
           <div className="flex gap-4 mt-2 lg:mt-1">
