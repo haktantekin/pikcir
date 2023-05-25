@@ -1,11 +1,13 @@
-import { Tabs } from '@mantine/core';
+import { Tabs, Modal } from '@mantine/core';
 import PostList from './../contentCenter/post/PostList';
 import CollectionListItem from '../profile/CollectionListItem';
 import { IconSquareRoundedPlus, IconArrowNarrowLeft } from '@tabler/icons-react';
 import { useState } from 'react';
+import NewCollectionModal from './NewCollectionModal';
 
 export default function ProfileContent() {
   const [collectionDetail, setCollectionDetail] = useState(false);
+  const [newCollection, setNewCollection] = useState(false);
 
   const collectClick = (): void => {
     setCollectionDetail(true);
@@ -106,7 +108,15 @@ export default function ProfileContent() {
         <Tabs.Panel value="collection" pt="lg">
           {!collectionDetail ?
             <>
-              <div className='w-full text-right pr-4 mb-4 text-f07167 font-bold flex justify-center gap-1 text-xs items-center'><IconSquareRoundedPlus size={18} /> Yeni Oluştur</div>
+              <button
+                onClick={()=> setNewCollection(true)}
+                className='w-full text-right pr-4 mb-4 text-f07167 font-bold flex justify-center gap-1 text-xs items-center'>
+                <IconSquareRoundedPlus size={18} />
+                Yeni Oluştur
+              </button>
+              <Modal opened={newCollection} onClose={() => setNewCollection(false)} centered title="Yeni Koleksiyon Oluştur">
+                <NewCollectionModal />
+              </Modal>
               <CollectionListItem
                 name="Komik Resimler"
                 link="/natkah/collections/komik-resimler"
