@@ -1,8 +1,7 @@
 
-import { Menu } from '@mantine/core';
+import { Menu, Modal } from '@mantine/core';
 import { IconAlertCircleFilled, IconDotsVertical, IconLink, IconMoodSilence, IconSettings } from '@tabler/icons-react';
 import { useState } from 'react';
-import { Modal } from '@mantine/core';
 import ProfileSettingsModal from './ProfileSettingsModal';
 
 export default function ProfileSettings() {
@@ -17,7 +16,6 @@ export default function ProfileSettings() {
           <Menu.Item href={"javascript:;"} component="a" icon={<IconSettings size={17} stroke={1.0} />} onClick={() => setprofileSettingsModal(true)}>
             Profili Düzenle
           </Menu.Item>
-
           <Menu.Item href={"javascript:;"} component="a" icon={<IconLink size={17} stroke={1.0} />}>
             Profil Linki
           </Menu.Item>

@@ -1,6 +1,7 @@
 import { IconAlbum } from "@tabler/icons-react"
 import Image from "next/image"
 import Link from "next/link"
+import CollectionSettings from "./CollectionSettings"
 
 
 interface CollectionListItemProps {
@@ -8,23 +9,26 @@ interface CollectionListItemProps {
   link: string,
   item: any,
   count: number,
-  collectClick:any
+  collectClick: any
 }
 
-export default function CollectionListItem({ name, link, item, count, collectClick }: CollectionListItemProps) {
+export default function CollectionListItem({ name, link, item, collectClick }: CollectionListItemProps) {
   return (
     <>
       <div className="w-full bg-white border rounded min-h-[200px] p-4 mb-4">
-        <Link href={link}>
-          <div className="flex justify-between px-2">
+        <div className="flex justify-between px-2">
+          <Link href={link}>
             <div className="font-bold text-base mb-3">
               {name}
             </div>
-            <div className="text-sm flex gap-1 justify-center items-center h-4">
-              <IconAlbum size={15} />
-              {count}
+          </Link>
+          <div className="text-sm flex gap-1 justify-center items-center h-4">
+            <div className="flex justify-center items-center">
+              <CollectionSettings />
             </div>
           </div>
+        </div>
+        <Link href={link}>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {item.map((e: any, index: number) => (
               <>

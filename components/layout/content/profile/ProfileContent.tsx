@@ -4,6 +4,7 @@ import CollectionListItem from '../profile/CollectionListItem';
 import { IconSquareRoundedPlus, IconArrowNarrowLeft } from '@tabler/icons-react';
 import { useState } from 'react';
 import NewCollectionModal from './NewCollectionModal';
+import CollectionSettings from './CollectionSettings';
 
 export default function ProfileContent() {
   const [collectionDetail, setCollectionDetail] = useState(false);
@@ -109,7 +110,7 @@ export default function ProfileContent() {
           {!collectionDetail ?
             <>
               <button
-                onClick={()=> setNewCollection(true)}
+                onClick={() => setNewCollection(true)}
                 className='w-full text-right pr-4 mb-4 text-f07167 font-bold flex justify-center gap-1 text-xs items-center'>
                 <IconSquareRoundedPlus size={18} />
                 Yeni Oluştur
@@ -134,7 +135,11 @@ export default function ProfileContent() {
             :
             <>
               <div className='w-full bg-white rounded mb-4 text-sm text-center min-h-[40px] flex justify-center items-center relative' style={{ boxShadow: "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px" }}>
-                <button className="absolute left-4 top-2" onClick={() => setCollectionDetail(false)}><IconArrowNarrowLeft /></button><span className="font-bold text-sm text-ffbeb9">Komik Resimler</span>&nbsp;Koleksiyonu</div>
+                <div className='absolute right-4 top-3'>
+                  <CollectionSettings />
+                </div>
+                <button className="absolute left-4 top-2" onClick={() => setCollectionDetail(false)}><IconArrowNarrowLeft /></button>
+                <span className="font-bold text-sm text-ffbeb9">Komik Resimler</span>&nbsp;Koleksiyonu</div>
               <div className='grid grid-cols-1 gap-4'>
                 <PostList
                   userName={"natkah"}

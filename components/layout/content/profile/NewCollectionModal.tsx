@@ -4,17 +4,16 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 export default function NewCollectionModal() {
-  const [selectPhoto, setSelectPhoto] = useState(false);
+  // const [selectPhoto, setSelectPhoto] = useState(false);
 
-  function selectImg(e: any) {
-    console.log(e);
-    if (selectPhoto === false) {
-      setSelectPhoto(true)
-    }
-    else {
-      setSelectPhoto(false)
-    }
-  }
+  // function selectImg(e: any) {
+  //   if (selectPhoto === false) {
+  //     setSelectPhoto(true)
+  //   }
+  //   else {
+  //     setSelectPhoto(false)
+  //   }
+  // }
   return (
     <>
       <div>
@@ -24,7 +23,7 @@ export default function NewCollectionModal() {
           label="Koleksiyona İsim Ver" />
       </div>
       <div>
-        <div className='text-sm my-4 font-bold'>Fotoğraf Seç</div>
+        {/* <div className='text-sm my-4 font-bold'>Fotoğraf Seç</div>
         <div className='h-56 overflow-y-auto'>
           <div className='grid grid-cols-4 gap-3'>
             <button className="w-full rounded overflow-hidden relative" onClick={(e) => selectImg(e.target)}>
@@ -124,7 +123,7 @@ export default function NewCollectionModal() {
               </div>
             </button>
           </div>
-        </div>
+        </div> */}
         <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-sm mt-4 max-h-[40px] max-w-[100px] mx-auto min-h-[40px] bg-e15146 pointer-events-none">
             Oluştur
           </button>
