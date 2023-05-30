@@ -75,7 +75,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
           <div className="flex justify-between gap-2 lg:gap-4  items-center flex-col lg:flex-row absolute bottom-2 left-2">
             <div className="flex gap-2">
               <UnstyledButton className="text-sm bg-f07167 text-white p-1 lg:p-2 rounded font-bold flex gap-1 items-center" onClick={() => setPikOpened(true)}>
-                <IconPhoto size={18} /> {pikCount} <span className="hidden lg:inline-block">Pik&apos;lenme</span></UnstyledButton>
+                <IconPhoto size={18} /> {pikCount} <span className="hidden lg:inline-block">Pik</span></UnstyledButton>
               <Modal opened={pikOpened} onClose={() => setPikOpened(false)} centered title="Pikleyen(ler)">
                 <PikModal />
               </Modal>
