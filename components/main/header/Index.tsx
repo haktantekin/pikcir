@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ShowProfile from './ShowProfile';
-import { IconCameraSearch, IconBrandHipchat, IconPlus } from '@tabler/icons-react';
+import { IconBrandHipchat, IconPlus } from '@tabler/icons-react';
 import { Menu, UnstyledButton, Modal, Drawer } from '@mantine/core';
 import Notification from "./Notification";
 import { useDisclosure } from '@mantine/hooks';
@@ -16,20 +16,21 @@ export default function Header() {
   return (
     <header className={`h-12 w-full bg-white flex relative`} style={{ boxShadow: 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px' }}>
       <div className="container">
-        <div className="grid grid-cols-12 w-full">
-          <div className="col-span-12 lg:col-span-2 flex justify-center items-center">
-            <Link href="/home" className="w-full block text-center">
-              <Image src="/logo.png" alt="Pickup" width={60} height={48} className="w-[60px] h-[48px] mx-auto" priority></Image>
+        <div className="grid grid-cols-12 w-full min-h-full">
+          <div className="col-span-12 lg:col-span-2">
+            <Link href="/home" className="flex justify-center items-center gap-2 h-full">
+              <Image src="/logo.png" alt="Pickup" width={32} height={40} className="w-[32px] h-[40px]" priority></Image>
+              <div className="text-sm font-bold text-e15146">pikcir</div>
             </Link>
           </div>
           <div className="col-span-6 lg:col-span-7 hidden lg:flex justify-center items-center relative">
-          <Search />
+            <Search />
           </div>
           <div className="col-span-2 lg:col-span-3 flex justify-end items-center gap-3 h-full absolute lg:relative right-4 lg:right-0 top-0">
-            <div className="relative cursor-pointer leading-none hidden lg:inline-block" title="Bildirimler">
+            <div className="relative cursor-pointer leading-[0] hidden lg:inline-block" title="Bildirimler">
               <Notification />
             </div>
-            <div className="relative cursor-pointer leading-none hidden lg:flex justify-center" title="Mesajlar">
+            <div className="relative cursor-pointer leading-[0] hidden lg:flex justify-center" title="Mesajlar">
               <div className="rounded-3xl bg-e15146 border border-e15146 p-1 py-0 absolute -top-1 -right-1 text-white text-center text-xs">2</div>
               <IconBrandHipchat size="1.7rem" stroke={1.0} className="text-343a40" />
             </div>
