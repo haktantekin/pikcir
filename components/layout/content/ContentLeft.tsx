@@ -33,14 +33,14 @@ export default function ContentLeft() {
               <Menu.Item href={"/explore"} component="a"icon={<IconCameraSearch size={25} stroke={0.5} />} className="text-sm pb-0">
                 Keşfet
               </Menu.Item>
-              <Menu.Item href={"/home"} component="a" icon={<IconPackage size={25} stroke={0.5} />} className="text-sm pb-0">
+              <Menu.Item href={"/profile"} component="a" icon={<IconPackage size={25} stroke={0.5} />} className="text-sm pb-0">
                 Koleksiyonlarım
               </Menu.Item>
               <Menu.Item href={"/profile"} component="a" icon={<IconUserCircle size={25} stroke={0.5} />} className="text-sm">
                 Profilim
               </Menu.Item>
               <Menu.Divider />
-              <Menu.Item href={"/home"} component="a" icon={<IconListDetails size={25} stroke={0.5} />} className="text-sm pb-0">
+              <Menu.Item href={"/lists"} component="a" icon={<IconListDetails size={25} stroke={0.5} />} className="text-sm pb-0">
                 Listeler
               </Menu.Item>
               <Menu.Item href={"/home"} component="a" icon={<IconAward size={25} stroke={0.5} />} className="text-sm pb-0">
