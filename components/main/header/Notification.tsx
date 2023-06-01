@@ -18,11 +18,11 @@ export default function Notification() {
           </UnstyledButton>
         </Menu.Target>
         <Menu.Dropdown>
-        <Menu.Item onMouseEnter={() => setNotRead(false)} href={"javascript:;"} className={`${notRead === true && 'bg-f5f3f4'}`} component="a" icon={<IconTrophy size={20} stroke={1.0} />}>
+        <Menu.Item onMouseEnter={() => setNotRead(false)} href={"javascript:;"} className={`${notRead === true && 'bg-f5f3f4'} leading-4`} component="a" icon={<IconTrophy size={20} stroke={1.0} />}>
             Haftanın en çok pik&apos;lenenleri açıklandı! - <span className='text-xs text-gray-500'>1h</span>
             <Link href="javascript:;" className='block text-f07167 mt-1'>Kimlermiş</Link>
           </Menu.Item>
-          <Menu.Item onMouseEnter={() => setNotRead(false)} href={"javascript:;"} className={`${notRead === true && 'bg-f5f3f4'}`} component="a" icon={<IconMoodWink size={20} stroke={1.0} />}>
+          <Menu.Item onMouseEnter={() => setNotRead(false)} href={"javascript:;"} className={`${notRead === true && 'bg-f5f3f4'} leading-4`} component="a" icon={<IconMoodWink size={20} stroke={1.0} />}>
             Yeni bir liste açıldı <Link href="javascript:;" className='font-bold'>&apos;Karım evde yokken&apos;</Link> - <span className='text-xs text-gray-500'>1h</span>
             <Link href="javascript:;" className='block text-f07167 mt-1'>Pikçır paylaş</Link>
           </Menu.Item>
