@@ -12,7 +12,7 @@ export default function CollapseCollectionList() {
               Atatürk Kolleksiyonu
             </Link>
             <div className="ml-auto">
-              <button className="bg-e15146 p-2 rounded font-bold !text-white text-xs">Ekle</button>
+              <button className="bg-BF4565 p-2 rounded font-bold !text-white text-xs">Ekle</button>
             </div>
           </li>
           <li className="flex justify-between border-b items-center min-h-[50px]">
@@ -20,7 +20,7 @@ export default function CollapseCollectionList() {
               Goygoy
             </Link>
             <div className="ml-auto">
-              <button className="bg-e15146 p-2 rounded font-bold !text-white text-xs">Ekle</button>
+              <button className="bg-BF4565 p-2 rounded font-bold !text-white text-xs">Ekle</button>
             </div>
           </li>
           <li className="flex justify-between border-b items-center min-h-[50px]">
@@ -40,7 +40,7 @@ export default function CollapseCollectionList() {
             </div>
           </li>
         </ul>
-        <button className="font-bold text-e15146 text-sm mt-2 w-full text-center">Yeni Koleksiyon Oluştur</button>
+        <button className="font-bold text-BF4565 text-sm mt-2 w-full text-center">Yeni Koleksiyon Oluştur</button>
       </ScrollArea>
     </>
   )

@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Login() {
   return (
     <main className={`h-auto lg:h-screen pb-10 lg:pb-0`}>
-      <h1 className='font-black text-3xl lg:text-2xl text-f07167 lg:text-white relative lg:absolute lg:left-5 pl-5 lg:pl-0 flex gap-2 items-center lg:top-3'>
+      <h1 className='font-black text-3xl lg:text-2xl text-BF4565 lg:text-white relative lg:absolute lg:left-5 pl-5 lg:pl-0 flex gap-2 items-center lg:top-3'>
         <Image src="/logo.png" alt="Pickup" width={60} height={48} className="w-[60px] h-[72px] mx-auto" priority></Image>
 
         PIKCIR!</h1>
@@ -16,7 +16,7 @@ export default function Login() {
         <strong>Pikcır</strong>&apos;ın eğlenceli dünyasına katıl.<br />Hemen sen de, <strong>PİK</strong>&apos;le!
       </p>
       <div className='grid grid-cols-1 lg:grid-cols-2 items-center lg:h-screen'>
-        <div className='h-full py-20 bg-f07167 hidden lg:block'>
+        <div className='h-full py-20 bg-BF4565 hidden lg:block'>
           <div className='flex justify-center items-center flex-col h-full relative'>
             <p className='mt-4 font-regular max-w-[50%] text-center text-eeedfd'>
               Dur tahmin edeyim;<br />

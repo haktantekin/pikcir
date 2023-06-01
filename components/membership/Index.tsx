@@ -13,8 +13,8 @@ export default function Membership() {
   return (
     <Tabs defaultValue={'login'}>
       <Tabs.List className="w-full justify-around border-b-0 bg-white py-2 font-bold rounded">
-        <Tabs.Tab className="px-0 text-f07167" value="login">Üye Girişi</Tabs.Tab>
-        <Tabs.Tab className="px-0 text-f07167" value="sign">Üye Ol</Tabs.Tab>
+        <Tabs.Tab className="px-0 text-BF4565" value="login">Üye Girişi</Tabs.Tab>
+        <Tabs.Tab className="px-0 text-BF4565" value="sign">Üye Ol</Tabs.Tab>
       </Tabs.List>
       <Tabs.Panel value="login" pt="xs">
         <Login />

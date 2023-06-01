@@ -42,9 +42,9 @@ export default function ProfileContent() {
     <>
       <Tabs defaultValue="piklerim" className="tab-active mb-4">
         <Tabs.List className="w-full justify-around border-b-0 bg-white py-2 font-bold rounded" style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
-          <Tabs.Tab className="px-0 text-f07167" value="piklerim">Pikcırları</Tabs.Tab>
-          <Tabs.Tab className="px-0 text-f07167" value="piklediklerim">Pikledikleri</Tabs.Tab>
-          <Tabs.Tab className="px-0 text-f07167" value="collection">Koleksiyonları</Tabs.Tab>
+          <Tabs.Tab className="px-0 text-BF4565" value="piklerim">Pikcırları</Tabs.Tab>
+          <Tabs.Tab className="px-0 text-BF4565" value="piklediklerim">Pikledikleri</Tabs.Tab>
+          <Tabs.Tab className="px-0 text-BF4565" value="collection">Koleksiyonları</Tabs.Tab>
         </Tabs.List>
         <Tabs.Panel value="piklerim" pt="lg">
           <PostList
@@ -111,7 +111,7 @@ export default function ProfileContent() {
             <>
               <button
                 onClick={() => setNewCollection(true)}
-                className='w-full text-right pr-4 mb-4 text-f07167 font-bold flex justify-center gap-1 text-xs items-center'>
+                className='w-full text-right pr-4 mb-4 text-BF4565 font-bold flex justify-center gap-1 text-xs items-center'>
                 <IconSquareRoundedPlus size={18} />
                 Yeni Oluştur
               </button>

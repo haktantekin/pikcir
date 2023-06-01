@@ -20,7 +20,7 @@ export default function Header() {
           <div className="col-span-12 lg:col-span-2">
             <Link href="/home" className="flex justify-center items-center gap-2 h-full">
               <Image src="/logo.png" alt="Pickup" width={32} height={40} className="w-[32px] h-[40px]" priority></Image>
-              <div className="text-sm font-bold text-e15146">pikcir</div>
+              <div className="text-sm font-bold text-BF4565">pikcir</div>
             </Link>
           </div>
           <div className="col-span-6 lg:col-span-7 hidden lg:flex justify-center items-center relative">
@@ -31,11 +31,11 @@ export default function Header() {
               <Notification />
             </div>
             <div className="relative cursor-pointer leading-[0] hidden lg:flex justify-center" title="Mesajlar">
-              <div className="rounded-3xl bg-e15146 border border-e15146 p-1 py-0 absolute -top-1 -right-1 text-white text-center text-xs">2</div>
+              <div className="rounded-3xl bg-BF4565 border border-BF4565 p-1 py-0 absolute -top-1 -right-1 text-white text-center text-xs">2</div>
               <IconBrandHipchat size="1.7rem" stroke={1.0} className="text-343a40" />
             </div>
             <div className="relative cursor-pointer hidden lg:flex justify-center" title="Yeni Ekle">
-              <UnstyledButton onClick={open}>  <IconPlus size="1.7rem" stroke={1.0} className="text-f07167" /></UnstyledButton>
+              <UnstyledButton onClick={open}>  <IconPlus size="1.7rem" stroke={1.0} className="text-BF4565" /></UnstyledButton>
               <Modal opened={opened} onClose={close} centered>
                 <NewPost />
               </Modal>

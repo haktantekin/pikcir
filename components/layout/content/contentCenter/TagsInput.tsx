@@ -47,12 +47,12 @@ export default function TagsInput() {
           />
         </div>
         <div className='col-span-12'>
-          <div className='flex flex-col w-full bg-white border border-e15146 rounded p-2'>
+          <div className='flex flex-col w-full bg-white border border-BF4565 rounded p-2'>
             <div className="w-full flex items-center flex-wrap gap-2">
               {tags.map((tag: any, index: number) => (
-                <div className="bg-white inline-block border-e15146 border p-2 h-auto rounded-full placeholder:text-003049 text-003049 text-xs " key={index}>
+                <div className="bg-white inline-block border-BF4565 border p-2 h-auto rounded-full placeholder:text-003049 text-003049 text-xs " key={index}>
                   <span className="text">#{tag}</span>
-                  <span className="h-4 w-4 bg-e15146 text-white rounded-full inline-flex justify-center items-center ml-2 text-base cursor-pointer" onClick={() => removeTag(index)}>&times;</span>
+                  <span className="h-4 w-4 bg-BF4565 text-white rounded-full inline-flex justify-center items-center ml-2 text-base cursor-pointer" onClick={() => removeTag(index)}>&times;</span>
                 </div>
               ))}
               {tags.length < 5 &&
@@ -71,14 +71,14 @@ export default function TagsInput() {
           </div>
           {collection &&
             <div className='col-span-9'>
-              <select className='w-full min-h-[30px] rounded border border-e15146 text-sm'>
+              <select className='w-full min-h-[30px] rounded border border-BF4565 text-sm'>
                 <option value={1}>Whatsapp Resimleri</option>
               </select>
             </div>
           }
         </div>
         <div className='col-span-12 my-auto'>
-          <UnstyledButton className={`w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-base max-w-[100px] mx-auto min-h-[40px] ${tags.length <= 0 ? 'bg-343a40 pointer-events-none' : 'bg-e15146'}`} disabled={tags.length < 0}>Pikle!</UnstyledButton>
+          <UnstyledButton className={`w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-base max-w-[100px] mx-auto min-h-[40px] ${tags.length <= 0 ? 'bg-343a40 pointer-events-none' : 'bg-BF4565'}`} disabled={tags.length < 0}>Pikle!</UnstyledButton>
         </div>
       </div>
     </>

@@ -124,7 +124,7 @@ export default function NewCollectionModal() {
             </button>
           </div>
         </div> */}
-        <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-sm mt-4 max-h-[40px] max-w-[100px] mx-auto min-h-[40px] bg-e15146 pointer-events-none">
+        <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-sm mt-4 max-h-[40px] max-w-[100px] mx-auto min-h-[40px] bg-BF4565 pointer-events-none">
             Oluştur
           </button>
       </div>

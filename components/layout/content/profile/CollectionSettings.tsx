@@ -24,7 +24,7 @@ export default function CollectionSettings() {
             <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-202124 text-sm max-w-[100px] mx-auto min-h-[36px] pointer-events-none gap-2"><IconTrashFilled size={15} /> Komple Sil</button>
           </div>
           <div className='w-full'>
-            <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-sm max-w-[100px] mx-auto min-h-[36px] bg-e15146 pointer-events-none">Güncelle</button>
+            <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-sm max-w-[100px] mx-auto min-h-[36px] bg-BF4565 pointer-events-none">Güncelle</button>
           </div>
         </div>
       </Modal>

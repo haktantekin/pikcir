@@ -39,7 +39,7 @@ export default function CollectionListItem({ name, link, item, collectClick }: C
             ))}
           </div>
         </Link>
-          <button className="font-bold font-base text-xs text-center mt-4 text-f07167 mx-auto flex" onClick={collectClick}>Koleksiyonu Gör</button>
+          <button className="font-bold font-base text-xs text-center mt-4 text-BF4565 mx-auto flex" onClick={collectClick}>Koleksiyonu Gör</button>
       </div>
     </>
   )

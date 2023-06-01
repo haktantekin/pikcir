@@ -25,10 +25,10 @@ export default function Login() {
           />
         </div>
 
-        <Link href="/forgot-password" className='ml-auto text-f07167 text-sm border-b border-b-f07167'>
+        <Link href="/forgot-password" className='ml-auto text-BF4565 text-sm border-b border-b-BF4565'>
           şifrem neydi yaa
         </Link>
-        <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-base max-w-[100px] mx-auto min-h-[40px] bg-e15146 pointer-events-none">Giriş Yap</button>
+        <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-base max-w-[100px] mx-auto min-h-[40px] bg-BF4565 pointer-events-none">Giriş Yap</button>
       </div>
     </>
   )

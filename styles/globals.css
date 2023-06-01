@@ -48,23 +48,23 @@ body{
     1px 1px 0 #202124;
 }
 .chip-item label[data-checked]:not([data-disabled]){
-  @apply border-e15146
+  @apply border-BF4565
 }
 .chip-item label span{
-  @apply text-e15146
+  @apply text-BF4565
 }
 .home-left [data-hovered]{
   @apply !bg-transparent
 }
 .tab-active [role="tab"]:hover{
-  @apply border-e15146
+  @apply border-BF4565
 }
 .tab-active [data-active]{
-  @apply border-e15146
+  @apply border-BF4565
 }
 
 .show-all button{
-  @apply w-full text-center font-bold text-xs text-e15146 block 
+  @apply w-full text-center font-bold text-xs text-BF4565 block 
 }
 
 .drawer-notification .mantine-Paper-root{
@@ -76,7 +76,7 @@ body{
 }
 
 .post-title .mantine-Input-input{
-  @apply border-e15146
+  @apply border-BF4565
 }
 
 .mantine-Spoiler-root .mantine-Text-root{

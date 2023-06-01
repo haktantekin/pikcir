@@ -17,7 +17,7 @@ export default function CreatePost() {
       <div className='flex flex-col mb-4'>
         {file && (
           <div className="mx-auto w-full relative">
-            <div className={`${!file ? 'hidden' : 'flex justify-center items-center'} mx-aut absolute h-4 w-4 bg-e15146 text-white rounded-full inline-flex left-2 top-2 justify-center items-center text-base cursor-pointer p-0 mt-0`}>
+            <div className={`${!file ? 'hidden' : 'flex justify-center items-center'} mx-aut absolute h-4 w-4 bg-BF4565 text-white rounded-full inline-flex left-2 top-2 justify-center items-center text-base cursor-pointer p-0 mt-0`}>
               <UnstyledButton className="" disabled={!file} onClick={clearFile} classNames={"leading-0"}>
                 <span className="text-white relative -top-px">&times;</span>
               </UnstyledButton>
@@ -28,7 +28,7 @@ export default function CreatePost() {
         <div className='flex gap-4 w-full'>
           <div className={`${!file ? 'block' : 'hidden'} w-full`}>
             <FileButton resetRef={resetRef} onChange={setFile} accept="image/png,image/jpeg">
-              {(props) => <Button className="border border-e15146 text-e15146 hover:bg-e15146 hover:text-white w-full bg-white hidden lg:block" style={{ boxShadow:'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }} {...props}>İçerik Gönder</Button>}
+              {(props) => <Button className="border border-BF4565 text-BF4565 hover:bg-BF4565 hover:text-white w-full bg-white hidden lg:block" style={{ boxShadow:'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }} {...props}>İçerik Gönder</Button>}
             </FileButton>
           </div>
         </div>

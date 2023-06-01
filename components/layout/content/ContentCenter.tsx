@@ -48,11 +48,11 @@ export default function ContentCenter({ type }: ContentCenterProps) {
             <CreatePost />
             <Tabs defaultValue="karma" className="tab-active">
               <Tabs.List className="w-full justify-around border-b-0 bg-white py-2 font-bold rounded" style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
-                <Tabs.Tab className="px-0 text-f07167" value="karma">Karma</Tabs.Tab>
-                <Tabs.Tab className="px-0 text-f07167" value="followed">Takip Ettiklerin</Tabs.Tab>
+                <Tabs.Tab className="px-0 text-BF4565" value="karma">Karma</Tabs.Tab>
+                <Tabs.Tab className="px-0 text-BF4565" value="followed">Takip Ettiklerin</Tabs.Tab>
               </Tabs.List>
               <Tabs.Panel value="karma" pt="xs">
-                <UnstyledButton className='relative mb-2 left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>32 Yeni Gönderi</UnstyledButton>
+                <UnstyledButton className='relative mb-2 left-1/2 -translate-x-1/2 bg-BF4565 border border-BF4565 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>32 Yeni Gönderi</UnstyledButton>
                 <PostList
                   userName={"can"}
                   userLink={"javascript:;"}
@@ -84,7 +84,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
               </Tabs.Panel>
 
               <Tabs.Panel value="followed" pt="xs">
-                <UnstyledButton className='relative mb-2 left-1/2 -translate-x-1/2 bg-f07167 border border-e15146 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>19 Yeni Gönderi</UnstyledButton>
+                <UnstyledButton className='relative mb-2 left-1/2 -translate-x-1/2 bg-BF4565 border border-BF4565 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>19 Yeni Gönderi</UnstyledButton>
                 <PostList
                   userName={"natkahh"}
                   userLink={"javascript:;"}
@@ -200,7 +200,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                 <Tabs defaultValue="today">
                   <div className='w-full bg-white rounded mt-4 lg:mt-0 min-h-[40px] flex justify-between items-center px-4' style={{ boxShadow: 'rgba(33, 35, 38, 0.1) 0px 10px 10px -10px' }}>
                     <h1 className='text-sm lg:text-base text-left'>
-                      <span className='font-bold text-ffbeb9'>02.06.2023&nbsp;</span> tarihli Pik Listeleri
+                      <span className='font-bold text-BF4565'>Pik Listeleri</span>
                     </h1>
                     <div>
                       <Tabs.List className='w-full justify-around border-b-0 tab-active'>
@@ -211,7 +211,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                     </div>
                   </div>
                   <Tabs.Panel value="today" pt="xs">
-                    <button className="font-bold text-e15146 text-base py-4 w-full text-center" onClick={() => setNewListModal(true)}>Yeni Liste Oluştur</button>
+                    <button className="font-bold text-BF4565 text-base py-4 w-full text-center" onClick={() => setNewListModal(true)}>Yeni Liste Oluştur</button>
                     <Modal opened={newListModal} onClose={() => setNewListModal(false)} centered title="Liste Oluştur">
                       <div className="mt-2">
                         <TextInput
@@ -222,7 +222,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                       </div>
                       <div className="mt-4 flex justify-center items-center w-full gap-3">
                         <div className='w-full'>
-                          <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-sm max-w-[100px] mx-auto min-h-[36px] bg-e15146 pointer-events-none">Oluştur</button>
+                          <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-sm max-w-[100px] mx-auto min-h-[36px] bg-BF4565 pointer-events-none">Oluştur</button>
                         </div>
                       </div>
                     </Modal>
@@ -252,7 +252,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                       </div>
                       <div className="mt-4 flex justify-center items-center w-full gap-3">
                         <div className='w-full'>
-                          <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-sm max-w-[100px] mx-auto min-h-[36px] bg-e15146 pointer-events-none">Oluştur</button>
+                          <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-sm max-w-[100px] mx-auto min-h-[36px] bg-BF4565 pointer-events-none">Oluştur</button>
                         </div>
                       </div>
                     </Modal>
@@ -282,7 +282,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                       </div>
                       <div className="mt-4 flex justify-center items-center w-full gap-3">
                         <div className='w-full'>
-                          <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-sm max-w-[100px] mx-auto min-h-[36px] bg-e15146 pointer-events-none">Oluştur</button>
+                          <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-sm max-w-[100px] mx-auto min-h-[36px] bg-BF4565 pointer-events-none">Oluştur</button>
                         </div>
                       </div>
                     </Modal>

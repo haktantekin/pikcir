@@ -17,7 +17,7 @@ export default function FollowBox() {
               <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@natkahh</Link>
             </div>
             <div className="ml-auto">
-              <button className="bg-e15146 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
+              <button className="bg-BF4565 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
             </div>
           </div>
           <div className="flex py-2 justify-center items-center">
@@ -45,7 +45,7 @@ export default function FollowBox() {
               <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@natkahh</Link>
             </div>
             <div className="ml-auto">
-              <button className="bg-e15146 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
+              <button className="bg-BF4565 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
             </div>
           </div>
         </div>

@@ -60,7 +60,7 @@ export default function Register() {
           lang="tr"
         />
       </div>
-      <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-base max-w-[100px] mx-auto min-h-[40px] bg-e15146 pointer-events-none mt-3">Kayıt Ol</button>
+      <button className="w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-base max-w-[100px] mx-auto min-h-[40px] bg-BF4565 pointer-events-none mt-3">Kayıt Ol</button>
       </div>
     </>
   )

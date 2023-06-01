@@ -15,7 +15,7 @@ export default function FollowingModal() {
               <span className="text-xs font-bold flex items-center text-343a40 gap-[2px]"><IconBrandMailgun size={20} /> {"natkah"}</span>
             </Link>
             <div className="ml-auto">
-              <button className="bg-e15146 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
+              <button className="bg-BF4565 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
             </div>
           </li>
           <li className="flex justify-between border-b items-center min-h-[50px]">
@@ -24,7 +24,7 @@ export default function FollowingModal() {
               <span className="text-xs font-bold flex items-center text-343a40 gap-[2px]"><IconBrandMailgun size={20} /> {"can"}</span>
             </Link>
             <div className="ml-auto">
-              <button className="bg-e15146 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
+              <button className="bg-BF4565 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
             </div>
           </li>
           <li className="flex justify-between border-b items-center min-h-[50px]">
@@ -42,7 +42,7 @@ export default function FollowingModal() {
               <span className="text-xs font-bold flex items-center text-343a40 gap-[2px]"><IconBrandMailgun size={20} /> {"natkah"}</span>
             </Link>
             <div className="ml-auto">
-              <button className="bg-e15146 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
+              <button className="bg-BF4565 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
             </div>
           </li>
           <li className="flex justify-between border-b items-center min-h-[50px]">
@@ -51,7 +51,7 @@ export default function FollowingModal() {
               <span className="text-xs font-bold flex items-center text-343a40 gap-[2px]"><IconBrandMailgun size={20} /> {"natkah"}</span>
             </Link>
             <div className="ml-auto">
-              <button className="bg-e15146 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
+              <button className="bg-BF4565 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
             </div>
           </li>
           <li className="flex justify-between border-b items-center min-h-[50px]">
@@ -60,7 +60,7 @@ export default function FollowingModal() {
               <span className="text-xs font-bold flex items-center text-343a40 gap-[2px]"><IconBrandMailgun size={20} /> {"natkah"}</span>
             </Link>
             <div className="ml-auto">
-              <button className="bg-e15146 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
+              <button className="bg-BF4565 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
             </div>
           </li>
           <li className="flex justify-between border-b items-center min-h-[50px]">
@@ -69,7 +69,7 @@ export default function FollowingModal() {
               <span className="text-xs font-bold flex items-center text-343a40 gap-[2px]"><IconBrandMailgun size={20} /> {"natkah"}</span>
             </Link>
             <div className="ml-auto">
-              <button className="bg-e15146 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
+              <button className="bg-BF4565 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
             </div>
           </li>
           <li className="flex justify-between border-b items-center min-h-[50px]">
@@ -78,7 +78,7 @@ export default function FollowingModal() {
               <span className="text-xs font-bold flex items-center text-343a40 gap-[2px]"><IconBrandMailgun size={20} /> {"natkah"}</span>
             </Link>
             <div className="ml-auto">
-              <button className="bg-e15146 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
+              <button className="bg-BF4565 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
             </div>
           </li>
           <li className="flex justify-between border-b items-center min-h-[50px]">
@@ -87,7 +87,7 @@ export default function FollowingModal() {
               <span className="text-xs font-bold flex items-center text-343a40 gap-[2px]"><IconBrandMailgun size={20} /> {"natkah"}</span>
             </Link>
             <div className="ml-auto">
-              <button className="bg-e15146 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
+              <button className="bg-BF4565 p-2 rounded font-bold text-white text-xs">Takibe Al</button>
             </div>
           </li>
         </ul>

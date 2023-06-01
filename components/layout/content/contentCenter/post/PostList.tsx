@@ -42,7 +42,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             <div className="flex flex-row items-center gap-2">
               <Link href={userLink} className="flex flex-row items-center gap-2">
                 <Image alt="profile" src={profileImage} width={400} height={400} className="w-9 rounded-full" style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }} />
-                <span className="text-xs font-bold flex items-center text-f07167">
+                <span className="text-xs font-bold flex items-center text-BF4565">
                   <IconBrandMailgun size={20} />
                   {userName}
                 </span>
@@ -66,7 +66,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
           <Link href={postLink} className="rounded overflow-hidden block">
             <Image alt="profile" width={740} height={200} className="w-full m-auto max-h-[1000px] " src={image} />
           </Link>
-          <UnstyledButton onClick={() => setTagOpened(true)} className="flex gap-1 items-center justify-center text-sm bg-f07167 text-white p-2 lg:min-w-[38px] lg:min-h-[38px] rounded absolute right-2 bottom-2">
+          <UnstyledButton onClick={() => setTagOpened(true)} className="flex gap-1 items-center justify-center text-sm bg-BF4565 text-white p-2 lg:min-w-[38px] lg:min-h-[38px] rounded absolute right-2 bottom-2">
             <IconTags size={18} />
           </UnstyledButton>
           <Modal opened={tagOpened} onClose={() => setTagOpened(false)} centered title="Etiket(ler)">
@@ -74,12 +74,12 @@ export default function PostList({ userName, userLink, postLink, time, image, co
           </Modal>
           <div className="flex justify-between gap-2 lg:gap-4  items-center flex-col lg:flex-row absolute bottom-2 left-2">
             <div className="flex gap-2">
-              <UnstyledButton className="text-sm bg-f07167 text-white p-1 lg:p-2 rounded font-bold flex gap-1 items-center" onClick={() => setPikOpened(true)}>
+              <UnstyledButton className="text-sm bg-BF4565 text-white p-1 lg:p-2 rounded font-bold flex gap-1 items-center" onClick={() => setPikOpened(true)}>
                 <IconPhoto size={18} /> {pikCount} <span className="hidden lg:inline-block">Pik</span></UnstyledButton>
               <Modal opened={pikOpened} onClose={() => setPikOpened(false)} centered title="Pikleyen(ler)">
                 <PikModal />
               </Modal>
-              <UnstyledButton className="flex gap-1 items-center text-sm text-f07167 border border-solid !border-f07167 p-1 lg:p-2 rounded bg-white" onClick={toggle}>
+              <UnstyledButton className="flex gap-1 items-center text-sm text-BF4565 border border-solid !border-BF4565 p-1 lg:p-2 rounded bg-white" onClick={toggle}>
                 <IconBrandHipchat size={18} />{commentCount} <span className="hidden lg:inline-block">Laklak</span>
               </UnstyledButton>
             </div>
@@ -88,7 +88,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
         <div className="flex gap-2 p-3 pl-0 pr-0 lg:pr-3 lg:pl-3 justify-between pb-0 min-h-[30px] lg:min-h-[40px] items-center">
           {pik === false && <button className="flex items-center gap-1 text-sm" onClick={() => setPik(true)}><IconPhoto size={18} />Pikle!</button>}
           {pik === true &&
-            <button className="flex items-center gap-1 text-sm text-f07167" onClick={() => setPik(false)}>
+            <button className="flex items-center gap-1 text-sm text-BF4565" onClick={() => setPik(false)}>
               <IconPhotoFilled size={18} />
               Pikledin
             </button>

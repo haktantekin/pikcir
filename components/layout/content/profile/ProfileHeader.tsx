@@ -21,14 +21,14 @@ export default function ProfileHeader() {
             <Image alt="" width={300} height={300} src="/profile.jpg" className="w-full" />
           </div>
           <div className="w-full text-left lg:text-center font-bold text-base mt-2 text-202124 relative">Haktan</div>
-          <div className="w-full text-left lg:text-center font-bold text-xs mt-0 text-343a40">@natkahh  <span className="absolute text-e15146 rounded text-[10px] ml-2 text-center">seni pikcırlıyor</span></div>
+          <div className="w-full text-left lg:text-center font-bold text-xs mt-0 text-343a40">@natkahh  <span className="absolute text-BF4565 rounded text-[10px] ml-2 text-center">seni pikcırlıyor</span></div>
           <div className="absolute top-4 right-4 gap-2 justify-center items-center flex">
             <ProfileSettings />
-            {notification && <button onClick={() => setNotification(false)} title="Bildirimleri Kapat" className="text-e15146 rounded text-sm font-bold justify-center items-center"><IconBellRinging size={20} /></button>}
+            {notification && <button onClick={() => setNotification(false)} title="Bildirimleri Kapat" className="text-BF4565 rounded text-sm font-bold justify-center items-center"><IconBellRinging size={20} /></button>}
             {!notification && <button onClick={() => setNotification(true)} title="Bildirimleri Aç" className="text-202124 rounded text-sm font-bold justify-center items-center"><IconBellRinging size={20} /></button>}
             <button className="text-202124 rounded text-sm font-bold justify-center items-center" title="Mesaj At"><IconMail size={20} /></button>
-            {follow && <button onClick={() => setFollow(false)} className="bg-e15146 text-white hover:bg-e15146 hover:text-white rounded text-sm font-bold min-w-[100px] min-h-[30px] justify-center items-center" title="Takibi Bırak">Bırak</button>}
-            {!follow && <button onClick={() => setFollow(true)} className="border border-e15146 text-e15146 hover:bg-e15146 hover:text-white rounded text-sm font-bold min-w-[100px] min-h-[30px] justify-center items-center" title="Takiple">Pikcırla</button>}
+            {follow && <button onClick={() => setFollow(false)} className="bg-BF4565 text-white hover:bg-BF4565 hover:text-white rounded text-sm font-bold min-w-[100px] min-h-[30px] justify-center items-center" title="Takibi Bırak">Bırak</button>}
+            {!follow && <button onClick={() => setFollow(true)} className="border border-BF4565 text-BF4565 hover:bg-BF4565 hover:text-white rounded text-sm font-bold min-w-[100px] min-h-[30px] justify-center items-center" title="Takiple">Pikcırla</button>}
           </div>
           <div className="w-full text-sm mt-2 lg:mt-1 italic text-202124 text-left lg:text-center pr-5 lg:px-5">Sana mutluluğun resmini çizemem, ama komik caps paylaşabilirim.</div>
           <div className="flex gap-4 mt-2 lg:mt-1">

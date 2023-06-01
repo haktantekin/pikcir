@@ -24,7 +24,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Mustafa</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@mustafa</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     32 Pik
                   </Link>
@@ -40,7 +40,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Kemal</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@kemal</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     24 Pik
                   </Link>
@@ -56,7 +56,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Atatürk</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@ataturk</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     20 Pik
                   </Link>
@@ -72,7 +72,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Atatürk</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@ataturk</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     20 Pik
                   </Link>
@@ -88,7 +88,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Atatürk</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@ataturk</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     20 Pik
                   </Link>
@@ -104,7 +104,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Atatürk</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@ataturk</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     20 Pik
                   </Link>
@@ -120,7 +120,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Atatürk</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@ataturk</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     20 Pik
                   </Link>
@@ -136,7 +136,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Atatürk</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@ataturk</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     20 Pik
                   </Link>
@@ -157,7 +157,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Yüksel</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@canyuksel</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     32 Paylaşım
                   </Link>
@@ -173,7 +173,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">haktan</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@canyuksel</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     32 Paylaşım
                   </Link>
@@ -189,7 +189,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Can.</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@canyuksel</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     32 Paylaşım
                   </Link>
@@ -205,7 +205,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Can.</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@canyuksel</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     32 Paylaşım
                   </Link>
@@ -221,7 +221,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Can.</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@canyuksel</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     32 Paylaşım
                   </Link>
@@ -237,7 +237,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Can.</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@canyuksel</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     32 Paylaşım
                   </Link>
@@ -253,7 +253,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Can.</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@canyuksel</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     32 Paylaşım
                   </Link>
@@ -269,7 +269,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Can.</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@canyuksel</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     32 Paylaşım
                   </Link>
@@ -285,7 +285,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Can.</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@canyuksel</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     32 Paylaşım
                   </Link>
@@ -301,7 +301,7 @@ export default function InfoBox() {
                   <Link href="javascript:void(0);" className="font-bold text-sm">Can.</Link>
                   <Link href="javascript:void(0);" className="font-normal text-xs block -mt-1 text-343a40">@canyuksel</Link>
                 </div>
-                <div className="ml-auto text-xs text-e15146">
+                <div className="ml-auto text-xs text-BF4565">
                   <Link href="javascript:void(0);" className="font-bold text-sm">
                     32 Paylaşım
                   </Link>
