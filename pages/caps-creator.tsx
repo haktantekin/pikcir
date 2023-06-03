@@ -5,6 +5,7 @@ import { Checkbox, ColorInput, Select } from '@mantine/core';
 import Header from '@/components/main/header/Index';
 import Footer from '@/components/main/footer/Footer';
 import ContentLeft from '@/components/layout/content/ContentLeft';
+import Draggable from 'react-draggable';
 
 
 interface TextField {
@@ -27,7 +28,6 @@ export default function CapsCreator() {
   const [selectedBGColor, setSelectedBGColor] = useState<string>('Seçiniz');
   const [selectedBGColorCheck, setSelectedBGColorCheck] = useState<boolean>(false);
   const dropAreaRef = useRef<any>(null);
-  const textFieldRefs = useRef<HTMLDivElement[]>([]);
   let domtoimage = require('dom-to-image');
 
   const handleImageUpload = (file: File) => {
@@ -67,48 +67,6 @@ export default function CapsCreator() {
       background: selectedBGColorCheck && selectedBGColor
     };
     setTextFields([...textFields, newTextField]);
-  };
-
-  const handleTextFieldChange = (
-    event: ChangeEvent<HTMLDivElement>,
-    id: number
-  ) => {
-    const updatedFields = textFields.map((field) =>
-      field.id === id ? { ...field, text: event.target.textContent || '' } : field
-    );
-    setTextFields(updatedFields);
-  };
-
-  const handleTextFieldDragStart = (
-    event: DragEvent<HTMLDivElement>,
-    id: number
-  ) => {
-    const textField = textFields.find((field) => field.id === id);
-    if (textField) {
-      event.dataTransfer.setData('text/plain', String(id));
-      event.dataTransfer.setDragImage(event.target as Element, 0, 0);
-    }
-  };
-
-  const handleTextFieldDragOver = (event: DragEvent<HTMLDivElement>) => {
-    event.preventDefault();
-  };
-
-  const handleTextFieldDrop = (event: DragEvent<HTMLDivElement>, id: number) => {
-    event.preventDefault();
-    const textField = textFields.find((field) => field.id === id);
-    if (textField) {
-      const updatedFields = textFields.map((field) =>
-        field.id === id ? { ...field, position: { x: event.clientX, y: event.clientY } } : field
-      );
-      setTextFields(updatedFields);
-    }
-  };
-
-  const handleTextFieldRef = (ref: HTMLDivElement | null) => {
-    if (ref && !textFieldRefs.current.includes(ref)) {
-      textFieldRefs.current.push(ref);
-    }
   };
 
   const handleBGColorCheckChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -161,7 +119,7 @@ export default function CapsCreator() {
       <main className={`h-auto pb-10 lg:pb-0`}>
         <div className="container lg:mt-3">
           <div className="grid grid-cols-12 gap-4">
-          <ContentLeft />
+            <ContentLeft />
             <div className='col-span-9'>
               <div
                 ref={dropAreaRef}
@@ -182,31 +140,27 @@ export default function CapsCreator() {
                           background: field.background,
                           minWidth: 100,
                           minHeight: 40,
-                          zIndex:100
+                          zIndex: 100
                         };
                         return (
                           <>
-                            <div key={field.id}
-                              onBlur={(event) => handleTextFieldChange(event, field.id)}
-                              draggable
-                              onDragStart={(event) => handleTextFieldDragStart(event, field.id)}
-                              onDragOver={handleTextFieldDragOver}
-                              onDrag={(event) => handleTextFieldDrop(event, field.id)}
-                              ref={handleTextFieldRef}
-                              style={textFieldStyle}
-                              className='min-w-[100px] min-h-[40px] flex justify-center items-center rounded px-4 relative z-5'>
-                              <div contentEditable className='outline-none font-bold text-center !p-0 !m-0 !leading-0 relative z-5'>
-                                Metin Gir
+                            <Draggable>
+                              <div key={field.id}
+                                style={textFieldStyle}
+                                className='min-w-[100px] min-h-[40px] flex justify-center items-center rounded px-4 relative z-5 cursor-pointer'>
+                                <div contentEditable className='outline-none font-bold text-center !p-0 !m-0 !leading-0 relative z-5'>
+                                  Metin Gir
+                                </div>
+                                <button
+                                  className="close-button absolute -top-4 -right-4 text-sm bg-BF4565 text-white rounded-full !leading-none w-5 h-5"
+                                  onClick={() => {
+                                    const updatedFields = textFields.filter((item) => item.id !== field.id);
+                                    setTextFields(updatedFields);
+                                  }}>
+                                  x
+                                </button>
                               </div>
-                              <button
-                                className="close-button absolute -top-4 -right-4 text-sm bg-BF4565 text-white rounded-full !leading-none w-5 h-5"
-                                onClick={() => {
-                                  const updatedFields = textFields.filter((item) => item.id !== field.id);
-                                  setTextFields(updatedFields);
-                                }}>
-                                x
-                              </button>
-                            </div>
+                            </Draggable>
                           </>
                         );
                       })}
