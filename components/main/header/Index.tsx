@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ShowProfile from './ShowProfile';
-import { IconBrandHipchat, IconPlus } from '@tabler/icons-react';
+import { IconBrandHipchat, IconLetterC, IconLetterI, IconLetterK, IconLetterP, IconLetterR, IconPlus } from '@tabler/icons-react';
 import { Menu, UnstyledButton, Modal, Drawer } from '@mantine/core';
 import Notification from "./Notification";
 import { useDisclosure } from '@mantine/hooks';
@@ -20,7 +20,14 @@ export default function Header() {
           <div className="col-span-12 lg:col-span-2">
             <Link href="/home" className="flex justify-center items-center gap-2 h-full">
               <Image src="/logo.png" alt="Pickup" width={32} height={40} className="w-[32px] h-[40px]" priority></Image>
-              <div className="text-sm font-bold text-BF4565">pikcir</div>
+              <div className="text-sm font-bold text-BF4565 flex justify-center items-center">
+                <IconLetterP size={20} stroke={2.0} />
+                <IconLetterI size={15} className="-ml-[6px]" stroke={2.0} />
+                <IconLetterK size={15} className="-ml-[2px]" stroke={2.0} />
+                <IconLetterC size={15} className="-ml-[2px]" stroke={2.0} />
+                <IconLetterI size={15} className="-ml-[2px]" stroke={2.0} />
+                <IconLetterR size={15} className="-ml-[2px]" stroke={2.0} />
+              </div>
             </Link>
           </div>
           <div className="col-span-6 lg:col-span-7 hidden lg:flex justify-center items-center relative">
