@@ -120,15 +120,15 @@ export default function CapsCreator() {
         <div className="container lg:mt-3">
           <div className="grid grid-cols-12 gap-4">
             <ContentLeft />
-            <div className='col-span-9'>
+            <div className='col-span-12 lg:col-span-9'>
               <div
                 ref={dropAreaRef}
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
                 onDragEnter={handleDragEnter}>
                 {selectedImage ? (
-                  <div className="relative flex gap-10">
-                    <div className='image-container relative overflow-hidden'>
+                  <div className="relative flex flex-col lg:flex-row gap-5 lg:gap-10">
+                    <div className='image-container relative overflow-hidden pt-5 lg:pt-0 w-full'>
                       <Image width={100} height={100} src={selectedImage} alt="Uploaded" className="pointer-events-none !w-auto !h-auto max-w-full lg:max-w-[600px]" />
                       {textFields.map((field) => {
                         const textFieldStyle: CSSProperties = {
@@ -147,7 +147,7 @@ export default function CapsCreator() {
                             <Draggable>
                               <div key={field.id}
                                 style={textFieldStyle}
-                                className='min-w-[100px] min-h-[40px] flex justify-center items-center rounded px-4 relative z-5 cursor-pointer'>
+                                className='min-w-[100px] min-h-[40px] flex justify-center items-center rounded  relative z-5 cursor-pointer'>
                                 <div contentEditable className='outline-none font-bold text-center !p-0 !m-0 !leading-0 relative z-5'>
                                   Metin Gir
                                 </div>
@@ -165,7 +165,7 @@ export default function CapsCreator() {
                         );
                       })}
                     </div>
-                    <div className='flex flex-col gap-2 pt-4'>
+                    <div className='flex flex-col gap-2 lg:pt-4 pb-8 lg:pb-0'>
                       <div>
                         <Select
                           icon={<IconTextSize size={15} />}
@@ -236,18 +236,51 @@ export default function CapsCreator() {
                         <IconPhotoDown />
                         Resmi İndir
                       </button>
+                      <div className='flex flex-col gap-4 text-xs text-343a40 pb-10 mt-3'>
+                        <div>
+                          Yazı tipinizi ayarlayarak <strong>&apos;Yazı Alanı Ekle&apos;</strong> butonuna basınız.
+                        </div>
+                        <div>
+                          Yazıyı resim üzerinde kaydırarak konumlandırabilirsiniz.
+                        </div>
+                        <div>
+                          Görsel üstünde sınırsız Yazı Alanı oluşturabilirsiniz.
+                        </div>
+                        <div>
+                        <strong>&apos;Resmi İndir&apos;</strong> diyerek paylaşıma hazır resminizi indirebilirsiniz.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ) : (
                   <>
-                    <div className='w-[400px] h-[700px] rounded border border-BF4565 border-dashed flex justify-center items-center m-4 relative cursor-pointer'>
-                      <input
-                        type="file"
-                        onChange={handleFileInputChange}
-                        className='absolute w-full h-full top-0 left-0 opacity-0'
-                        ref={dropAreaRef}
-                      />
-                      <div className='text-sm text-BF4565 font-bold'>Tıklayarak veya sürükleyerek resim yükleyebilirsiniz.</div>
+                    <div className='flex flex-col lg:flex-row gap-4 w-full justify-center items-center'>
+                      <div className='w-full lg:w-[400px] h-[700px] rounded border border-BF4565 border-dashed flex justify-center items-center m-4 relative cursor-pointer'>
+                        <input
+                          type="file"
+                          onChange={handleFileInputChange}
+                          className='absolute w-full h-full top-0 left-0 opacity-0'
+                          ref={dropAreaRef}
+                        />
+                        <div className='text-sm text-BF4565 font-bold mx-auto flex text-center w-full justify-center items-center'>Tıklayarak veya sürükleyerek resim yükleyebilirsiniz.</div>
+                      </div>
+                      <div className='flex flex-col gap-4 text-base text-343a40 pb-10'>
+                        <div>
+                          Resminizi sürükleyerek ya da tıklayarak açınız,
+                        </div>
+                        <div>
+                          Yazı tipinizi ayarlayarak <strong>&apos;Yazı Alanı Ekle&apos;</strong> butonuna basınız.
+                        </div>
+                        <div>
+                          Yazıyı resim üzerinde kaydırarak konumlandırabilirsiniz.
+                        </div>
+                        <div>
+                          Görsel üstünde sınırsız Yazı Alanı oluşturabilirsiniz.
+                        </div>
+                        <div>
+                        <strong>&apos;Resmi İndir&apos;</strong> diyerek paylaşıma hazır resminizi indirebilirsiniz.
+                        </div>
+                      </div>
                     </div>
                   </>
                 )}
