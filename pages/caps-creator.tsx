@@ -138,7 +138,7 @@ export default function CapsCreator() {
                           fontSize: `${field.fontSize}px`,
                           color: field.color,
                           background: field.background,
-                          minWidth: 100,
+                          minWidth: 50,
                           minHeight: 40,
                           zIndex: 100
                         };
@@ -147,10 +147,9 @@ export default function CapsCreator() {
                             <Draggable>
                               <div key={field.id}
                                 style={textFieldStyle}
-                                className='min-w-[100px] min-h-[40px] flex justify-center items-center rounded  relative z-5 cursor-pointer'>
-                                <div contentEditable className='outline-none font-bold text-center !p-0 !m-0 !leading-0 relative z-5'>
-                                  Metin Gir
-                                </div>
+                                className=' flex justify-center items-center rounded  relative z-5 cursor-pointer min-w-[50px] min-h-[40px]'>
+                                <input className='outline-none font-bold text-center !p-0 !m-0 !leading-0 relative z-5 bg-transparent w-full' defaultValue={'Metin Gir'} />
+                             
                                 <button
                                   className="close-button absolute -top-4 -right-4 text-sm bg-BF4565 text-white rounded-full !leading-none w-5 h-5"
                                   onClick={() => {
@@ -247,7 +246,7 @@ export default function CapsCreator() {
                           Görsel üstünde sınırsız Yazı Alanı oluşturabilirsiniz.
                         </div>
                         <div>
-                        <strong>&apos;Resmi İndir&apos;</strong> diyerek paylaşıma hazır resminizi indirebilirsiniz.
+                          <strong>&apos;Resmi İndir&apos;</strong> diyerek paylaşıma hazır resminizi indirebilirsiniz.
                         </div>
                       </div>
                     </div>
@@ -278,7 +277,7 @@ export default function CapsCreator() {
                           Görsel üstünde sınırsız Yazı Alanı oluşturabilirsiniz.
                         </div>
                         <div>
-                        <strong>&apos;Resmi İndir&apos;</strong> diyerek paylaşıma hazır resminizi indirebilirsiniz.
+                          <strong>&apos;Resmi İndir&apos;</strong> diyerek paylaşıma hazır resminizi indirebilirsiniz.
                         </div>
                       </div>
                     </div>
