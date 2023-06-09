@@ -6,6 +6,7 @@ import Header from '@/components/main/header/Index';
 import Footer from '@/components/main/footer/Footer';
 import ContentLeft from '@/components/layout/content/ContentLeft';
 import Draggable from 'react-draggable';
+import Head from 'next/head';
 
 
 interface TextField {
@@ -115,6 +116,10 @@ export default function CapsCreator() {
 
   return (
     <>
+        <Head>
+        <title>PIKCIR - Caps Oluştur</title>
+        <meta id="meta-description" name="description" content="Kafanın içinde biri var ve sürekli espri yapıyorsa bize katıl. Resmini al gel, koleksiyonlar oluştur, eğlen!" />
+      </Head>
       <Header />
       <main className={`h-auto pb-10 lg:pb-0`}>
         <div className="container lg:mt-3">
