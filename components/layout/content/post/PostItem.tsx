@@ -1,33 +1,30 @@
 import { IconAdFilled, IconAlarm, IconAlertSquareFilled, IconBrandHipchat, IconBrandMailgun, IconMessageDots, IconPackage, IconPhotoFilled, IconPhoto, IconShare3, IconTags } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Tooltip, Modal, Collapse, Drawer } from '@mantine/core';
-import TagModal from "./TagModal";
+import { Tooltip, Modal, Drawer } from '@mantine/core';
 import { useState } from 'react';
-import PikModal from "./PikModal";
 import { useDisclosure } from '@mantine/hooks';
-import PostCollapse from "./PostCollapse";
-import CollapseCollectionList from "./CollapseCollectionList";
-import PostShare from "./PostShare";
-import ReportModal from "./ReportModal";
+import TagModal from "../contentCenter/post/TagModal";
+import PikModal from "../contentCenter/post/PikModal";
+import CollapseCollectionList from "../contentCenter/post/CollapseCollectionList";
+import PostShare from "../contentCenter/post/PostShare";
+import ReportModal from "../contentCenter/post/ReportModal";
+import PostCollapse from "../contentCenter/post/PostCollapse";
 
 
-interface PostListProps {
+interface PostItemProps {
   userName: string,
   userLink: string,
   profileImage: string,
-  postLink: string,
   time: string | number,
   image: string,
   commentCount: number
   pikCount: number
   admin: boolean
   postTitle?: string
-  profile: boolean
-  collectionItem: boolean
 }
 
-export default function PostList({ userName, userLink, postLink, time, image, commentCount, pikCount, admin, postTitle, profileImage, profile, collectionItem }: PostListProps) {
+export default function PostItem({ userName, userLink, time, image, commentCount, pikCount, admin, postTitle, profileImage }: PostItemProps) {
   const [tagOpened, setTagOpened] = useState(false);
   const [pikOpened, setPikOpened] = useState(false);
   const [reportOpened, setReportOpened] = useState(false);
@@ -36,36 +33,34 @@ export default function PostList({ userName, userLink, postLink, time, image, co
   const [openDraw, { open, close }] = useDisclosure(false);
   return (
     <>
-      <div className={`bg-white p-4 rounded ${!collectionItem ? 'mb-4' : ''} `} style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
-        {!collectionItem &&
-          <div className="flex flex-row justify-between border-b pb-2 px-1">
-            <div className="flex flex-row items-center gap-2">
-              <Link href={userLink} className="flex flex-row items-center gap-2">
-                <Image alt="profile" src={profileImage} width={400} height={400} className="w-9 rounded-full" style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }} />
-                <span className="text-xs font-bold flex items-center text-BF4565">
-                  <IconBrandMailgun size={20} />
-                  {userName}
-                </span>
-              </Link>
-              {admin &&
-                <Tooltip label="Yönetici">
-                  <IconAdFilled size={15} className="-ml-1 text-202124" />
-                </Tooltip>
-              }
-              {!profile &&
-                <Link href={"javascript:;"} className="flex flex-row ml-0 text-343a40 text-xs">takibe al</Link>
-              }
-            </div>
-            <Link href={postLink} className="text-343a40 font-light flex items-center text-sm gap-1">&nbsp; <IconAlarm size={10} /> {time}</Link>
+      <div className={`bg-white p-4 rounded mt-3`} style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}>
+        <div className="flex flex-row justify-between border-b pb-2 px-1">
+          <div className="flex flex-row items-center gap-2">
+            <Link href={userLink} className="flex flex-row items-center gap-2">
+              <Image alt="profile" src={profileImage} width={400} height={400} className="w-9 rounded-full" style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }} />
+              <span className="text-xs font-bold flex items-center text-BF4565">
+                <IconBrandMailgun size={20} />
+                {userName}
+              </span>
+            </Link>
+            {admin &&
+              <Tooltip label="Yönetici">
+                <IconAdFilled size={15} className="-ml-1 text-202124" />
+              </Tooltip>
+            }
+            <Link href={"javascript:;"} className="flex flex-row ml-0 text-343a40 text-xs">takibe al</Link>
           </div>
-        }
-          <div className={`flex flex-col items-start  ${collectionItem ? 'p-0 mb-3 font-bold' : 'mb-1 py-2'}`}>
-            {postTitle && <div className={`flex flex-col items-start text-sm text-343a40 lowercase  ${collectionItem ? ' ' : 'italic'}`}>{postTitle}</div>}
+          <div className="text-343a40 font-light flex items-center text-sm gap-1">
+            <IconAlarm size={10} /> {time}
           </div>
+        </div>
+        <div className={`flex flex-col items-start mb-1 py-2`}>
+          {postTitle && <div className={`flex flex-col items-start text-sm text-343a40 lowercase italic`}>{postTitle}</div>}
+        </div>
         <div className="overflow-hidden max-h-[700px] relative">
-          <Link href={postLink} className="rounded overflow-hidden block">
+          <div className="rounded overflow-hidden block">
             <Image alt="profile" width={740} height={200} className="w-full m-auto max-h-[1000px] " src={image} />
-          </Link>
+          </div>
           <button onClick={() => setTagOpened(true)} className="flex gap-1 items-center justify-center text-sm bg-BF4565 text-white p-2 lg:min-w-[38px] lg:min-h-[38px] rounded absolute right-2 bottom-2">
             <IconTags size={18} />
           </button>
@@ -93,10 +88,6 @@ export default function PostList({ userName, userLink, postLink, time, image, co
               Pikledin
             </button>
           }
-          <button className="flex items-center gap-1 text-sm" onClick={toggle}>
-            <IconMessageDots size={18} />
-            <span className="hidden lg:inline-block">Laklak Yap</span>
-          </button>
           <button onClick={open} className="flex items-center gap-1 text-sm">
             <IconPackage size={18} />
             <span className="hidden lg:inline-block">Koleksiyona Ekle</span>
@@ -112,9 +103,7 @@ export default function PostList({ userName, userLink, postLink, time, image, co
             <ReportModal />
           </Modal>
         </div>
-        <Collapse in={opened} className="w-full">
-          <PostCollapse />
-        </Collapse>
+        <PostCollapse />
       </div>
     </>
   )
