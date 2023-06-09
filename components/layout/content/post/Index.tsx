@@ -32,9 +32,10 @@ export default function PostContent() {
       <div className="col-span-12 lg:col-span-7 relative mb-4 mt-4 lg:mt-0">
         <ProfileHeader />
         <div className='w-full bg-white rounded mb-4 text-sm text-center min-h-[40px] flex justify-center items-center relative mt-3' style={{ boxShadow: "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px" }}>
-        <div className='font-bold text-xs text-343a40 absolute left-12'>Geri Dön</div>
           <div className='font-bold text-sm text-ffbeb9'>Pikçır Detayı</div>
-          <button className="absolute left-4 top-2" onClick={() => history.back()}><IconArrowNarrowLeft /></button>
+          <button className="absolute left-4 top-2 flex justify-center items-center" onClick={() => history.back()}>
+            <IconArrowNarrowLeft />
+            <div className='font-bold text-xs text-343a40'>Geri Dön</div></button>
         </div>
         <PostItem
           userName={"natkahh"}

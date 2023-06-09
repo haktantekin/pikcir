@@ -228,13 +228,13 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                     </Modal>
                     <section className="w-full group-odd:ml-auto flex flex-col gap-5">
                       <ListItem
-                        link="javascript:;"
+                        link="lists-detail"
                         value="Maaş Yatmıştır"
                         count={96}
                         item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
                       />
                       <ListItem
-                        link="javascript:;"
+                        link="lists-detail"
                         value="Futbol Sevmeyen Erkek"
                         count={82}
                         item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
@@ -258,13 +258,13 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                     </Modal>
                     <section className="w-full group-odd:ml-auto flex flex-col gap-5">
                       <ListItem
-                        link="javascript:;"
+                        link="lists-detail"
                         value="Günlük Modum"
                         count={112}
                         item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
                       />
                       <ListItem
-                        link="javascript:;"
+                        link="lists-detail"
                         value="Yaptığım Hatalardan Ders Alıyorumdur"
                         count={102}
                         item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
@@ -288,25 +288,25 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                     </Modal>
                     <section className="w-full group-odd:ml-auto flex flex-col gap-5">
                       <ListItem
-                        link="javascript:;"
+                        link="lists-detail"
                         value="Günlük Modum"
                         count={112}
                         item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
                       />
                       <ListItem
-                        link="javascript:;"
+                        link="lists-detail"
                         value="Yaptığım Hatalardan Ders Alıyorumdur"
                         count={102}
                         item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
                       />
                       <ListItem
-                        link="javascript:;"
+                        link="lists-detail"
                         value="Maaş Yatmıştır"
                         count={96}
                         item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
                       />
                       <ListItem
-                        link="javascript:;"
+                        link="lists-detail"
                         value="Futbol Sevmeyen Erkek"
                         count={82}
                         item={["/postExample/Dp-lEfsW4AEDQXc.jpg", "/postExample/Dp-lP3mWkAAinKk.jpg", "/postExample/Dqn0H6aX0AArwuh.jpg", "/postExample/DrGjfB2XQAIELri.jpg"]}
