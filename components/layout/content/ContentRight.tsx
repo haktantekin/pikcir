@@ -15,11 +15,6 @@ export default function ContentRight() {
           <InfoBox />
           <WeeklyWinner />
           <MonthlyWinner />
-          <div className="flex flex-col gap-2 justify-around mt-2">
-            <Link href="javascript:;" className="text-xs">Hizmet Şartları</Link>
-            <Link href="javascript:;" className="text-xs">Gizlilik Sözleşmesi</Link>
-            <Link href="javascript:;" className="text-xs">Çerez Politikası</Link>
-          </div>
         </div>
       </div>
     </>
