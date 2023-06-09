@@ -9,7 +9,7 @@ export default function Profile() {
   return (
     <>
       <Head>
-        <title>PIKCIR - @natkahh</title>
+        <title>haktan - (@natkah) / Pikcir</title>
         <meta id="meta-description" name="description" content="Kafanın içinde biri var ve sürekli espri yapıyorsa bize katıl. Resmini al gel, koleksiyonlar oluştur, eğlen!" />
       </Head>
       <Header />

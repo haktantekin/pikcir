@@ -9,7 +9,7 @@ export default function Lists() {
   return (
     <>
       <Head>
-        <title>PIKCIR - Günün Listeleri</title>
+        <title>Günün Listeleri / Pikcir</title>
         <meta id="meta-description" name="description" content="Kafanın içinde biri var ve sürekli espri yapıyorsa bize katıl. Resmini al gel, koleksiyonlar oluştur, eğlen!" />
       </Head>
       <Header />

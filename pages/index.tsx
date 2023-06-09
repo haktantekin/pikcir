@@ -6,7 +6,7 @@ export default function Login() {
   return (
     <>
       <Head>
-        <title>PIKCIR</title>
+        <title>Ana Sayfa / Pikcir</title>
         <meta id="meta-description" name="description" content="Kafanın içinde biri var ve sürekli espri yapıyorsa bize katıl. Resmini al gel, koleksiyonlar oluştur, eğlen!" />
       </Head>
       <main className={`h-auto lg:h-screen pb-10 lg:pb-0`}>

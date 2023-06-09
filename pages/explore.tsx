@@ -9,7 +9,7 @@ export default function Explore() {
   return (
     <>
       <Head>
-        <title>PIKCIR - Keşfet</title>
+        <title>Keşfet / Pikcir</title>
         <meta id="meta-description" name="description" content="Kafanın içinde biri var ve sürekli espri yapıyorsa bize katıl. Resmini al gel, koleksiyonlar oluştur, eğlen!" />
       </Head>
       <Header />

@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>PIKCIR</title>
+        <title>Ana Sayfa / Pikcir</title>
         <meta id="meta-description" name="description" content="Kafanın içinde biri var ve sürekli espri yapıyorsa bize katıl. Resmini al gel, koleksiyonlar oluştur, eğlen!" />
       </Head>
       <Header />

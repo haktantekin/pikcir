@@ -9,7 +9,7 @@ export default function Search() {
   return (
     <>
       <Head>
-        <title>PIKCIR</title>
+        <title>deneme araması / Pikcir</title>
         <meta id="meta-description" name="description" content="Kafanın içinde biri var ve sürekli espri yapıyorsa bize katıl. Resmini al gel, koleksiyonlar oluştur, eğlen!" />
       </Head>
       <Header />
