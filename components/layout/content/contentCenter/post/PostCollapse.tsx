@@ -10,7 +10,7 @@ export default function PostCollapse() {
       <div className="w-full pb-4 pt-2 block -mb-4">
       <div className="grid grid-cols-12 w-full pb-2 relative">
           <div className="col-span-12">
-            <input type="text" placeholder="goygoy yap" className="w-full border text-xs p-3" />
+            <textarea placeholder="goygoy yap" className="w-full border text-xs p-3" />
           </div>
           <div className="flex justify-center items-center absolute right-2 top-3">
             <button>

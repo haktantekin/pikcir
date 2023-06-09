@@ -28,7 +28,7 @@ export default function CreatePost() {
         <div className='flex gap-4 w-full'>
           <div className={`${!file ? 'block' : 'hidden'} w-full`}>
             <FileButton resetRef={resetRef} onChange={setFile} accept="image/png,image/jpeg">
-              {(props) => <Button className="border border-BF4565 text-BF4565 hover:bg-BF4565 hover:text-white w-full bg-white hidden lg:block" style={{ boxShadow:'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }} {...props}>İçerik Gönder</Button>}
+              {(props) => <Button className="border border-dashed border-BF4565 text-BF4565 hover:bg-gray-50 w-full bg-white hidden lg:block min-h-[60px]" style={{ boxShadow:'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }} {...props}>İçerik Gönder</Button>}
             </FileButton>
           </div>
         </div>
