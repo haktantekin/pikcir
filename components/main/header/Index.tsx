@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ShowProfile from './ShowProfile';
 import { IconBrandHipchat, IconLetterC, IconLetterI, IconLetterK, IconLetterP, IconLetterR, IconPlus } from '@tabler/icons-react';
-import { Menu, UnstyledButton, Modal, Drawer } from '@mantine/core';
+import { Menu, Modal, Drawer } from '@mantine/core';
 import Notification from "./Notification";
 import { useDisclosure } from '@mantine/hooks';
 import NewPost from "./NewPost";
@@ -42,7 +42,7 @@ export default function Header() {
               <IconBrandHipchat size="1.7rem" stroke={1.0} className="text-343a40" />
             </div>
             <div className="relative cursor-pointer hidden lg:flex justify-center" title="Yeni Ekle">
-              <UnstyledButton onClick={open}>  <IconPlus size="1.7rem" stroke={1.0} className="text-BF4565" /></UnstyledButton>
+              <button onClick={open}>  <IconPlus size="1.7rem" stroke={1.0} className="text-BF4565" /></button>
               <Modal opened={opened} onClose={close} centered>
                 <NewPost />
               </Modal>
@@ -50,9 +50,9 @@ export default function Header() {
             <div className="relative cursor-pointer justify-center hidden lg:flex" title="Profilim">
               <Menu shadow="md" width={150} withArrow>
                 <Menu.Target>
-                  <UnstyledButton className="bg-none hover:bg-transparent px-0 mx-0">
+                  <button className="bg-none hover:bg-transparent px-0 mx-0">
                     <Image alt="profile" src={'/profile.jpg'} width={400} height={400} className="w-9 rounded-full border border-white" />
-                  </UnstyledButton>
+                  </button>
                 </Menu.Target>
                 <Menu.Dropdown className="py-2">
                   <ShowProfile />

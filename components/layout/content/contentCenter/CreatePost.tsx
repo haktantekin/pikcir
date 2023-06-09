@@ -1,7 +1,7 @@
 
 import { useState, useRef } from 'react';
 import Image from "next/image";
-import { Button, FileButton, UnstyledButton } from '@mantine/core';
+import { Button, FileButton } from '@mantine/core';
 import TagsInput from './TagsInput';
 
 export default function CreatePost() {
@@ -18,9 +18,9 @@ export default function CreatePost() {
         {file && (
           <div className="mx-auto w-full relative">
             <div className={`${!file ? 'hidden' : 'flex justify-center items-center'} mx-aut absolute h-4 w-4 bg-BF4565 text-white rounded-full inline-flex left-2 top-2 justify-center items-center text-base cursor-pointer p-0 mt-0`}>
-              <UnstyledButton className="" disabled={!file} onClick={clearFile} classNames={"leading-0"}>
+              <button className="" disabled={!file} onClick={clearFile} classNames={"leading-0"}>
                 <span className="text-white relative -top-px">&times;</span>
-              </UnstyledButton>
+              </button>
             </div>
             <Image className="max-w-full w-full" width={300} height={200} src={`/${file.name}`} alt="" />
           </div>

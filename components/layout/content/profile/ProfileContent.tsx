@@ -50,7 +50,7 @@ export default function ProfileContent() {
           <PostList
             userName={"natkah"}
             userLink={"javascript:;"}
-            postLink={"javascript:;"}
+            postLink={"/post"}
             profileImage={"/profile.jpg"}
             time={postTime("2023-05-21T10:11:00")}
             image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
@@ -64,7 +64,7 @@ export default function ProfileContent() {
           <PostList
             userName={"natkah"}
             userLink={"javascript:;"}
-            postLink={"javascript:;"}
+            postLink={"/post"}
             profileImage={"/profile.jpg"}
             time={postTime("2023-05-21T10:11:00")}
             image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
@@ -80,7 +80,7 @@ export default function ProfileContent() {
           <PostList
             userName={"can"}
             userLink={"javascript:;"}
-            postLink={"javascript:;"}
+            postLink={"/post"}
             profileImage={"/noImage.png"}
             time={postTime("2023-05-21T10:11:00")}
             image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
@@ -94,7 +94,7 @@ export default function ProfileContent() {
           <PostList
             userName={"can"}
             userLink={"javascript:;"}
-            postLink={"javascript:;"}
+            postLink={"/post"}
             profileImage={"/noImage.png"}
             time={postTime("2023-05-21T10:11:00")}
             image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
@@ -144,7 +144,7 @@ export default function ProfileContent() {
                 <PostList
                   userName={"natkah"}
                   userLink={"javascript:;"}
-                  postLink={"javascript:;"}
+                  postLink={"/post"}
                   profileImage={"/profile.jpg"}
                   time={postTime("2023-05-21T10:11:00")}
                   image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
@@ -158,7 +158,7 @@ export default function ProfileContent() {
                 <PostList
                   userName={"natkah"}
                   userLink={"javascript:;"}
-                  postLink={"javascript:;"}
+                  postLink={"/post"}
                   profileImage={"/profile.jpg"}
                   time={postTime("2023-05-21T10:11:00")}
                   image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
@@ -172,7 +172,7 @@ export default function ProfileContent() {
                 <PostList
                   userName={"natkah"}
                   userLink={"javascript:;"}
-                  postLink={"javascript:;"}
+                  postLink={"/post"}
                   profileImage={"/profile.jpg"}
                   time={postTime("2023-05-21T10:11:00")}
                   image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
@@ -186,7 +186,7 @@ export default function ProfileContent() {
                 <PostList
                   userName={"natkah"}
                   userLink={"javascript:;"}
-                  postLink={"javascript:;"}
+                  postLink={"/post"}
                   profileImage={"/profile.jpg"}
                   time={postTime("2023-05-21T10:11:00")}
                   image={`/postExample/Dqn0H6aX0AArwuh.jpg`}

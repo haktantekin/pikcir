@@ -1,4 +1,4 @@
-import { UnstyledButton, Tabs, Modal, TextInput } from '@mantine/core';
+import { Tabs, Modal, TextInput } from '@mantine/core';
 import CreatePost from './contentCenter/CreatePost';
 import PostList from './contentCenter/post/PostList';
 import TagList from './contentCenter/TagList';
@@ -52,11 +52,11 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                 <Tabs.Tab className="px-0 text-BF4565" value="followed">Takip Ettiklerin</Tabs.Tab>
               </Tabs.List>
               <Tabs.Panel value="karma" pt="xs">
-                <UnstyledButton className='relative mb-2 left-1/2 -translate-x-1/2 bg-BF4565 border border-BF4565 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>32 Yeni Gönderi</UnstyledButton>
+                <button className='relative mb-2 left-1/2 -translate-x-1/2 bg-BF4565 border border-BF4565 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>32 Yeni Gönderi</button>
                 <PostList
                   userName={"can"}
                   userLink={"javascript:;"}
-                  postLink={"javascript:;"}
+                  postLink={"/post"}
                   profileImage={"/noImage.png"}
                   time={postTime("2023-05-21T10:11:00")}
                   image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
@@ -70,7 +70,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                 <PostList
                   userName={"can"}
                   userLink={"javascript:;"}
-                  postLink={"javascript:;"}
+                  postLink={"/post"}
                   profileImage={"/noImage.png"}
                   time={postTime("2023-05-21T10:11:00")}
                   image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
@@ -84,11 +84,11 @@ export default function ContentCenter({ type }: ContentCenterProps) {
               </Tabs.Panel>
 
               <Tabs.Panel value="followed" pt="xs">
-                <UnstyledButton className='relative mb-2 left-1/2 -translate-x-1/2 bg-BF4565 border border-BF4565 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>19 Yeni Gönderi</UnstyledButton>
+                <button className='relative mb-2 left-1/2 -translate-x-1/2 bg-BF4565 border border-BF4565 rounded p-2 text-white font-bold cursor-pointer text-xs lg:text-base'>19 Yeni Gönderi</button>
                 <PostList
                   userName={"natkahh"}
                   userLink={"javascript:;"}
-                  postLink={"javascript:;"}
+                  postLink={"/post"}
                   profileImage={"/profile.jpg"}
                   time={postTime("2023-05-18T23:11:00")}
                   image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
@@ -102,7 +102,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                 <PostList
                   userName={"natkahh"}
                   userLink={"javascript:;"}
-                  postLink={"javascript:;"}
+                  postLink={"/post"}
                   profileImage={"/profile.jpg"}
                   time={postTime("2023-05-18T23:11:00")}
                   image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
@@ -128,7 +128,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   userName={"natkahh"}
                   userLink={"javascript:;"}
                   profileImage={"/profile.jpg"}
-                  postLink={"javascript:;"}
+                  postLink={"/post"}
                   time={postTime("2023-05-18T23:11:00")}
                   image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
                   commentCount={3}
@@ -142,7 +142,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   userName={"natkahh"}
                   userLink={"javascript:;"}
                   profileImage={"/profile.jpg"}
-                  postLink={"javascript:;"}
+                  postLink={"/post"}
                   time={postTime("2023-05-18T23:11:00")}
                   image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
                   commentCount={35}
@@ -163,7 +163,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   userName={"natkahh"}
                   userLink={"javascript:;"}
                   profileImage={"/profile.jpg"}
-                  postLink={"javascript:;"}
+                  postLink={"/post"}
                   time={postTime("2023-05-18T23:11:00")}
                   image={`/postExample/Dqn0H6aX0AArwuh.jpg`}
                   commentCount={3}
@@ -177,7 +177,7 @@ export default function ContentCenter({ type }: ContentCenterProps) {
                   userName={"natkahh"}
                   userLink={"javascript:;"}
                   profileImage={"/profile.jpg"}
-                  postLink={"javascript:;"}
+                  postLink={"/post"}
                   time={postTime("2023-05-18T23:11:00")}
                   image={`/postExample/Dp-lP3mWkAAinKk.jpg`}
                   commentCount={35}

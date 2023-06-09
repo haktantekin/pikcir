@@ -1,7 +1,5 @@
-import ShowProfileMobile from "../header/ShowProfileMobile";
 import { useDisclosure } from '@mantine/hooks';
-import { Drawer, Modal, UnstyledButton } from '@mantine/core';
-import Image from "next/image";
+import { Modal} from '@mantine/core';
 import Notification from "../header/Notification";
 import { IconBrandHipchat, IconHome2, IconPlus, IconCameraSearch } from "@tabler/icons-react";
 import NewPost from "../header/NewPost";
@@ -20,9 +18,9 @@ export default function Footer() {
           <IconCameraSearch size={"1.7rem"} stroke={1.0} />
         </Link>
         <div className="relative cursor-pointer flex justify-center" title="Yeni Ekle">
-          <UnstyledButton onClick={open}>
+          <button onClick={open}>
             <IconPlus size="1.7rem" stroke={1.0} className="text-BF4565" />
-          </UnstyledButton>
+          </button>
           <Modal opened={opened} onClose={close} centered>
             <NewPost />
           </Modal>
@@ -35,8 +33,8 @@ export default function Footer() {
           <Notification />
         </div>
         <div className="relative cursor-pointer hidden lg:flex justify-center items-center" title="Yeni Ekle">
-          <UnstyledButton onClick={open}>
-            <IconPlus size="1.7rem" stroke={1.0} className="text-BF4565" /></UnstyledButton>
+          <button onClick={open}>
+            <IconPlus size="1.7rem" stroke={1.0} className="text-BF4565" /></button>
           <Modal opened={opened} onClose={close} centered>
             <NewPost />
           </Modal>

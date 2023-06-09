@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { UnstyledButton, Textarea, Tooltip, Chip } from '@mantine/core';
+import { Textarea, Tooltip, Chip } from '@mantine/core';
 import { IconAlertCircle } from '@tabler/icons-react';
 
 export default function TagsInput() {
@@ -78,7 +78,7 @@ export default function TagsInput() {
           }
         </div>
         <div className='col-span-12 my-auto'>
-          <UnstyledButton className={`w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-base max-w-[100px] mx-auto min-h-[40px] ${tags.length <= 0 ? 'bg-343a40 pointer-events-none' : 'bg-BF4565'}`} disabled={tags.length < 0}>Pikle!</UnstyledButton>
+          <button className={`w-full h-full flex text-center justify-center items-center rounded font-bold text-white text-base max-w-[100px] mx-auto min-h-[40px] ${tags.length <= 0 ? 'bg-343a40 pointer-events-none' : 'bg-BF4565'}`} disabled={tags.length < 0}>Pikle!</button>
         </div>
       </div>
     </>

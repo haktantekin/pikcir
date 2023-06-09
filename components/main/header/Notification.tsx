@@ -1,5 +1,5 @@
 import { useDisclosure } from '@mantine/hooks';
-import { Menu, Drawer, UnstyledButton } from '@mantine/core';
+import { Menu, Drawer } from '@mantine/core';
 import { IconBellRinging, IconMessageCircle2, IconMoodWink, IconPackage, IconTrophy } from '@tabler/icons-react';
 import { useState } from 'react';
 import Link from 'next/link';
@@ -11,11 +11,11 @@ export default function Notification() {
     <>
       <Menu shadow="md" width={300} withArrow closeOnItemClick={true}>
         <Menu.Target>
-          <UnstyledButton className="bg-none hover:bg-transparent px-0 mx-0">
+          <button className="bg-none hover:bg-transparent px-0 mx-0">
             <div className="rounded-3xl bg-BF4565 border border-BF4565 p-1 py-0 absolute top-1 lg:-top-1 -right-1 text-white text-center text-xs">9+</div>
             <span id="show-notification" className='fixed top-0'></span>
             <IconBellRinging size="1.7rem" stroke={1.0} className="text-343a40" />
-          </UnstyledButton>
+          </button>
         </Menu.Target>
         <Menu.Dropdown>
         <Menu.Item onMouseEnter={() => setNotRead(false)} href={"javascript:;"} className={`${notRead === true && 'bg-f5f3f4'} leading-4`} component="a" icon={<IconTrophy size={20} stroke={1.0} />}>

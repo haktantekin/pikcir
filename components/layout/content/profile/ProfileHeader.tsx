@@ -16,7 +16,7 @@ export default function ProfileHeader() {
       <section>
         <div className="w-full bg-cover min-h-[200px] bg-center bg-no-repeat mb-4 flex justify-center items-center relative before:w-full before:h-full before:absolute before:top-0 before-left-0 before:bg-opacity-50 before:bg-black z-0 rounded-tr rounded-tl overflow-hidden" style={{ backgroundImage: 'url(coverExample.jpg)' }}>
         </div>
-        <div className="flex flex-col relative z-1 justify-center items-start lg:items-center -mt-4 pl-4 lg:pl-0 bg-white">
+        <div className="flex flex-col relative z-1 justify-center items-start lg:items-center -mt-4 pl-4 lg:pl-0 bg-white pb-2">
           <div className="group relative rounded-full w-28 border-2 border-white -mt-12 overflow-hidden">
             <Image alt="" width={300} height={300} src="/profile.jpg" className="w-full" />
           </div>
