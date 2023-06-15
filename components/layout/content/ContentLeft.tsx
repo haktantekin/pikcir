@@ -1,6 +1,8 @@
-import { Menu } from '@mantine/core';
+import ConfidentialityAgreementModal from '@/components/main/mustModal/ConfidentialityAgreementModal';
+import CookiePolicyModal from '@/components/main/mustModal/CookiePolicyModal';
+import TermOfServiceModal from '@/components/main/mustModal/TermOfServiceModal';
+import { Menu, Modal } from '@mantine/core';
 import { IconAward, IconCameraSearch, IconAwardFilled, IconBellRinging, IconHome2, IconPackage, IconListDetails, IconUserCircle } from "@tabler/icons-react";
-import Link from 'next/link';
 import { useState } from 'react';
 
 export default function ContentLeft() {
@@ -19,6 +21,9 @@ export default function ContentLeft() {
     }
   }
 
+  const [termOfServiceModal, setTermOfServiceModal] = useState(false);
+  const [confidentialityAgreementModal, setConfidentialityAgreementModal] = useState(false);
+  const [cookiePolicyModal, setCookiePolicyModal] = useState(false);
   return (
     <>
       <div className='hidden lg:block relative col-span-2'>
@@ -54,13 +59,22 @@ export default function ContentLeft() {
               </Menu>
             </div>
           </div>
-          <div className="flex flex-col gap-2 justify-around mt-3 w-full pl-3 text-right">
-            <Link href="javascript:;" className="text-xs">Hizmet Şartları</Link>
-            <Link href="javascript:;" className="text-xs">Gizlilik Sözleşmesi</Link>
-            <Link href="javascript:;" className="text-xs">Çerez Politikası</Link>
+          <div className="flex flex-col gap-2 justify-around mt-3 w-full pl-3 text-left">
+            <button onClick={() => setTermOfServiceModal(true)} className="text-xs text-left">Hizmet Şartları</button>
+            <button onClick={() => setConfidentialityAgreementModal(true)} className="text-xs text-left">Gizlilik Sözleşmesi</button>
+            <button onClick={() => setCookiePolicyModal(true)} className="text-xs text-left">Çerez Politikası</button>
           </div>
         </div>
       </div>
+      <Modal opened={termOfServiceModal} onClose={() => setTermOfServiceModal(false)} centered title="Hizmet Şartları"size={700}>
+        <TermOfServiceModal />
+      </Modal>
+      <Modal opened={confidentialityAgreementModal} onClose={() => setConfidentialityAgreementModal(false)} centered title="Gizlilik Sözleşmesi"size={700}>
+        <ConfidentialityAgreementModal />
+      </Modal>
+      <Modal opened={cookiePolicyModal} onClose={() => setCookiePolicyModal(false)} centered title="Çerez Politikası"size={700}>
+        <CookiePolicyModal />
+      </Modal>
     </>
   )
 }
